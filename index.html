@@ -150,18 +150,31 @@ ol.wf{padding-left:20px;margin:8px 0}ol.wf li{margin:8px 0;font-size:15px}
 <section id="research" class="cs "><div class="secnum">05</div><h2>User Research and Agent Pain Points</h2>
 
 <p>The research framework centers on the agent’s daily jobs and the questions they need answered. ChatGPT and Claude supported synthesis, helping cluster research inputs into the pain-point themes below.</p>
-<div class="grid2">
-<div class="card"><h3>Research approach</h3><ul class="clean"><li>Methods: <span class="ph">[Add: e.g. agent interviews, surveys, support-ticket or analytics review]</span></li><li>Participants: <span class="ph">[Add: number of agents interviewed and their profiles (new, experienced, team leader, mentor)]</span></li><li>Synthesis: themes clustered with support from ChatGPT and Claude; method <span class="ph">[Add: e.g. affinity mapping]</span></li></ul></div>
-<div class="card"><h3>Agent roles the design covers</h3><ul class="clean"><li>A new agent looking for a mentor</li><li>An agent who has just capped</li><li>A certified mentor managing mentees and requests</li><li>A mentee following their mentor’s training</li><li>An agent with a team and a revenue share organization</li></ul></div>
-</div>
-<table class="tbl"><thead><tr><th>Pain-point theme</th><th>What it means for the agent</th><th>Evidence from research</th></tr></thead><tbody>
-<tr><td>Scattered information</td><td>Answers about goals, cap, earnings and deals are spread across tools</td><td><span class="ph">[Add: finding + quote]</span></td></tr>
-<tr><td>Hard-to-read earnings</td><td>RevShare levels, payouts and the organization are dense and hierarchical</td><td><span class="ph">[Add: finding + quote]</span></td></tr>
-<tr><td>Unclear next action</td><td>No single view of what needs attention today</td><td><span class="ph">[Add: finding + quote]</span></td></tr>
-<tr><td>Getting help</td><td>Finding a document or the right support channel takes effort</td><td><span class="ph">[Add: finding + quote]</span></td></tr>
-<tr><td>Growth and mentorship</td><td>Finding a mentor and tracking progress has many states</td><td><span class="ph">[Add: finding + quote]</span></td></tr>
+<h3>Research approach</h3>
+<table class="tbl"><thead><tr><th>Research activity</th><th>Details</th></tr></thead><tbody>
+<tr><td>Stakeholder discussions</td><td>4 product owners / circle leads</td></tr>
+<tr><td>Product evaluation</td><td>Existing My eXp workflows and dashboards</td></tr>
+<tr><td>Workflow analysis</td><td>Home, Agent, RevShare, Team, Agent Desk and Mentor Program</td></tr>
+<tr><td>Competitive research</td><td>reZEN, SkySlope, KW Command, Compass and BoldTrail</td></tr>
+<tr><td>AI exploration</td><td>Conversational workflows, contextual assistance and human approval</td></tr>
+<tr><td>Synthesis</td><td>Pain-point clustering, journey mapping and opportunity identification</td></tr>
 </tbody></table>
-<div class="phbox"><b>Needs Suvarna’s input</b><ul><li><span class="ph">[Add: number of agents interviewed and key quotes]</span></li><li><span class="ph">[Add: top 3 research insights]</span></li></ul></div>
+<div class="card" style="margin-top:18px"><h3>Agent roles the design covers</h3><ul class="clean"><li>A new agent looking for a mentor</li><li>An agent who has just capped</li><li>A certified mentor managing mentees and requests</li><li>A mentee following their mentor’s training</li><li>An agent with a team and a revenue share organization</li></ul></div>
+<h3>Agent pain points</h3>
+<table class="tbl"><thead><tr><th>Pain point</th><th>Insight</th><th>Design opportunity</th></tr></thead><tbody>
+<tr><td>Scattered information</td><td>Agents need to navigate multiple sections to understand their business performance.</td><td>Unified personalized dashboard</td></tr>
+<tr><td>Complex earnings</td><td>Revenue Share, FLA, FLQA and payout information can be difficult to interpret.</td><td>Simplified earnings dashboard</td></tr>
+<tr><td>Unclear priorities</td><td>Agents need a clearer view of pending transactions and important tasks.</td><td>Needs your attention</td></tr>
+<tr><td>Finding support</td><td>Agents need a faster way to locate documents and get relevant assistance.</td><td>MIRA conversational assistant</td></tr>
+<tr><td>Mentorship discovery</td><td>New agents need guidance to identify mentors and understand the application process.</td><td>Guided Mentor Program</td></tr>
+</tbody></table>
+<h3>Top 3 insights</h3>
+<div class="grid2">
+<div class="card"><p class="src">Insight 01</p><h3>Visibility over navigation</h3><p>Agents need to understand their business health without visiting multiple dashboards.</p></div>
+<div class="card"><p class="src">Insight 02</p><h3>Context over complexity</h3><p>Financial and organizational information should explain what a number means, not simply display it.</p></div>
+<div class="card"><p class="src">Insight 03</p><h3>Assistance over automation</h3><p>Agents want help identifying the next step, but should retain control over important business and financial actions.</p></div>
+</div>
+<p class="note">Insights synthesized from stakeholder discussions with the circle leads, product evaluation and workflow analysis.</p>
 </section>
 
 <section id="competitive" class="cs "><div class="secnum">06</div><h2>Competitive Analysis</h2>
@@ -226,7 +239,17 @@ ol.wf{padding-left:20px;margin:8px 0}ol.wf li{margin:8px 0;font-size:15px}
 <div><h4>Next</h4><p>Remaining routes (Events Calendar, Tools, Knowledge Base, Downloads), mobile layouts for frequent on-the-go tasks, and an accessibility review.</p></div>
 <div><h4>Later</h4><p>Deeper MIRA capabilities grounded in the agent’s own data, and task execution with human confirmation.</p></div>
 </div>
-<div class="phbox"><b>Needs Suvarna’s input</b><ul><li>Involved: the four circle leads (product owners). Method: <span class="ph">[Add: prioritization method (e.g. impact vs. effort)]</span></li></ul></div>
+<h3>Feature prioritization</h3>
+<table class="tbl"><thead><tr><th>Priority</th><th>Feature</th><th>Reason</th></tr></thead><tbody>
+<tr><td>P0 – High</td><td>Personalized Home</td><td>Essential daily starting point</td></tr>
+<tr><td>P0 – High</td><td>RevShare and Earnings</td><td>Critical financial visibility</td></tr>
+<tr><td>P0 – High</td><td>Agent Desk</td><td>Transaction visibility and action tracking</td></tr>
+<tr><td>P1 – Medium</td><td>MIRA assistant</td><td>Faster information discovery</td></tr>
+<tr><td>P1 – Medium</td><td>Mentor Program</td><td>Agent growth and onboarding</td></tr>
+<tr><td>P2 – Later</td><td>Advanced AI task execution</td><td>Requires deeper integrations and safeguards</td></tr>
+<tr><td>P2 – Later</td><td>Mobile experience</td><td>Supports agents working on the move</td></tr>
+</tbody></table>
+<p class="note"><b>Prioritization rationale:</b> I weighed each feature on impact (business value and agent need) against effort (implementation complexity), working alongside the four circle leads. Core workflows such as Home, RevShare and Agent Desk came before advanced AI automation and extended platform capabilities.</p>
 </section>
 
 <section id="ia" class="cs "><div class="secnum">08</div><h2>Information Architecture</h2>
@@ -243,12 +266,12 @@ ol.wf{padding-left:20px;margin:8px 0}ol.wf li{margin:8px 0;font-size:15px}
 
 <p>A journey through an agent’s working day, mapped to the touchpoints in the platform and the role MIRA is designed to play at each step.</p>
 <div class="tblwrap"><table class="tbl journey"><thead><tr><th>Stage</th><th>Agent goal</th><th>Touchpoints</th><th>MIRA’s role (design intent)</th><th>Pain points &amp; feelings</th></tr></thead><tbody>
-<tr><td>Start the day</td><td>See where I stand</td><td>Home: Getting Started, Capping Year, Scheduled Training</td><td>Summarize progress and what changed</td><td><span class="ph">[Add: from research]</span></td></tr>
-<tr><td>Check earnings</td><td>Know what I earned and when I get paid</td><td>My Earnings, Unpaid / Expected / Last Paid, Revenue Share Group</td><td>Explain trends; start a payout with confirmation</td><td><span class="ph">[Add: from research]</span></td></tr>
-<tr><td>Move deals forward</td><td>Act on what needs attention</td><td>Agent Desk, Needs your attention, transaction workspace</td><td>Recommend the next action on a deal</td><td><span class="ph">[Add: from research]</span></td></tr>
-<tr><td>Grow</td><td>Find or be a mentor</td><td>Mentor Program, Choose Mentor drawer, mentor dashboard</td><td>Guide through the right mentorship journey</td><td><span class="ph">[Add: from research]</span></td></tr>
-<tr><td>Get help</td><td>Find a document or an answer fast</td><td>Documents, Contact eXpert Care (call, AI chat, email)</td><td>Answer or route to the right human channel</td><td><span class="ph">[Add: from research]</span></td></tr>
-<tr><td>Celebrate</td><td>Mark milestones</td><td>CAP REACHED state, Recognition tab</td><td>Highlight milestones and peers to recognize</td><td><span class="ph">[Add: from research]</span></td></tr>
+<tr><td>Start the day</td><td>See where I stand</td><td>Home: Getting Started, Capping Year, Scheduled Training</td><td>Summarize progress and what changed</td><td>Uncertainty about performance, cap progress and upcoming priorities</td></tr>
+<tr><td>Check earnings</td><td>Know what I earned and when I get paid</td><td>My Earnings, Unpaid / Expected / Last Paid, Revenue Share Group</td><td>Explain trends; start a payout with confirmation</td><td>Difficulty understanding payout status, revenue share levels and expected earnings</td></tr>
+<tr><td>Move deals forward</td><td>Act on what needs attention</td><td>Agent Desk, Needs your attention, transaction workspace</td><td>Recommend the next action on a deal</td><td>Concern about missing deadlines, documents or transaction requirements</td></tr>
+<tr><td>Grow</td><td>Find or be a mentor</td><td>Mentor Program, Choose Mentor drawer, mentor dashboard</td><td>Guide through the right mentorship journey</td><td>Uncertainty about mentor eligibility, selection and application progress</td></tr>
+<tr><td>Get help</td><td>Find a document or an answer fast</td><td>Documents, Contact eXpert Care (call, AI chat, email)</td><td>Answer or route to the right human channel</td><td>Frustration when searching multiple resources for the correct answer</td></tr>
+<tr><td>Celebrate</td><td>Mark milestones</td><td>CAP REACHED state, Recognition tab</td><td>Highlight milestones and peers to recognize</td><td>Limited visibility into milestones and opportunities to recognize peers</td></tr>
 </tbody></table></div>
 <p class="note">The Demo Config lets the same prototype walk through three of these journeys live: a new agent looking for a mentor, an agent who just capped, and a certified mentor.</p>
 </section>
