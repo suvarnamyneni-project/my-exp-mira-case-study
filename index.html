@@ -166,13 +166,49 @@ ol.wf{padding-left:20px;margin:8px 0}ol.wf li{margin:8px 0;font-size:15px}
 
 <section id="competitive" class="cs "><div class="secnum">06</div><h2>Competitive Analysis</h2>
 
-<p>I compared the experience against three categories of product that agents already use, looking at the same criteria for each: a unified view of the business, legibility of earnings data, next-action guidance, AI grounded in the agent’s own data, and human control over important actions.</p>
-<table class="tbl"><thead><tr><th>Category compared</th><th>What I looked at</th><th>Findings</th><th>Opportunity for My eXp + MIRA</th></tr></thead><tbody>
-<tr><td>Brokerage agent portals</td><td>Dashboards, earnings and transaction views</td><td><span class="ph">[Add: findings]</span></td><td><span class="ph">[Add: opportunity]</span></td></tr>
-<tr><td>CRM and transaction-management tools</td><td>Pipelines, checklists, documents and tables</td><td><span class="ph">[Add: findings]</span></td><td><span class="ph">[Add: opportunity]</span></td></tr>
-<tr><td>AI assistants and copilots</td><td>Conversation design, grounding, actions and confirmation</td><td><span class="ph">[Add: findings]</span></td><td><span class="ph">[Add: opportunity]</span></td></tr>
-</tbody></table>
-<div class="phbox"><b>Needs Suvarna’s input</b><ul><li><span class="ph">[Add: products reviewed in each category]</span></li><li><span class="ph">[Add: key findings and the gap MIRA fills]</span></li></ul></div>
+<p>I reviewed products agents already use in three categories, looking at the same criteria for each: a unified view of the business, legibility of earnings and revenue share, onboarding, next-action guidance, AI grounded in the agent’s own data, and human control over important actions.</p>
+<h3>Products reviewed</h3>
+<p class="note">Based on public product information (official product pages, help centers and press releases) reviewed in October 2026. Features change often and some are in beta, so this is a snapshot, not a hands-on audit.</p>
+<div class="tblwrap"><table class="tbl"><thead><tr><th>Product</th><th>Category</th><th>Notable features for agents</th><th>AI?</th></tr></thead><tbody>
+<tr><td>Real Brokerage – reZEN</td><td>Brokerage agent portal</td><td>Dashboard with production income and cap / Elite progress; Revenue Share Insights (month-over-month earnings, tier unlock progress, earnings per tier, pending and past payments, network contacts, badges); onboarding checklist; transactions, CDA on demand, document upload, mobile check deposit.</td><td>Not covered in the help articles reviewed</td></tr>
+<tr><td>Keller Williams – Command</td><td>Brokerage agent platform</td><td>All-in-one platform for contacts / CRM, SmartPlans automation, Opportunities pipeline, marketing (Campaigns, Designs), agent websites and mobile app; open to third-party integrations via KW MarketPlace.</td><td>Yes – KWIQ chat, plus integrations such as RemyAI and Google Gemini</td></tr>
+<tr><td>Compass – agent platform</td><td>Brokerage agent platform</td><td>End-to-end platform with CRM, marketing and client service; Compass One client dashboard; Collections; transaction timelines.</td><td>Yes – Compass AI: proactive, voice-activated assistant (announced June 2025)</td></tr>
+<tr><td>BoldTrail (formerly kvCORE)</td><td>CRM / platform</td><td>CRM, IDX websites, marketing automation, lead generation, transaction management and recruiting on one system; Vitals performance dashboard; Streams mobile workspace with a prioritized daily workflow.</td><td>Yes – Smart Assistant, AI lead scoring, Streams AI Assistant</td></tr>
+<tr><td>Follow Up Boss</td><td>CRM</td><td>CRM with built-in calling and texting; AI tools included at no extra cost and used where agents already work.</td><td>Yes – Smart Messages, suggested tasks, Smart Summary (closed beta, currently paused), AI lead tags</td></tr>
+<tr><td>SkySlope</td><td>Transaction management</td><td>Dashboard with recent listing / transaction files, Forms and DigiSign shortcuts and one search across all of them; custom checklists with daily reminders for flagged items; Quick Audit; commissions synced through Books.</td><td>Described as “AI-enhanced”; AI coaching product (Ayce)</td></tr>
+<tr><td>Lofty – AI Assistant / AOS</td><td>AI assistant</td><td>Chat available anywhere in the CRM: daily recommended actions, task and appointment creation, lead notes, natural-language property search, drafting emails and texts; Lofty AOS adds specialized AI agents (Sales, Social, Homeowner, Transaction Coordinator) and a Cowork workspace with a morning read and production metrics.</td><td>Yes – agentic; Cowork “escalates to you only when judgment is needed”</td></tr>
+<tr><td>Follow Up Ace (in Follow Up Boss)</td><td>AI assistant</td><td>Reads the contact you have open, answers questions about contacts and pipeline, drafts follow-ups, recommends next moves, daily brief.</td><td>Yes – shows a preview and asks before it sends a message, creates or changes a task or note, or moves a pipeline stage</td></tr>
+<tr><td>KWIQ (Keller Williams)</td><td>AI assistant</td><td>Chat on any page in Command, grounded in KW books, playbooks and help articles; drafting help; history tab; feedback on every answer.</td><td>Yes – knowledge-only: KW says it has no access to the agent’s own business data</td></tr>
+</tbody></table></div>
+
+<h3>Takeaways by category</h3>
+<div class="grid2">
+<div class="card"><h3>Brokerage agent portals</h3><ul class="clean"><li>reZEN puts cap progress and revenue share on the dashboard, with tiers, earnings per tier and payment history in one module. That sets a bar: revenue share should be readable and traceable down to the payment, not just a single total.</li><li>Portals add onboarding checklists and AI as separate pieces. My eXp can make Getting Started and MIRA part of one Home, rather than extra places to visit.</li></ul></div>
+<div class="card"><h3>CRM and transaction management</h3><ul class="clean"><li>The strongest patterns are “what’s due now” views: Streams’ prioritized daily workflow, SkySlope’s recent files, checklists and cross-app search. My eXp Home can borrow this “today” framing for transactions, cap and onboarding tasks.</li><li>These tools are built around leads and deals, not the agent’s relationship with the brokerage (cap, revenue share, mentorship, support). That relationship is My eXp’s own space.</li></ul></div>
+<div class="card"><h3>AI assistants for agents</h3><ul class="clean"><li>Assistants range from knowledge-only (KWIQ) to agentic (Lofty AOS). The most careful designs, Follow Up Ace and BoldTrail Streams, preview every action and need explicit confirmation. MIRA follows the same rule: draft, show, confirm.</li><li>Grounding matters. KW is open that KWIQ cannot see the agent’s numbers, while FUB and Lofty use CRM data. MIRA should answer from the agent’s own earnings, cap and transactions, and show where each answer came from.</li></ul></div>
+<div class="card"><h3>Gap My eXp + MIRA fills</h3><p>No single product I reviewed combines all three: a brokerage portal where earnings and revenue share are easy to read, CRM-style next-action guidance, and an assistant grounded in the agent’s own brokerage data that confirms before acting. My eXp + MIRA aims to bring them into one Home. Agents can see their cap and revenue share, know what to do next, and ask MIRA to act, with a confirmation step before anything is changed or sent.</p></div>
+</div>
+
+<h3>Sources</h3>
+<ul class="clean src">
+<li><a href="https://support.therealbrokerage.com/hc/en-us/articles/18138195152279-What-is-reZEN" target="_blank" rel="noopener">Real – What is reZEN?</a></li>
+<li><a href="https://support.therealbrokerage.com/hc/en-us/articles/13824275667863-How-do-I-view-and-track-my-Revenue-Share-Payments" target="_blank" rel="noopener">Real – Revenue Share Insights in reZEN</a></li>
+<li><a href="https://support.therealbrokerage.com/hc/en-us/articles/18229365740055-Your-reZEN-Agent-Profile" target="_blank" rel="noopener">Real – Your reZEN Agent Profile</a></li>
+<li><a href="https://kwri.kw.com/press/keller-williams-opens-command-r-to-power-agent-choice-and-best-in-class-integrations" target="_blank" rel="noopener">Keller Williams – Command integrations press release</a></li>
+<li><a href="https://outfront.kw.com/technology/kw-command-new-enhancements-elevate-the-ultimate-real-estate-crm-for-agents-and-teams/" target="_blank" rel="noopener">KW Outfront – KW Command enhancements</a></li>
+<li><a href="https://answers.kw.com/hc/en-us/articles/28891445953043-Use-the-KW-AI-Chat-KWIQ-in-Command" target="_blank" rel="noopener">KW Answers – Use KWIQ in Command</a></li>
+<li><a href="https://www.compass.com/newsroom/press-releases/4jOjK5Ej4ai0SyAnZGGlpP/" target="_blank" rel="noopener">Compass – Next evolution of Compass AI (June 2025)</a></li>
+<li><a href="https://boldtrail.com/faq/" target="_blank" rel="noopener">BoldTrail – FAQ</a></li>
+<li><a href="https://help.insiderealestate.com/en/articles/13170400-boldtrail-streams" target="_blank" rel="noopener">BoldTrail Helpdesk – Streams AI Assistant</a></li>
+<li><a href="https://www.followupboss.com/features/ai" target="_blank" rel="noopener">Follow Up Boss – AI features</a></li>
+<li><a href="https://help.followupboss.com/hc/en-us/articles/30282773055127-Smart-Summary" target="_blank" rel="noopener">Follow Up Boss Help – Smart Summary</a></li>
+<li><a href="https://followupace.com/support/what-is-follow-up-ace/" target="_blank" rel="noopener">Follow Up Ace – What is Follow Up Ace?</a></li>
+<li><a href="https://skyslope.com/products-services/skyslope/" target="_blank" rel="noopener">SkySlope – Product overview</a></li>
+<li><a href="https://support.skyslope.com/support/solutions/articles/156000366371-new-skyslope-dashboard" target="_blank" rel="noopener">SkySlope Support – New SkySlope Dashboard</a></li>
+<li><a href="https://help.lofty.com/hc/en-us/articles/33090360187675-AI-Assistant" target="_blank" rel="noopener">Lofty Help – AI Assistant</a></li>
+<li><a href="https://lofty.com/news/lofty-launches-first-agentic-ai-operating-system" target="_blank" rel="noopener">Lofty – Lofty AOS launch (Feb 2026)</a></li>
+<li><a href="https://lofty.com/ai/assistant" target="_blank" rel="noopener">Lofty – Cowork</a></li>
+</ul>
 </section>
 
 <section id="strategy" class="cs "><div class="secnum">07</div><h2>Product Strategy and Feature Prioritization</h2>
