@@ -79,6 +79,33 @@ ol.wf{padding-left:20px;margin:8px 0}ol.wf li{margin:8px 0;font-size:15px}
 @media(max-width:520px){.ov,.pillars,.caps,.outs,.steps,.shots.two{grid-template-columns:1fr}}
 @media print{.layout{grid-template-columns:1fr}.toc{display:none}.caps{grid-template-columns:repeat(3,1fr)}}
 .cs>h3{margin-top:30px;margin-bottom:0}
+
+.emocard{padding:14px 10px}.emo{width:100%;height:auto;display:block}
+.stages{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:14px}
+.stage{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.stage-media{aspect-ratio:16/10;background:#f1f3f8;border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.stage-media a{display:block;height:100%}.stage-media img{width:100%;height:100%;object-fit:cover;object-position:0 0;display:block}
+.stage-body{padding:14px 16px}.stage-n{font-size:12px;font-weight:700;color:var(--gold);letter-spacing:.1em}.stage-body h4{margin:4px 0 6px;font-size:15px}.stage-body p{margin:0;font-size:14px;color:var(--muted);line-height:1.5}
+.wireph{position:absolute;inset:14px 14px 34px;display:grid;grid-template-columns:22% 1fr 1fr;grid-template-rows:22% 1fr 1fr;gap:7px}
+.wireph i{border:1.5px dashed #b7c0d4;border-radius:6px}.wireph .w1{grid-row:1/4}.wireph .w2{grid-column:2/4}.wireph .w5{grid-column:2/4}
+.phnote{position:absolute;left:0;right:0;bottom:6px;margin:0;text-align:center;font-size:11.5px}
+.lead.strong{font-weight:600;color:var(--ink);margin-top:20px}
+.status{margin-top:14px;padding:12px 14px;background:var(--brand2);border-radius:12px;font-size:14.5px}
+.mira-hero{display:grid;grid-template-columns:1fr 1.05fr;gap:28px;align-items:center;margin:22px 0 10px;padding:30px;border-radius:22px;background:linear-gradient(135deg,#1b2350 0%,#3d3a9e 55%,#6b4fd8 100%);color:#fff;box-shadow:0 30px 60px -36px rgba(40,35,120,.8)}
+.mh-eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#cfd3ff;background:rgba(255,255,255,.12);border-radius:999px;padding:4px 12px}
+.mh-text h3{color:#fff;font-size:24px;line-height:1.3;margin:14px 0 10px}.mh-text p{color:#dfe2ff;margin:0}
+.convo{background:#fff;color:var(--ink);border-radius:18px;padding:16px;box-shadow:0 20px 40px -24px rgba(0,0,0,.5)}
+.convo-top{display:flex;justify-content:space-between;align-items:center;font-size:13px;margin-bottom:12px}.convo-top b{color:#4b3fc4;font-size:15px}.convo-top span{color:var(--muted);font-size:12px;background:#f1f0fd;border-radius:999px;padding:2px 10px}
+.msg{border-radius:14px;padding:11px 14px;font-size:14.5px;line-height:1.5}.msg p{margin:0 0 8px}.msg p:last-of-type{margin-bottom:10px}
+.msg.user{background:#3d5aa8;color:#fff;margin-left:auto;max-width:78%;border-bottom-right-radius:4px;margin-bottom:10px}
+.msg.bot{background:#f5f6fb;border:1px solid var(--line);border-bottom-left-radius:4px}
+.ctiles{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:6px 0 10px}.ctiles div{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px}.ctiles b{display:block;font-size:20px;color:var(--ink)}.ctiles span{font-size:12.5px;color:var(--muted)}
+.cbar{height:9px;background:#e4e6f3;border-radius:99px;overflow:hidden}.cbar i{display:block;height:100%;background:linear-gradient(90deg,#3d5aa8,#6b4fd8);border-radius:99px}
+.cbar-l{font-size:12.5px;color:var(--muted);margin:6px 0 10px!important}
+.chips2{display:flex;gap:8px;flex-wrap:wrap}.chip{font-size:13px;font-weight:600;border:1px solid #c9cdea;color:#3d3a9e;border-radius:999px;padding:6px 12px;background:#fff}.chip.pri{background:#4b3fc4;border-color:#4b3fc4;color:#fff}
+.tconfirm{background:#fde8e4;color:#9a3426;margin-left:6px}
+@media(max-width:900px){.stages{grid-template-columns:1fr 1fr}.mira-hero{grid-template-columns:1fr;padding:20px}}
+@media(max-width:560px){.stages{grid-template-columns:1fr}}
 </style></head><body>
 <nav class="top"><div class="wrap"><a class="brand" href="#">Suvarna Myneni</a><div class="links"><a href="#overview">Overview</a><a href="#problem">Problem</a><a href="#mira">MIRA</a><a href="#dashboard">Dashboards</a><a href="#before-after">Before &amp; After</a><a href="https://headless-brenxsjtqad-motiveux-1408.wix-site-host.com">Portfolio</a></div><a class="btn" href="#mira">See MIRA →</a></div></nav>
 <header class="hero"><div class="wrap">
@@ -92,7 +119,7 @@ ol.wf{padding-left:20px;margin:8px 0}ol.wf li{margin:8px 0;font-size:15px}
 <p class="note">Design work I did as a UX designer at eXp Realty on the My eXp agent portal; MIRA and some other areas are shown as earlier prototype designs. All names, figures and transactions shown are demo data and fictional. Shared for portfolio purposes; eXp and My eXp are trademarks of their respective owners.</p>
 </div></header>
 <div class="layout wrap">
-<aside class="toc"><b>Contents</b><ol><li><a href="#overview"><span>01</span>Project Overview</a></li><li><a href="#background"><span>02</span>Product Background – My eXp and MIRA</a></li><li><a href="#vision"><span>03</span>Business Context and Product Vision</a></li><li><a href="#problem"><span>04</span>Problem Discovery</a></li><li><a href="#research"><span>05</span>User Research and Agent Pain Points</a></li><li><a href="#competitive"><span>06</span>Competitive Analysis</a></li><li><a href="#strategy"><span>07</span>Product Strategy and Feature Prioritization</a></li><li><a href="#ia"><span>08</span>Information Architecture</a></li><li><a href="#journey"><span>09</span>Agent Journey Mapping</a></li><li><a href="#flows"><span>10</span>User Flows and Interaction Design</a></li><li><a href="#dashboard"><span>11</span>Dashboard UX and UI Design</a></li><li><a href="#before-after"><span>12</span>Before and After</a></li><li><a href="#mira"><span>13</span>MIRA – Agentic AI Experience Design</a></li><li><a href="#conversational"><span>14</span>Conversational UX and AI Workflows</a></li><li><a href="#prototyping"><span>15</span>Wireframing and Prototyping</a></li><li><a href="#design-system"><span>16</span>Design System and Components</a></li><li><a href="#usability"><span>17</span>Usability Testing and Iterations</a></li><li><a href="#handoff"><span>18</span>Development Handoff</a></li><li><a href="#outcomes"><span>19</span>Product Outcomes and Business Impact</a></li><li><a href="#learnings"><span>20</span>Learnings and Future Roadmap</a></li></ol></aside>
+<aside class="toc"><b>Contents</b><ol><li><a href="#overview"><span>01</span>Project Overview</a></li><li><a href="#background"><span>02</span>Product Background</a></li><li><a href="#vision"><span>03</span>Business Context &amp; Vision</a></li><li><a href="#problem"><span>04</span>Problem Discovery</a></li><li><a href="#research"><span>05</span>Research &amp; Insights</a></li><li><a href="#competitive"><span>06</span>Competitive Analysis</a></li><li><a href="#strategy"><span>07</span>Product Strategy &amp; Prioritization</a></li><li><a href="#ia"><span>08</span>Information Architecture</a></li><li><a href="#journey"><span>09</span>User Journey Mapping</a></li><li><a href="#flows"><span>10</span>User Flows</a></li><li><a href="#dashboard"><span>11</span>Dashboard UX/UI</a></li><li><a href="#before-after"><span>12</span>Before &amp; After</a></li><li><a href="#mira"><span>13</span>MIRA AI Experience</a></li><li><a href="#conversational"><span>14</span>Conversational UX &amp; AI Workflows</a></li><li><a href="#prototyping"><span>15</span>Wireframing &amp; Prototyping</a></li><li><a href="#design-system"><span>16</span>Design System</a></li><li><a href="#usability"><span>17</span>Testing &amp; Iterations</a></li><li><a href="#handoff"><span>18</span>Development Handoff</a></li><li><a href="#outcomes"><span>19</span>Outcomes &amp; Impact</a></li><li><a href="#learnings"><span>20</span>Learnings &amp; Roadmap</a></li></ol></aside>
 <main>
 <section id="overview" class="cs "><div class="secnum">01</div><h2>Project Overview</h2>
 
@@ -108,11 +135,11 @@ ol.wf{padding-left:20px;margin:8px 0}ol.wf li{margin:8px 0;font-size:15px}
 <div class="wide"><b>Focus Areas</b><span class="chips"><i>Product Strategy</i><i>UX Research</i><i>AI Experience Design</i><i>Conversational UX</i><i>Dashboard Design</i><i>Workflow Automation</i><i>Design Systems</i></span></div>
 </div>
 <blockquote class="vision"><b>Product vision</b>To create a unified real estate platform that combines the My eXp agent experience with MIRA, an intelligent AI assistant that helps agents access information, complete tasks, navigate workflows and make better business decisions through natural conversations.</blockquote>
-<p>I designed the product end to end, from framing the problem and structuring the information architecture to the UI, the component patterns and MIRA’s conversational experience. I then built it into a clickable, stateful prototype of 71 screens and states, since updated with the current design for Home, Notifications, Team, RevShare Earnings and My Organization. I used Figma for wireframes, UI and components; ChatGPT and Claude to synthesize research inputs, explore flows and draft UX copy; and Lovable for the AI-assisted working prototype.</p>
+<p>I designed the product end to end, from framing the problem and structuring the information architecture to the UI, the component patterns and MIRA’s conversational experience. I then built it into a clickable, stateful prototype: 71 screens and states in the overall prototype scope. The latest design files cover the Home, earnings, team and organization areas. I used Figma for wireframes, UI and components; ChatGPT and Claude to synthesize research inputs, explore flows and draft UX copy; and Lovable for the AI-assisted working prototype.</p>
 <p>Project context: UX design work at eXp Realty on the My eXp agent portal, May 2025 – Jan 2026. I was the sole UX designer, working with four circle leads, each the product owner of their circle. I owned end-to-end UX/UI across all four circles: research, information architecture, flows, UI, design system, prototyping and handoff. MIRA and some other areas are shown as earlier prototype designs.</p>
 </section>
 
-<section id="background" class="cs "><div class="secnum">02</div><h2>Product Background – My eXp and MIRA</h2>
+<section id="background" class="cs "><div class="secnum">02</div><h2>Product Background</h2>
 
 <p class="lead">My eXp is the main product ecosystem: the portal where an agent runs their business. MIRA is its intelligent AI layer, available across the whole ecosystem rather than living in one corner of it.</p>
 <div class="eco">
@@ -129,7 +156,7 @@ ol.wf{padding-left:20px;margin:8px 0}ol.wf li{margin:8px 0;font-size:15px}
 <div class="card"><h3>MIRA</h3><p>A conversational assistant that answers questions about the agent’s business, surfaces insights and helps them get things done, with the same assistant powering support in Contact eXpert Care.</p></div></div>
 </section>
 
-<section id="vision" class="cs "><div class="secnum">03</div><h2>Business Context and Product Vision</h2>
+<section id="vision" class="cs "><div class="secnum">03</div><h2>Business Context &amp; Vision</h2>
 
 <div class="grid2"><div><p>An agent’s working day spans many questions: how close they are to their goals and their cap, what they have earned in revenue share and when they will be paid, which deal needs attention, who their mentor is, and where to find a document or get help.</p><p>When those answers live in separate tools and dense tables, agents spend effort finding information instead of acting on it. The opportunity: a single, personal and consistent platform, with an AI layer that turns questions into answers and actions.</p></div>
 <div class="card"><h3>Product goals</h3><ul class="clean"><li><b>Personal:</b> a Home that reflects each agent’s own goals and progress</li><li><b>Legible:</b> make complex earnings and organization data easy to read</li><li><b>Actionable:</b> surface what needs attention next</li><li><b>Consistent:</b> one set of patterns across every area</li><li><b>Conversational:</b> let agents ask MIRA instead of hunting through menus</li><li><b>Demo-ready:</b> show many user states without separate accounts</li></ul></div></div>
@@ -148,7 +175,7 @@ ol.wf{padding-left:20px;margin:8px 0}ol.wf li{margin:8px 0;font-size:15px}
 <div class="challenge"><b>Design challenge</b><p>How might we give an agent one personal, consistent platform that answers “where do I stand, and what should I do next?”, and let them get there by simply asking?</p></div>
 </section>
 
-<section id="research" class="cs "><div class="secnum">05</div><h2>User Research and Agent Pain Points</h2>
+<section id="research" class="cs "><div class="secnum">05</div><h2>Research &amp; Insights</h2>
 
 <p>The research framework centers on the agent’s daily jobs and the questions they need answered. ChatGPT and Claude supported synthesis, helping cluster research inputs into the pain-point themes below.</p>
 <h3>Research approach</h3>
@@ -225,7 +252,7 @@ ol.wf{padding-left:20px;margin:8px 0}ol.wf li{margin:8px 0;font-size:15px}
 </ul>
 </section>
 
-<section id="strategy" class="cs "><div class="secnum">07</div><h2>Product Strategy and Feature Prioritization</h2>
+<section id="strategy" class="cs "><div class="secnum">07</div><h2>Product Strategy &amp; Prioritization</h2>
 
 <div class="pillars">
 <div><h4>Personal Home</h4><p>Getting Started, capping progress and training first, in tiles each agent can rearrange.</p></div>
@@ -236,7 +263,7 @@ ol.wf{padding-left:20px;margin:8px 0}ol.wf li{margin:8px 0;font-size:15px}
 <div><h4>One system</h4><p>Shared tables, drawers, tabs and KPI cards.</p></div>
 </div>
 <div class="nnl">
-<div><h4>Now · in the prototype</h4><p>77 screens and states (32 in the current design): Sign-in &amp; onboarding (2), Home &amp; personalization (14), Notifications &amp; account (8), MIRA &amp; help (4), Broker Center (4), Agent (9), Documents (2), Team (4), Training (1), RevShare Earnings (13), Agent Desk (9), Mentor Program (7).</p></div>
+<div><h4>Now · in the prototype</h4><p>71 screens and states in the overall prototype scope: Sign-in &amp; onboarding, Home &amp; personalization, Notifications &amp; account, MIRA &amp; help, Broker Center, Agent, Documents, Team, Training, RevShare Earnings, Agent Desk and Mentor Program. The latest design files cover the Home, earnings, team and organization areas.</p></div>
 <div><h4>Next</h4><p>Remaining routes (Events Calendar, Tools, Knowledge Base, Downloads), mobile layouts for frequent on-the-go tasks, and an accessibility review.</p></div>
 <div><h4>Later</h4><p>Deeper MIRA capabilities grounded in the agent’s own data, and task execution with human confirmation.</p></div>
 </div>
@@ -263,7 +290,7 @@ ol.wf{padding-left:20px;margin:8px 0}ol.wf li{margin:8px 0;font-size:15px}
 </div>
 </section>
 
-<section id="journey" class="cs "><div class="secnum">09</div><h2>Agent Journey Mapping</h2>
+<section id="journey" class="cs "><div class="secnum">09</div><h2>User Journey Mapping</h2>
 
 <p>A journey through an agent’s working day, mapped to the touchpoints in the platform and the role MIRA is designed to play at each step.</p>
 <div class="tblwrap"><table class="tbl journey"><thead><tr><th>Stage</th><th>Agent goal</th><th>Touchpoints</th><th>MIRA’s role (design intent)</th><th>Pain points &amp; feelings</th></tr></thead><tbody>
@@ -274,10 +301,13 @@ ol.wf{padding-left:20px;margin:8px 0}ol.wf li{margin:8px 0;font-size:15px}
 <tr><td>Get help</td><td>Find a document or an answer fast</td><td>Documents, Contact eXpert Care (call, AI chat, email)</td><td>Answer or route to the right human channel</td><td>Frustration when searching multiple resources for the correct answer</td></tr>
 <tr><td>Celebrate</td><td>Mark milestones</td><td>CAP REACHED state, Recognition tab</td><td>Highlight milestones and peers to recognize</td><td>Limited visibility into milestones and opportunities to recognize peers</td></tr>
 </tbody></table></div>
+<h3 class="sub">Emotional journey</h3>
+<div class="card emocard"><svg class="emo" viewBox="0 0 1000 330" role="img" aria-label="Conceptual emotional journey: Uncertain, Confused, Pressured, Motivated, Frustrated, Confident"><g font-family="Inter,system-ui,sans-serif"><line x1="70" y1="145.0" x2="960" y2="145.0" stroke="#e4e8f0" stroke-dasharray="5 6"/><text x="14" y="46" font-size="12" fill="#2f8a57" font-weight="600">Positive</text><text x="14" y="250" font-size="12" fill="#b4483c" font-weight="600">Negative</text><path d="M90.0 161.8 C118.3 168.1 203.3 196.8 260.0 199.6 C316.7 202.4 373.3 198.2 430.0 178.6 C486.7 159.0 543.3 73.6 600.0 82.0 C656.7 90.4 713.3 234.2 770.0 229.0 C826.7 223.8 911.7 80.2 940.0 50.5" fill="none" stroke="#3d5aa8" stroke-width="3.5" stroke-linecap="round"/><circle cx="90.0" cy="161.8" r="8" fill="#fff" stroke="#c48a12" stroke-width="3.5"/><text x="90.0" y="145.8" text-anchor="middle" font-size="14" font-weight="700" fill="#c48a12">Uncertain</text><text x="90.0" y="300" text-anchor="middle" font-size="13" fill="#5b6478">Start the day</text><circle cx="260.0" cy="199.6" r="8" fill="#fff" stroke="#b4483c" stroke-width="3.5"/><text x="260.0" y="183.6" text-anchor="middle" font-size="14" font-weight="700" fill="#b4483c">Confused</text><text x="260.0" y="300" text-anchor="middle" font-size="13" fill="#5b6478">Check earnings</text><circle cx="430.0" cy="178.6" r="8" fill="#fff" stroke="#c48a12" stroke-width="3.5"/><text x="430.0" y="162.6" text-anchor="middle" font-size="14" font-weight="700" fill="#c48a12">Pressured</text><text x="430.0" y="300" text-anchor="middle" font-size="13" fill="#5b6478">Move deals forward</text><circle cx="600.0" cy="82.0" r="8" fill="#fff" stroke="#2f8a57" stroke-width="3.5"/><text x="600.0" y="66.0" text-anchor="middle" font-size="14" font-weight="700" fill="#2f8a57">Motivated</text><text x="600.0" y="300" text-anchor="middle" font-size="13" fill="#5b6478">Grow</text><circle cx="770.0" cy="229.0" r="8" fill="#fff" stroke="#b4483c" stroke-width="3.5"/><text x="770.0" y="213.0" text-anchor="middle" font-size="14" font-weight="700" fill="#b4483c">Frustrated</text><text x="770.0" y="300" text-anchor="middle" font-size="13" fill="#5b6478">Get help</text><circle cx="940.0" cy="50.5" r="8" fill="#fff" stroke="#2f8a57" stroke-width="3.5"/><text x="924.0" y="55.5" text-anchor="end" font-size="14" font-weight="700" fill="#2f8a57">Confident</text><text x="940.0" y="300" text-anchor="middle" font-size="13" fill="#5b6478">Celebrate</text></g></svg></div>
+<p class="note">Conceptual emotional journey based on design synthesis, not measured user sentiment.</p>
 <p class="note">The Demo Config lets the same prototype walk through three of these journeys live: a new agent looking for a mentor, an agent who just capped, and a certified mentor.</p>
 </section>
 
-<section id="flows" class="cs "><div class="secnum">10</div><h2>User Flows and Interaction Design</h2>
+<section id="flows" class="cs "><div class="secnum">10</div><h2>User Flows</h2>
 
 <p class="lead">Key flows keep the agent in context: focused drawers instead of new pages, explicit steps for anything involving money, and scenario switching for demos.</p>
 <div class="flowrow"><b>Get Paid Now</b><span>Review</span><span>Verify</span><span>Confirm</span><span>Done</span><em>Fee and total shown before any commitment</em></div>
@@ -288,7 +318,7 @@ ol.wf{padding-left:20px;margin:8px 0}ol.wf li{margin:8px 0;font-size:15px}
 <div class="dec"><div><div class="num">03</div><h3>Scenario-driven Demo Config for stakeholder demos</h3><p>To demo realistic journeys without fake accounts, I built a Demo Configuration panel into the account menu: mentor modes, capping scenarios (including CAP REACHED), ICON toggles, country and FLQA states. Switching a scenario updates the live UI, and a sidebar Demo Toggles menu covers the most common switches during a walkthrough.</p></div></div>
 </section>
 
-<section id="dashboard" class="cs "><div class="secnum">11</div><h2>Dashboard UX and UI Design</h2>
+<section id="dashboard" class="cs "><div class="secnum">11</div><h2>Dashboard UX/UI</h2>
 <p class="lead">The dashboards turn dense business data into clear answers: where the agent stands, what they earned and what needs attention.</p>
 <div class="dec"><div><div class="num">01</div><h3>A personalized Home that answers “where do I stand?”</h3><p>Home is a modular set of tiles that answers “where do I stand?” at a glance: a <b>Getting Started</b> checklist for new agents, <b>Capping Year</b> progress with GCI, Volume, Units and Revenue Share, Scheduled Training, Achievements, What’s New and Upline Partners. Home changes with the agent’s stage: the Getting Started checklist leads for new joiners and drops away after the first 90 days.</p><p><b>Customize Home Screen</b> lets each agent drag tiles into the order they want, with Reset to Default, Cancel and Save Changes, and a short first-run overlay that explains how.</p></div><div class="shots one"><a href="img-v2/02-home-customize.webp" target="_blank" rel="noopener"><img loading="lazy" class="v2" src="img-v2/02-home-customize.webp" alt="Home — Customize Home Screen" width="1440" height="1269"></a></div></div>
 <div class="dec"><div><div class="num">02</div><h3>Capping progress as a moment, not a number</h3><p>Capping is one of the most meaningful milestones for an agent, so I designed it as a recurring visual thread: the Capping Year progress bar on Home, a year-by-year capping history timeline on the Agent dashboard, and a <b>CAP REACHED</b> celebration state that turns goals green and adds goal-reached badges.</p></div><div class="shots one"><a href="img-v2/01-home.webp" target="_blank" rel="noopener"><img loading="lazy" class="v2 capcrop" src="img-v2/01-home.webp" alt="Capping Year progress on the current Home" width="1440" height="1576"></a></div></div>
@@ -296,16 +326,37 @@ ol.wf{padding-left:20px;margin:8px 0}ol.wf li{margin:8px 0;font-size:15px}
 <div class="dec"><div><div class="num">04</div><h3>Agent Desk: one workspace per transaction</h3><p>Agent Desk starts with the active pipeline and a <b>Needs your attention</b> list so the next action is obvious. Each transaction opens into a workspace with persistent key facts (agent, buyer, expected close, days on market, price) and tabs for Overview, Contacts, Commission, Checklist, Documents, Activity and Comments, so everything about a deal lives in one place.</p></div><div class="shots one"><a href="img/54-agent-desk.webp" target="_blank" rel="noopener"><img loading="lazy" src="img/54-agent-desk.webp" alt="Agent Desk" width="1600" height="893"></a></div></div>
 <div class="dec"><div><div class="num">05</div><h3>A consistent table system</h3><p>Much of the portal is tabular, so I standardized one data-table pattern: search and filter chips, a column manager, Save View, Download, per-column search, pagination, and row click to open a detail drawer. Once agents learn it on one page, it works the same on State Mentors, Production Details, Team Reconciliation, Revenue Share Group and My Mentees.</p></div><div class="shots one"><a href="img-v2/39-team-top-agents.webp" target="_blank" rel="noopener"><img loading="lazy" class="v2" src="img-v2/39-team-top-agents.webp" alt="Team — Top Agents table" width="1440" height="1024"></a></div></div>
 </section>
-<section id="before-after" class="cs "><div class="secnum">12</div><h2>Before and After: Design Evolution</h2>
+<section id="before-after" class="cs "><div class="secnum">12</div><h2>Before &amp; After</h2>
 <p class="lead">The earlier prototype next to the current design for the same screens. Captions describe only what is visibly different between the two.</p>
 <div class="ba"><div class="bapair"><h3>Home</h3><div class="bagrid"><figure><figcaption>Before · earlier prototype</figcaption><a href="img/01-home.webp" target="_blank" rel="noopener"><img loading="lazy" src="img/01-home.webp" alt="Before: Home — Mission Control" width="1600" height="893"></a></figure><figure class="after"><figcaption>After · current design</figcaption><a href="img-v2/01-home.webp" target="_blank" rel="noopener"><img loading="lazy" src="img-v2/01-home.webp" alt="After: Home — Modular home" width="1440" height="1576"></a></figure></div><p>Before: a light sidebar and a mission-control layout of goal KPIs (Homes Closed, Commission, Sales Volume), Weekly Quests and a capping ring. After: dark navy navigation, a full-width announcement banner and modular tiles: Getting Started checklist, Capping Year progress with GCI, Volume, Units and Revenue Share, Scheduled Training, Achievements, What’s New and Upline Partners.</p><p class="src">After: Home-Screens Figma file.</p></div><div class="bapair"><h3>Home customization</h3><div class="bagrid"><figure><figcaption>Before · earlier prototype</figcaption><a href="img/02-home-customize.webp" target="_blank" rel="noopener"><img loading="lazy" src="img/02-home-customize.webp" alt="Before: Home — Customize mode" width="1600" height="893"></a></figure><figure class="after"><figcaption>After · current design</figcaption><a href="img-v2/02-home-customize.webp" target="_blank" rel="noopener"><img loading="lazy" src="img-v2/02-home-customize.webp" alt="After: Home — Customize Home Screen" width="1440" height="1269"></a></figure></div><p>Before: drag handles and remove controls on each card, with Done and Reset layout. After: a Customize Home Screen mode with dashed tile outlines and Reset to Default, Cancel and Save Changes in the page header.</p><p class="src">After: Home-Screens Figma file.</p></div><div class="bapair"><h3>RevShare dashboard → My Earnings</h3><div class="bagrid"><figure><figcaption>Before · earlier prototype</figcaption><a href="img/42-revshare-dashboard.webp" target="_blank" rel="noopener"><img loading="lazy" src="img/42-revshare-dashboard.webp" alt="Before: RevShare Dashboard" width="1600" height="893"></a></figure><figure class="after"><figcaption>After · current design</figcaption><a href="img-v2/42-my-earnings-revshare.webp" target="_blank" rel="noopener"><img loading="lazy" src="img-v2/42-my-earnings-revshare.webp" alt="After: My Earnings — Revenue Share" width="1440" height="1024"></a></figure></div><p>Before: YTD revenue share, Get Paid Now, FLA/FLQA tiles, a level ladder and payout status cards. After: Revenue Share and GCI tabs, My FLA, My FLQA, My New Agents and My Prospective Agents cards, a Revenue Share Group donut by level, and Unpaid, Expected Next and Last Paid amounts.</p><p class="src">After: Cosmo Transition Figma file.</p></div><div class="bapair"><h3>Revenue Share Group</h3><div class="bagrid"><figure><figcaption>Before · earlier prototype</figcaption><a href="img/51-revshare-group.webp" target="_blank" rel="noopener"><img loading="lazy" src="img/51-revshare-group.webp" alt="Before: Revenue Share Group" width="1600" height="893"></a></figure><figure class="after"><figcaption>After · current design</figcaption><a href="img-v2/51-revshare-group.webp" target="_blank" rel="noopener"><img loading="lazy" src="img-v2/51-revshare-group.webp" alt="After: Reports — Rev Share Group" width="1440" height="1024"></a></figure></div><p>Before: a group table with date, status, country and level filters. After: a Reports page with Rev Share Group and Rev Share from Team tabs and a simpler table of level, cap percentage and amount.</p><p class="src">After: Cosmo Transition Figma file.</p></div><div class="bapair"><h3>Organization dashboard → Organization Reporting</h3><div class="bagrid"><figure><figcaption>Before · earlier prototype</figcaption><a href="img/47-revshare-organization.webp" target="_blank" rel="noopener"><img loading="lazy" src="img/47-revshare-organization.webp" alt="Before: Organization Dashboard" width="1600" height="893"></a></figure><figure class="after"><figcaption>After · current design</figcaption><a href="img-v2/47-org-overview.webp" target="_blank" rel="noopener"><img loading="lazy" src="img-v2/47-org-overview.webp" alt="After: Organization Reporting — Overview Dashboard" width="1440" height="1569"></a></figure></div><p>Before: an organization snapshot with leader tier, KPIs with month-over-month deltas and productivity by country. After: Overview Dashboard, Off-boarding Overview and Detail Report tabs, organization KPI tiles, YTD revenue share and volume, donut charts and per-level bar charts.</p><p class="src">After: Organization Figma file.</p></div><div class="bapair"><h3>Team dashboard</h3><div class="bagrid"><figure><figcaption>Before · earlier prototype</figcaption><a href="img/38-team-dashboard.webp" target="_blank" rel="noopener"><img loading="lazy" src="img/38-team-dashboard.webp" alt="Before: Team Dashboard" width="1600" height="893"></a></figure><figure class="after"><figcaption>After · current design</figcaption><a href="img-v2/38-team-dashboard.webp" target="_blank" rel="noopener"><img loading="lazy" src="img-v2/38-team-dashboard.webp" alt="After: Team dashboard" width="1440" height="1024"></a></figure></div><p>Before: team production, onboarding agents, Top Agents tabs and Mega Team re-qualification progress. After: Units, Volume and Team Lead Split tiles with pending values, a currency selector and Filter, and Top Agents tabs for Units Sold and Highest Volume.</p><p class="src">After: Cosmo Transition Figma file.</p></div></div>
 </section>
 
-<section id="mira" class="cs mira"><div class="secnum">13</div><h2>MIRA – Agentic AI Experience Design</h2>
+<section id="mira" class="cs mira"><div class="secnum">13</div><h2>MIRA AI Experience</h2>
 
 <p class="lead">MIRA is designed to go beyond a traditional chatbot. Rather than a help widget that answers FAQs, it is an assistant that understands what the agent is trying to do, uses the context of their business, and helps them act, with the agent always in control.</p>
+<div class="mira-hero"><div class="mh-text"><span class="mh-eyebrow">MIRA · Intelligent agent assistant</span><h3>Ask in plain words. Get an answer grounded in your business, and stay in control of the next step.</h3><p>An example scenario showing how MIRA turns a question about capping into a clear answer, a visual progress summary and a suggested next step that the agent chooses to take.</p></div>
+<div class="convo" role="figure" aria-label="Example MIRA conversation about annual cap progress"><div class="convo-top"><b>MIRA</b><span>Example scenario · Demo data</span></div>
+<div class="msg user">How close am I to reaching my annual cap?</div>
+<div class="msg bot"><p>You’re making good progress toward your annual cap.</p>
+<div class="ctiles"><div><b>$12,500</b><span>Annual cap target</span></div><div><b>$9,250</b><span>Paid toward cap</span></div></div>
+<div class="cbar"><i style="width:74%"></i></div><p class="cbar-l">74% completed · $3,250 remaining</p>
+<p>You are approaching your annual cap. Would you like to review your production details?</p>
+<div class="chips2"><span class="chip pri">Review production details</span><span class="chip">Not now</span></div></div>
+</div></div>
+<p class="note">Illustrative figures for the prototype, not actual eXp agent data.</p>
+
 <div class="grid2 mira-proto"><div class="card"><h3>In the prototype</h3><ul class="clean"><li>Floats on every screen, one click away from Home and every other area</li><li>Opens with a greeting, suggested prompts (GCI trends, listing velocity, active pipeline) and chat history</li><li>Answers with chart insight cards that can be pinned to the dashboard</li><li>The same MIRA panel powers AI chat support in Contact eXpert Care, so help and insights share one entry point</li></ul><p class="note">MIRA’s answers in the prototype are scripted to demonstrate the experience.</p></div>
 <div class="shots"><a href="img/16-assistant-chat.webp" target="_blank" rel="noopener"><img loading="lazy" src="img/16-assistant-chat.webp" alt="MIRA assistant" width="1600" height="893"></a><a href="img/17-assistant-answer.webp" target="_blank" rel="noopener"><img loading="lazy" src="img/17-assistant-answer.webp" alt="MIRA — GCI Trends answer" width="1600" height="893"></a></div></div>
+<h3 class="sub">What agents can ask</h3>
+<table class="tbl"><thead><tr><th>Agent asks MIRA</th><th>Expected response</th></tr></thead><tbody>
+<tr><td>“Show my GCI trend this year”</td><td>Monthly GCI chart and trend summary</td></tr>
+<tr><td>“Which transactions need attention?”</td><td>Prioritized list of pending transactions</td></tr>
+<tr><td>“How much revenue share will I receive?”</td><td>Earnings breakdown and payout status</td></tr>
+<tr><td>“Help me find a mentor”</td><td>Mentor recommendations and application journey</td></tr>
+<tr><td>“Where can I find my tax documents?”</td><td>Direct document navigation</td></tr>
+<tr><td>“Prepare my payout request”</td><td>Review screen with fee and total before confirmation <span class="tag tconfirm">Requires human confirmation</span></td></tr>
+</tbody></table>
+<p class="note">Designed response patterns; in the prototype, MIRA’s answers are scripted to demonstrate the experience.</p>
 <h3 class="sub">Beyond a chatbot: capabilities and design principles</h3>
 <p class="note">Labels: <span class="tag tprototyped">Prototyped</span> shown in the prototype · <span class="tag tdesigned">Designed pattern</span> designed interaction principle · <span class="tag troadmap">Roadmap</span> planned capability.</p>
 <div class="caps"><div class="cap"><span class="tag tprototyped">Prototyped</span><h4>Natural-language conversations</h4><p>Agents ask in their own words, starting from suggested prompts such as GCI trends, listing velocity and active pipeline.</p></div><div class="cap"><span class="tag tdesigned">Designed pattern</span><h4>Understanding agent intent</h4><p>Requests are framed as intents (get an insight, find something, do a task, get help) so MIRA can respond in the right way.</p></div><div class="cap"><span class="tag tdesigned">Designed pattern</span><h4>Context-aware responses</h4><p>Answers take into account where the agent is and what they are looking at, and come back as chart insight cards rather than walls of text.</p></div><div class="cap"><span class="tag troadmap">Roadmap</span><h4>Accessing relevant agent information</h4><p>Answers draw on the agent’s own goals, earnings, pipeline and documents.</p></div><div class="cap"><span class="tag tdesigned">Designed pattern</span><h4>Assisting with business workflows</h4><p>MIRA hands the agent into existing flows such as Get Paid Now, a transaction checklist or the mentor application instead of replacing them.</p></div><div class="cap"><span class="tag tdesigned">Designed pattern</span><h4>Recommending next actions</h4><p>Like “Needs your attention” on Agent Desk, MIRA suggests what to do next and links to it.</p></div><div class="cap"><span class="tag troadmap">Roadmap</span><h4>Supporting task execution through AI agents</h4><p>MIRA prepares and runs multi-step tasks on the agent’s behalf.</p></div><div class="cap"><span class="tag tdesigned">Designed pattern</span><h4>Human confirmation and control</h4><p>Important actions follow the Get Paid Now model: show exactly what will happen, then Review, Confirm and Done. Nothing important happens without the agent’s approval.</p></div><div class="cap"><span class="tag tdesigned">Designed pattern</span><h4>Error handling and conversation recovery</h4><p>When a request is unclear or fails, MIRA asks a clarifying question, offers options, or routes to a human in Contact eXpert Care.</p></div></div>
@@ -327,7 +378,7 @@ ol.wf{padding-left:20px;margin:8px 0}ol.wf li{margin:8px 0;font-size:15px}
 </g></svg></div>
 </section>
 
-<section id="conversational" class="cs "><div class="secnum">14</div><h2>Conversational UX and AI Workflows</h2>
+<section id="conversational" class="cs "><div class="secnum">14</div><h2>Conversational UX &amp; AI Workflows</h2>
 
 <div class="grid2"><div class="card"><h3>Conversation design principles</h3><ul class="clean"><li><b>Start with prompts, not a blank box:</b> suggested prompts show what MIRA can do</li><li><b>Show, don’t tell:</b> answer with a short summary and a chart insight card</li><li><b>Make answers useful later:</b> pin an insight card to the dashboard</li><li><b>Remember the thread:</b> chat history keeps earlier questions close</li><li><b>Clear, plain language:</b> UX copy drafted and refined with ChatGPT and Claude, then edited for tone</li><li><b>Always a way out:</b> human help in Contact eXpert Care via call or email</li></ul></div>
 <div class="card"><h3>AI workflows</h3><ol class="wf">
@@ -340,7 +391,7 @@ ol.wf{padding-left:20px;margin:8px 0}ol.wf li{margin:8px 0;font-size:15px}
 
 </section>
 
-<section id="prototyping" class="cs "><div class="secnum">15</div><h2>Wireframing and Prototyping</h2>
+<section id="prototyping" class="cs "><div class="secnum">15</div><h2>Wireframing &amp; Prototyping</h2>
 
 <div class="steps">
 <div><h4>Understand</h4><p>Framed the agent’s daily questions and jobs, and synthesized research inputs into goals.</p><span class="tool">ChatGPT · Claude</span></div>
@@ -351,13 +402,15 @@ ol.wf{padding-left:20px;margin:8px 0}ol.wf li{margin:8px 0;font-size:15px}
 <div><h4>Iterate</h4><p>Tested drawers, drill-downs and multi-step flows as real behavior, and refined layout and UX copy.</p><span class="tool">Lovable · ChatGPT · Claude</span></div>
 </div>
 <p>Building the prototype in Lovable with AI-assisted development meant interactions like drawers, drill-downs, multi-step flows and MIRA’s panel could be tested as real behavior instead of static frames. The result is a clickable prototype in which hotspots link the screens the way the app does.</p>
-<div class="phbox"><b>Needs Suvarna’s input</b><ul><li><span class="ph">[Add: Figma wireframe and UI images to show the design evolution]</span></li></ul></div>
+<h3 class="sub">From wireframe to working prototype</h3>
+<div class="stages"><div class="stage"><div class="stage-media"><div class="wireph" aria-hidden="true"><i class="w1"></i><i class="w2"></i><i class="w3"></i><i class="w4"></i><i class="w5"></i></div><p class="phnote"><span class="ph">[Add: your low-fi wireframe image]</span></p></div><div class="stage-body"><span class="stage-n">01</span><h4>Low-fidelity wireframes</h4><p>Initial Home, Agent Desk, RevShare and Mentor Program structures.</p></div></div><div class="stage"><div class="stage-media"><a href="img-v2/01-home.webp" target="_blank" rel="noopener"><img loading="lazy" src="img-v2/01-home.webp" alt="High-fidelity UI: current Home"></a></div><div class="stage-body"><span class="stage-n">02</span><h4>High-fidelity UI</h4><p>Evolution of KPI cards, tables, side panels and navigation.</p></div></div><div class="stage"><div class="stage-media"><a href="img/54-agent-desk.webp" target="_blank" rel="noopener"><img loading="lazy" src="img/54-agent-desk.webp" alt="Components in use: Agent Desk table, filters, status chips and cards"></a></div><div class="stage-body"><span class="stage-n">03</span><h4>Component library</h4><p>Tables, drawers, buttons, filters, cards and status components.</p></div></div><div class="stage"><div class="stage-media"><a href="img/17-assistant-answer.webp" target="_blank" rel="noopener"><img loading="lazy" src="img/17-assistant-answer.webp" alt="Interactive prototype: MIRA answer with insight card"></a></div><div class="stage-body"><span class="stage-n">04</span><h4>Interactive prototype</h4><p>Lovable prototype with Demo Config and MIRA interactions.</p></div></div></div>
+<p class="lead strong">The strongest part: I moved beyond static Figma designs and built a stateful prototype in Lovable.</p>
 <p class="note">Full screen set and interactive walkthrough available on request or in interview.</p>
 </section>
 
-<section id="design-system" class="cs "><div class="secnum">16</div><h2>Design System and Components</h2>
+<section id="design-system" class="cs "><div class="secnum">16</div><h2>Design System</h2>
 
-<p class="lead">A small set of reusable components and states keeps 77 screens feeling like one product. Once an agent learns a pattern on one page, it works the same everywhere.</p>
+<p class="lead">A small set of reusable components and states keeps 71 screens and states feeling like one product. Once an agent learns a pattern on one page, it works the same everywhere.</p>
 <div class="uis">
 <div class="card"><h3>Core components</h3><ul class="clean"><li><b>KPI tiles</b> for capping progress, GCI, Volume, Units and Revenue Share</li><li><b>Data table</b> with search and filter chips, column manager, Save View, Download, per-column search and pagination</li><li><b>Detail drawers and side panels</b> for agents, notifications, transactions and mentors, so context is never lost</li><li><b>Tabs</b> for the transaction workspace and Notifications (Activity Feed · Recognition)</li><li><b>Step flows</b> such as the mentor application and background report downloads</li><li><b>MIRA panel</b> with prompts, chat history and pinnable insight cards</li></ul></div>
 <div class="card"><h3>Visual hierarchy</h3><ul class="clean"><li>Typography and spacing that put key values first, with labels and table data secondary</li><li>Color used for meaning, such as goals turning green and goal-reached badges in the CAP REACHED state</li><li>Status and payout cards that make earnings readable at a glance</li><li>Persistent key facts at the top of each transaction workspace</li></ul></div>
@@ -367,31 +420,46 @@ ol.wf{padding-left:20px;margin:8px 0}ol.wf li{margin:8px 0;font-size:15px}
 
 </section>
 
-<section id="usability" class="cs "><div class="secnum">17</div><h2>Usability Testing and Iterations</h2>
+<section id="usability" class="cs "><div class="secnum">17</div><h2>Testing &amp; Iterations</h2>
 
-<div class="grid2"><div class="card"><h3>Test plan: core tasks</h3><ol class="wf"><li>Find how close you are to your cap on Home</li><li>Find what you will be paid next on My Earnings</li><li>Find the deal that needs your attention in Agent Desk</li><li>Ask MIRA about your GCI trend and pin the answer</li><li>Find and choose a mentor</li></ol><p class="note">What to observe: task success, time on task, errors and points of confusion, and trust in MIRA’s answers.</p></div>
-<div class="card"><h3>Results and iterations</h3><ul class="clean"><li>Status: <span class="ph">[Add: testing completed, or planned]</span></li><li>Participants: <span class="ph">[Add: number and profile of agents tested]</span></li><li>Key findings: <span class="ph">[Add: findings]</span></li><li>Changes made: <span class="ph">[Add: before / after iterations]</span></li></ul></div></div>
+<p>I conducted interaction reviews and scenario-based walkthroughs of the prototype to evaluate navigation clarity, information hierarchy, consistency and workflow completion. The reviews focused on identifying friction across key agent journeys.</p>
+<table class="tbl"><thead><tr><th>Initial experience</th><th>Design improvement</th></tr></thead><tbody>
+<tr><td>Dense dashboard</td><td>Prioritized KPI cards and modular widgets</td></tr>
+<tr><td>Long navigation paths</td><td>Contextual drawers and direct navigation</td></tr>
+<tr><td>Complex earnings tables</td><td>Separate payout categories and drill-down views</td></tr>
+<tr><td>Inconsistent table patterns</td><td>Standardized table components</td></tr>
+<tr><td>Generic chatbot experience</td><td>Context-aware MIRA with suggested prompts and insight cards</td></tr>
+</tbody></table>
+<p class="status"><b>Status:</b> Prototype interaction review completed; formal agent usability validation planned.</p>
+<div class="card" style="margin-top:18px"><h3>Planned agent usability tasks</h3><ol class="wf"><li>Find how close you are to your cap on Home</li><li>Find what you will be paid next on My Earnings</li><li>Find the deal that needs your attention in Agent Desk</li><li>Ask MIRA about your GCI trend and pin the answer</li><li>Find and choose a mentor</li></ol><p class="note">Planned measures: task success, time on task, errors and points of confusion, and trust in MIRA’s answers.</p></div>
 </section>
 
 <section id="handoff" class="cs "><div class="secnum">18</div><h2>Development Handoff</h2>
 
-<div class="grid2"><div class="card"><h3>What a handoff package includes</h3><ul class="clean"><li>Figma screens, components and their states</li><li>The Lovable prototype as a reference for real interaction behavior</li><li>Interaction notes for drawers, tabs, tables and multi-step flows</li><li>MIRA conversation specs: intents, response formats, confirmation steps and error and recovery states</li><li>Demo Config scenarios for QA and stakeholder review</li><li>Accessibility notes for color, contrast and keyboard flows</li></ul></div>
-<div class="card"><h3>How it happened</h3><ul class="clean"><li>Handed off to the four circle leads (product owners). The circle leads took the designs forward into development with their teams.</li><li><span class="ph">[Add: tools and documentation used, e.g. Figma Dev Mode, tickets, specs]</span></li></ul></div></div>
+<p>I prepared the design handoff with structured Figma screens, reusable components, interaction specifications and a working Lovable prototype. I collaborated with the four circle leads, who owned their respective product areas, to communicate workflow behaviour, component states, edge cases and MIRA interaction patterns. The prototype served as an additional reference for understanding expected interactions beyond static design files.</p>
+<table class="tbl"><thead><tr><th>Handoff item</th><th>Details</th></tr></thead><tbody>
+<tr><td>Design source</td><td>Figma screens, components and variants</td></tr>
+<tr><td>Interaction specifications</td><td>Drawers, filters, tabs, dropdowns and multi-step flows</td></tr>
+<tr><td>Prototype</td><td>Lovable interactive prototype</td></tr>
+<tr><td>UX documentation</td><td>User flows, interaction behaviour and edge cases</td></tr>
+<tr><td>AI specifications</td><td>MIRA intents, response patterns and confirmation states</td></tr>
+<tr><td>Collaboration</td><td>Four circle leads / product owners</td></tr>
+<tr><td>QA reference</td><td>Demo scenarios, screen states and interaction walkthroughs</td></tr>
+</tbody></table>
+<p class="status">Handed off to the four circle leads (product owners). The circle leads took the designs forward into development with their teams.</p>
 </section>
 
-<section id="outcomes" class="cs "><div class="secnum">19</div><h2>Product Outcomes and Business Impact</h2>
+<section id="outcomes" class="cs "><div class="secnum">19</div><h2>Outcomes &amp; Impact</h2>
 
-<div class="outs">
-<div><b>71</b><span>screens and states designed and prototyped</span></div>
-<div><b>Stateful</b><span>working prototype built in Lovable, not static frames</span></div>
-<div><b>1 prototype</b><span>tells many stories through the Demo Config in stakeholder demos</span></div>
-<div><b>1 table pattern</b><span>reused across five data-heavy pages</span></div>
-</div>
-<p>MIRA is integrated as one assistant across the platform, and the same panel serves insights and support.</p>
-<div class="phbox"><b>Business impact: needs Suvarna’s input</b><ul><li><span class="ph">[Add: stakeholder or recruiter feedback from demos]</span></li><li><span class="ph">[Add: business impact or metrics, only if measured]</span></li></ul></div>
+<h3 class="sub">Design execution</h3>
+<div class="outs"><div><b>71</b><span>Screens and states prototyped</span></div><div><b>4</b><span>Product owner collaborations</span></div><div><b>5</b><span>Pages using shared table patterns</span></div><div><b>1</b><span>Unified platform experience</span></div></div>
+<div class="grid2" style="margin-top:18px"><div class="card"><h3>Experience improvements</h3><ul class="clean"><li>Consolidated key agent workflows into a structured navigation system</li><li>Created personalized dashboards for different agent stages</li><li>Standardized data-heavy tables and contextual detail drawers</li><li>Designed a consistent MIRA assistant experience across the platform</li></ul></div>
+<div class="card"><h3>AI experience innovation</h3><ul class="clean"><li>Designed conversational entry points across the portal</li><li>Created contextual insight cards and suggested prompts</li><li>Designed human-confirmation patterns for sensitive actions</li><li>Built scenario-driven demonstrations using Demo Config</li></ul></div></div>
+<h3 class="sub">Business impact</h3>
+<p>The project established a unified UX direction for the My eXp ecosystem, bringing agent performance, revenue share, transactions, mentorship and support into a more consistent experience. The reusable design patterns and interactive prototype helped communicate complex workflows to stakeholders and provided a shared reference for product discussions and development handoff.</p>
 </section>
 
-<section id="learnings" class="cs "><div class="secnum">20</div><h2>Learnings and Future Roadmap</h2>
+<section id="learnings" class="cs "><div class="secnum">20</div><h2>Learnings &amp; Roadmap</h2>
 
 <div class="grid2"><div><p>Working across Figma and Lovable changed how I design. Figma gave me a clear structure and a shared set of components; building those designs in Lovable with AI assistance let me move from idea to a working, stateful experience quickly, and test interactions like drawers, drill-downs and multi-step flows as real behavior instead of static frames.</p><p>Designing MIRA taught me that an AI assistant is a product surface of its own: it needs intents, response formats, confirmation and recovery designed as carefully as any screen. ChatGPT and Claude were useful thinking partners for exploring flows and tightening UX copy, while the design decisions stayed mine.</p><p>The Demo Config turned out to be one of the most useful design tools in the project: one prototype can tell the story of a new agent looking for a mentor, an agent who just capped, and a certified mentor, live in the same session.</p></div>
 <div class="card"><h3>Future roadmap</h3><ul class="clean"><li>Usability testing with agents on Home, RevShare, Agent Desk and MIRA</li><li>Complete the remaining routes (Events Calendar, Tools, Knowledge Base, Downloads)</li><li>Mobile layouts for the most frequent on-the-go tasks</li><li>Accessibility review of color, contrast and keyboard flows in charts and tables</li><li>Deeper MIRA capabilities grounded in the agent’s own data</li><li>MIRA task execution through AI agents, with human confirmation for important actions</li></ul></div></div>
