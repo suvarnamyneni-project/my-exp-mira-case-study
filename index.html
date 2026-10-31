@@ -1,680 +1,350 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>My eXp + MIRA — Case Study · Suvarna Myneni</title>
-<meta name="description" content="My eXp is the product ecosystem where a real estate agent runs their business. MIRA is its intelligent AI layer: an agentic assistant that helps agents find answers, complete tasks, and decide what to do next.">
-<link rel="stylesheet" href="case-study.css">
-<style>
-/* Layout only: frame tall product screens from the top, and let wide tables scroll. No palette changes. */
-img.frame{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top}
-.scroll{overflow-x:auto}
-</style>
-</head>
-<body>
-<nav class="cs-nav"><div class="wrap">
-  <a class="back" href="https://suvarnamyneni-project.github.io/">← All work</a>
-  <div class="links">
-    <a href="#role">My Role</a><a href="#design">Design Process</a><a href="#problem">Problem</a><a href="#stakeholders">Stakeholders</a><a href="#users">End Users</a><a href="#research">Research</a><a href="#competitive">Competitive</a><a href="#personas">Personas</a><a href="#decisions">Decisions</a><a href="#prototype">Prototype</a><a href="#uikit">UI Kit</a><a href="#final">Final Design</a><a href="#outcome">Outcome</a><a href="#metrics">Metrics</a>
-  </div>
-</div></nav>
-
-<header class="cs-hero"><div class="wrap">
-  <div class="eyebrow">Case Study · eXp Realty</div>
-  <h1>My eXp + MIRA</h1>
-  <p class="lede">An AI-powered real estate platform with an intelligent agent assistant. My eXp is where an agent runs their business. MIRA is its agentic, conversational layer: it helps agents find answers, complete tasks, and decide what to do next.</p>
-  <dl class="meta">
-    <div><dt>Role</dt><dd>Senior UX / Product Designer</dd></div>
-    <div><dt>Timeline</dt><dd>In-house at eXp Realty</dd></div>
-    <div><dt>Team</dt><dd>UX design on the My eXp agent portal</dd></div>
-    <div><dt>Platform</dt><dd>Web application · AI assistant</dd></div>
-    <div><dt>Tools</dt><dd>Figma, Lovable, ChatGPT, Claude</dd></div>
-  </dl>
-  <figure class="cs-cover"><img class="frame" src="img-v2/01-home.webp" alt="Home — Modular home, the current My eXp design" width="1440" height="1576"></figure>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>My eXp + MIRA — An AI-powered real estate platform · Suvarna Myneni</title>
+<meta name="description" content="Case study by Suvarna Myneni: My eXp + MIRA, an AI-powered real estate platform with an intelligent agent assistant. Designed in Figma and prototyped in Lovable.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css"><style>img.v2{aspect-ratio:1440/1000;object-fit:cover;object-position:top;width:100%}.heroimg img.v2{aspect-ratio:1440/900}.badge2{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:2px 6px;border-radius:999px;background:#e3f4ea;color:#1f6f4a;margin-left:6px;vertical-align:middle}.badge2.old{background:#eef0f5;color:#5d6680}.thumbs a .badge2{display:inline-block;padding:2px 6px;margin-left:4px}.ba{display:grid;gap:22px;margin-top:18px}.bapair{border:1px solid var(--line);border-radius:14px;background:var(--card,#fff);padding:14px 16px 16px}.bapair h3{margin:0 0 10px;font-size:17px}.bagrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.bagrid figure{margin:0}.bagrid a{display:block;border-radius:10px;overflow:hidden;border:1px solid var(--line)}.bagrid img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top}.bagrid figcaption{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted,#6b7488);margin:0 0 6px}.bagrid figure.after figcaption{color:#1f6f4a}.bapair p{margin:10px 0 0;font-size:14px}.bapair .src{font-size:12px;color:var(--muted,#6b7488);margin-top:4px}@media(max-width:700px){.bagrid{grid-template-columns:1fr}}.subtitle{font-size:clamp(20px,2.4vw,26px);font-weight:600;color:var(--ink);margin:-6px 0 14px;max-width:820px}
+.layout{display:grid;grid-template-columns:230px 1fr;gap:48px;max-width:1280px}
+.toc{position:sticky;top:76px;align-self:start;max-height:calc(100vh - 96px);overflow:auto;padding:28px 0;font-size:13.5px}
+.toc b{display:block;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.toc ol{list-style:none;margin:0;padding:0}
+.toc a{display:flex;gap:10px;padding:5px 10px;border-radius:8px;color:var(--muted);text-decoration:none;line-height:1.35}
+.toc a span{font-weight:700;color:var(--gold);min-width:20px;font-size:12px;padding-top:1px}
+.toc a:hover{background:#fff;color:var(--ink)}.toc a.on{background:var(--brand2);color:var(--ink);font-weight:600}
+main{min-width:0}
+main section.cs{padding:56px 0;border-top:1px solid var(--line);scroll-margin-top:70px}
+main section.cs:first-child{border-top:0}
+.secnum{font-size:13px;font-weight:700;color:var(--gold);letter-spacing:.12em;margin-bottom:4px}
+h3.sub{margin:36px 0 10px;font-size:22px}
+.ov{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:8px 0 22px}
+.ov div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-weight:500}
+.ov div.wide{grid-column:1/-1}
+.ov b{display:block;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}.chips i{font-style:normal;font-size:13.5px;background:var(--brand2);color:var(--brand);border-radius:999px;padding:4px 12px;font-weight:600}
+.vision{margin:0 0 22px;padding:22px 24px;border-radius:16px;background:linear-gradient(135deg,#0f1b33,#2b3f7a);color:#fff;font-size:19px;line-height:1.5;font-weight:500}
+.vision b{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#f3cf7a;margin-bottom:8px}
+.ph{display:inline;background:#fff3cd;border:1px dashed #d39a1c;color:#7a5200;border-radius:6px;padding:1px 6px;font-weight:600;font-size:.92em}
+.phbox{margin:18px 0 0;border:1.5px dashed #d39a1c;background:#fffaf0;border-radius:12px;padding:12px 16px}
+.phbox b{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#7a5200}.phbox ul{margin:6px 0 0;padding-left:18px}.phbox li{margin:4px 0}
+.eco{border:1px solid var(--line);border-radius:18px;background:var(--card);padding:16px;margin:18px 0 18px}
+.eco-layer{background:linear-gradient(90deg,#3d5aa8,#6b55c9);color:#fff;border-radius:12px;padding:14px 18px;display:flex;flex-direction:column;gap:2px}
+.eco-layer span{font-size:13.5px;opacity:.9}
+.eco-areas{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:10px 0}
+.eco-areas div{border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:var(--bg)}
+.eco-areas h4{margin:0 0 4px;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--brand)}.eco-areas p{margin:0;font-size:14px;color:var(--muted)}
+.eco-base{background:var(--ink);color:#fff;border-radius:12px;padding:12px 18px;text-align:center}
+.challenge{margin:22px 0 0;padding:18px 20px;border-left:4px solid var(--gold);background:#fffaf0;border-radius:0 12px 12px 0}
+.challenge b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.challenge p{margin:0;font-size:18px;font-weight:600;line-height:1.45}
+.pains{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0 0;padding:0;list-style:none}
+.pains li{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:15px}
+.pains li b{display:block;font-size:14px;margin-bottom:2px}
+.tblwrap{overflow-x:auto}
+.tbl{width:100%;border-collapse:separate;border-spacing:0;margin-top:18px;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;font-size:14.5px}
+.tbl th{text-align:left;background:var(--brand2);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);padding:10px 12px}
+.tbl td{padding:10px 12px;border-top:1px solid var(--line);vertical-align:top}.tbl td:first-child{font-weight:600}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.pillars div,.nnl div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.pillars h4,.nnl h4{margin:0 0 4px;font-size:15px}.pillars p,.nnl p{margin:0;font-size:14px;color:var(--muted)}
+.nnl{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:12px;margin-top:14px}.nnl div:first-child{border-color:#b9c6ea;background:#f4f7fe}
+.flowrow{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:10px 0;font-size:14px}
+.flowrow b{min-width:160px}.flowrow span{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:4px 12px;font-weight:600}
+.flowrow span+span:before{content:"→ ";color:var(--brand)}.flowrow em{color:var(--muted);font-style:normal;font-size:13px}
+main .dec{margin:40px 0}
+.mira{background:linear-gradient(180deg,#f1f0fd 0,transparent 420px);margin:0 -28px;padding-left:28px!important;padding-right:28px!important;border-radius:24px}
+.mira-proto{align-items:start}.mira .shots a{box-shadow:0 18px 40px -26px rgba(61,90,168,.6)}
+.caps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
+.cap{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.cap h4{margin:8px 0 4px;font-size:15.5px}.cap p{margin:0;font-size:14px;color:var(--muted);line-height:1.5}
+.tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.04em;border-radius:999px;padding:2px 9px}
+.tprototyped{background:#e3f4ea;color:#1f6b41}.tdesigned{background:var(--brand2);color:var(--brand)}.troadmap{background:#fdf1d6;color:#7a5200}
+.flowcard{padding:18px}.mflow{width:100%;height:auto;display:block}
+ol.wf{padding-left:20px;margin:8px 0}ol.wf li{margin:8px 0;font-size:15px}
+.shots.two{grid-template-columns:1fr 1fr;margin-top:18px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:8px 0 18px;counter-reset:s}
+.steps div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px}
+.steps div:before{counter-increment:s;content:"0" counter(s);font-size:12px;font-weight:700;color:var(--gold);letter-spacing:.1em}
+.steps h4{margin:6px 0 6px;font-size:15px}.steps p{margin:0;font-size:14px;color:var(--muted);line-height:1.5}
+.steps .tool{display:inline-block;margin-top:8px;font-size:11.5px;font-weight:600;color:var(--brand);background:var(--brand2);border-radius:999px;padding:2px 9px}
+.uis{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:18px}
+.uis .card h3{font-size:17px}.uis .card p{margin:4px 0 0;font-size:15px;color:var(--muted)}.uis .card ul.clean li{font-size:15px}
+.uishots{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px}
+.uishots a{display:block;border-radius:12px;overflow:hidden;border:1px solid var(--line);text-decoration:none;color:var(--ink);background:var(--card);font-size:13px;font-weight:600}
+.uishots a span{display:block;padding:8px 10px}
+.outs{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.outs div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px}
+.outs b{display:block;font-size:24px;color:var(--brand);letter-spacing:-.01em}.outs span{font-size:14px;color:var(--muted)}
+#gallery{scroll-margin-top:70px}
+@media(max-width:1000px){.layout{grid-template-columns:1fr;gap:0}.toc{position:static;max-height:none;border-bottom:1px solid var(--line)}.toc ol{columns:2;column-gap:12px}.mira{margin:0 -12px;padding-left:12px!important;padding-right:12px!important}}
+@media(max-width:860px){.ov,.pillars,.caps,.outs,.steps{grid-template-columns:1fr 1fr}.nnl,.uis,.pains,.eco-areas{grid-template-columns:1fr}.uishots{grid-template-columns:1fr 1fr}.toc ol{columns:1}}
+@media(max-width:520px){.ov,.pillars,.caps,.outs,.steps,.shots.two{grid-template-columns:1fr}}
+@media print{.layout{grid-template-columns:1fr}.toc{display:none}.caps{grid-template-columns:repeat(3,1fr)}}
+</style></head><body>
+<nav class="top"><div class="wrap"><a class="brand" href="#">Suvarna Myneni</a><div class="links"><a href="#overview">Overview</a><a href="#problem">Problem</a><a href="#mira">MIRA</a><a href="#dashboard">Dashboards</a><a href="#gallery">Screens</a><a href="https://headless-brenxsjtqad-motiveux-1408.wix-site-host.com">Portfolio</a></div><a class="btn" href="walkthrough.html">Open prototype →</a></div></nav>
+<header class="hero"><div class="wrap">
+<div class="eyebrow">Case study · UX design at eXp Realty</div>
+<h1>My eXp + MIRA</h1>
+<p class="subtitle">An AI-powered real estate platform with an intelligent agent assistant</p>
+<p class="lead">My eXp is the product ecosystem where an agent runs their business. MIRA is its intelligent AI layer: an agentic, conversational assistant that helps agents find answers, complete tasks and decide what to do next.</p>
+<div class="meta"><div><b>My role</b>Senior UX / Product Designer</div><div><b>Platform</b>Web Application · AI assistant</div><div><b>Tools</b>Lovable, ChatGPT, Claude, Figma</div></div>
+<p><a class="btn" href="walkthrough.html">Click through all 77 screens →</a> &nbsp; <a class="btn ghost" href="#mira">See MIRA</a> &nbsp; <a class="btn ghost" href="#gallery">Browse the screen gallery</a></p>
+<div class="heroimg"><a href="walkthrough.html#01" title="Open in walkthrough: Home — Modular home"><img loading="lazy" class="v2" src="img-v2/01-home.webp" alt="Home — Modular home" width="1440" height="1576"></a></div>
+<p class="note">Design work I did as a UX designer at eXp Realty on the My eXp agent portal; MIRA and some other areas are shown as earlier prototype designs. All names, figures and transactions shown are demo data and fictional. Shared for portfolio purposes; eXp and My eXp are trademarks of their respective owners.</p>
 </div></header>
-
+<div class="layout wrap">
+<aside class="toc"><b>Contents</b><ol><li><a href="#overview"><span>01</span>Project Overview</a></li><li><a href="#background"><span>02</span>Product Background – My eXp and MIRA</a></li><li><a href="#vision"><span>03</span>Business Context and Product Vision</a></li><li><a href="#problem"><span>04</span>Problem Discovery</a></li><li><a href="#research"><span>05</span>User Research and Agent Pain Points</a></li><li><a href="#competitive"><span>06</span>Competitive Analysis</a></li><li><a href="#strategy"><span>07</span>Product Strategy and Feature Prioritization</a></li><li><a href="#ia"><span>08</span>Information Architecture</a></li><li><a href="#journey"><span>09</span>Agent Journey Mapping</a></li><li><a href="#flows"><span>10</span>User Flows and Interaction Design</a></li><li><a href="#dashboard"><span>11</span>Dashboard UX and UI Design</a></li><li><a href="#before-after"><span>12</span>Before and After</a></li><li><a href="#mira"><span>13</span>MIRA – Agentic AI Experience Design</a></li><li><a href="#conversational"><span>14</span>Conversational UX and AI Workflows</a></li><li><a href="#prototyping"><span>15</span>Wireframing and Prototyping</a></li><li><a href="#design-system"><span>16</span>Design System and Components</a></li><li><a href="#usability"><span>17</span>Usability Testing and Iterations</a></li><li><a href="#handoff"><span>18</span>Development Handoff</a></li><li><a href="#outcomes"><span>19</span>Product Outcomes and Business Impact</a></li><li><a href="#learnings"><span>20</span>Learnings and Future Roadmap</a></li><li><a href="#gallery"><span>A</span>Screen gallery</a></li></ol></aside>
 <main>
-<section class="cs-section" id="role"><div class="wrap">
-  <div class="head"><div class="num">01</div><div><h2>My Role</h2><p>I designed My eXp and MIRA end to end, from the problem and the information architecture to the UI, the component patterns, and MIRA’s conversational experience.</p></div></div>
-  <div class="body">
-    <p>This is UX design work I did as a Senior UX / Product Designer at eXp Realty on the My eXp agent portal. MIRA and some other areas are shown as earlier prototype designs. I used Figma for wireframes, UI, and components; ChatGPT and Claude to synthesize research inputs, explore flows, and draft UX copy; and Lovable for the AI-assisted working prototype.</p>
-    <div class="grid g3">
-      <div class="card"><span class="tag">Product strategy</span><h3>Frame the product</h3><p>Set the vision of one personal platform, the goals (personal, legible, actionable, consistent, conversational, demo-ready), and the Now / Next / Later scope.</p></div>
-      <div class="card"><span class="tag">UX research</span><h3>Start from the agent’s day</h3><p>Centered the work on daily jobs and the questions agents need answered, then clustered those inputs into pain-point themes.</p></div>
-      <div class="card"><span class="tag">AI experience</span><h3>Design MIRA as a product surface</h3><p>Intents, suggested prompts, insight cards, confirmation, and recovery — not a help widget that only answers FAQs.</p></div>
-      <div class="card"><span class="tag">Dashboards</span><h3>Make dense business data readable</h3><p>Home, capping, RevShare earnings, organization reporting, Team, and Agent Desk, each answering a specific question.</p></div>
-      <div class="card"><span class="tag">Design systems</span><h3>One set of patterns</h3><p>KPI tiles, data tables, drawers, tabs, step flows, and the MIRA panel, so a pattern learned on one page works everywhere.</p></div>
-      <div class="card"><span class="tag">Prototype</span><h3>A stateful walkthrough</h3><p>Built a clickable Lovable prototype of 71 screens and states, since updated to 77, with 32 screens in the current design. Demo Config switches live scenarios.</p></div>
-    </div>
-    <p>Focus areas: product strategy, UX research, AI experience design, conversational UX, dashboard design, workflow automation, and design systems. <a href="https://headless-brenxsjtqad-motiveux-1408.wix-site-host.com">Portfolio</a></p>
-    <p>All names, figures, and transactions shown are demo data and fictional. Shared for portfolio purposes. eXp and My eXp are trademarks of their respective owners.</p>
-  </div>
-</div></section>
+<section id="overview" class="cs "><div class="secnum">01</div><h2>Project Overview</h2>
 
-<section class="cs-section" id="design"><div class="wrap">
-  <div class="head"><div class="num">02</div><div><h2>Design Process</h2><p>End-to-end, from discovery to delivery.</p></div></div>
-  <div class="body">
-    <div class="process">
-      <div class="step"><b>Discover</b><span>Framed the agent’s daily questions — cap, earnings, deals, mentorship, documents, help — and clustered inputs into pain themes with ChatGPT and Claude.</span></div>
-      <div class="step"><b>Define</b><span>Grouped the portal into My Desk, Business &amp; Growth, and Resources, plus a global header and MIRA. Wrote the product goals and the Now / Next / Later cut.</span></div>
-      <div class="step"><b>Ideate</b><span>Wireframed Home, RevShare, Agent Desk, the Mentor Program, and MIRA in Figma, including drawers and multi-step flows.</span></div>
-      <div class="step"><b>Prototype</b><span>Designed the visual UI and components in Figma, then built a stateful Lovable prototype with Demo Config so scenarios update live.</span></div>
-      <div class="step"><b>Test &amp; Deliver</b><span>Exercised drawers, drill-downs, and flows as real behavior. Wrote a five-task usability plan and a handoff package for engineering and QA.</span></div>
-    </div>
-    <p>My eXp is the main product ecosystem: the portal where an agent runs their business. MIRA is its intelligent AI layer, available across the whole ecosystem rather than living in one corner of it. MIRA floats on every screen, with suggested prompts, chat history, insight cards, and AI chat inside Contact eXpert Care.</p>
-    <div class="grid g2">
-      <div class="card"><h3>My eXp</h3><p>One place where an agent can see goals and capping progress, understand revenue share, run transactions, grow through mentorship, and find documents or help.</p></div>
-      <div class="card"><h3>MIRA</h3><p>A conversational assistant that answers questions about the agent’s business, surfaces insights, and helps them get things done. The same assistant powers support in Contact eXpert Care.</p></div>
-    </div>
-    <h3>Information architecture</h3>
-    <p>The sidebar groups the platform into three areas. A persistent header holds notifications, the account menu (with Demo Config), and Contact eXpert Care. MIRA floats on every screen.</p>
-    <div class="grid g2">
-      <div class="card"><h3>My Desk</h3><ul>
-        <li>Home — Customize Home Screen, Getting Started checklist</li>
-        <li>Broker Center — State Mentors table, mentor profile drawer</li>
-        <li>Agent — Dashboard, Agent Production Details, ICON Program, Custom Service Fees</li>
-        <li>Documents — Year-End, Downloads, Documents Portal</li>
-        <li>Events Calendar</li>
-      </ul></div>
-      <div class="card"><h3>Business &amp; Growth</h3><ul>
-        <li>Team — Dashboard, Team Reconciliation, Roster</li>
-        <li>RevShare Earnings — My Earnings (Revenue Share), My FLA with Unpaid / Expected / Last Paid, Revenue Share Group</li>
-        <li>My Organization — Overview Dashboard, Off-boarding Overview, Detail Report and downloads</li>
-        <li>Agent Desk — transaction workspace with seven tabs</li>
-        <li>Mentor Program — apply, mentor, and mentee views</li>
-      </ul></div>
-      <div class="card"><h3>Resources</h3><ul>
-        <li>Tools</li>
-        <li>Knowledge Base</li>
-        <li>Contact eXpert Care — call, AI chat, and email</li>
-      </ul></div>
-      <div class="card"><h3>Global</h3><ul>
-        <li>Notifications — Activity Feed and Recognition, filters, detail drawer</li>
-        <li>Account menu — Personal Details, Settings, Demo Config</li>
-        <li>MIRA assistant</li>
-      </ul></div>
-    </div>
-    <h3>Now, next, and later</h3>
-    <div class="grid g3">
-      <div class="card"><h3>Now · in the prototype</h3><p>77 screens and states (32 in the current design): Sign-in and onboarding (2), Home and personalization (14), Notifications and account (8), MIRA and help (4), Broker Center (4), Agent (9), Documents (2), Team (4), Training (1), RevShare Earnings (13), Agent Desk (9), Mentor Program (7).</p></div>
-      <div class="card"><h3>Next</h3><p>Remaining routes (Events Calendar, Tools, Knowledge Base, Downloads), mobile layouts for frequent on-the-go tasks, and an accessibility review.</p></div>
-      <div class="card"><h3>Later</h3><p>Deeper MIRA capabilities grounded in the agent’s own data, and task execution with human confirmation.</p></div>
-    </div>
-  </div>
-</div></section>
-
-<section class="cs-section" id="problem"><div class="wrap">
-  <div class="head"><div class="num">03</div><div><h2>Problem</h2><p>Agents were spending the day finding information instead of acting on it.</p></div></div>
-  <div class="body">
-    <p class="callout">How might we give an agent one personal, consistent platform that answers “where do I stand, and what should I do next?”, and let them get there by simply asking?</p>
-    <p>An agent’s working day spans many questions: how close they are to their goals and their cap, what they have earned in revenue share and when they will be paid, which deal needs attention, who their mentor is, and where to find a document or get help. When those answers live in separate tools and dense tables, the work is hunting, not deciding.</p>
-    <p>The product vision: a unified real estate platform that combines the My eXp agent experience with MIRA, an intelligent AI assistant that helps agents access information, complete tasks, navigate workflows, and make better business decisions through natural conversations.</p>
-    <div class="grid g2">
-      <div class="card"><h3>Scattered answers</h3><p>Goals, cap, revenue share, deals, mentorship, documents, and help sit in different places.</p></div>
-      <div class="card"><h3>Dense, hard-to-read data</h3><p>Earnings and the revenue share organization are hierarchical and table-heavy.</p></div>
-      <div class="card"><h3>No clear next step</h3><p>It isn’t obvious which deal or task needs attention right now.</p></div>
-      <div class="card"><h3>Inconsistent patterns</h3><p>When every area behaves differently, the interface has to be relearned page by page.</p></div>
-    </div>
-    <div class="card"><h3>Product goals</h3><ul>
-      <li><b>Personal:</b> a Home that reflects each agent’s own goals and progress</li>
-      <li><b>Legible:</b> make complex earnings and organization data easy to read</li>
-      <li><b>Actionable:</b> surface what needs attention next</li>
-      <li><b>Consistent:</b> one set of patterns across every area</li>
-      <li><b>Conversational:</b> let agents ask MIRA instead of hunting through menus</li>
-      <li><b>Demo-ready:</b> show many user states without separate accounts</li>
-    </ul></div>
-  </div>
-</div></section>
-
-<section class="cs-section" id="stakeholders"><div class="wrap">
-  <div class="head"><div class="num">04</div><div><h2>Stakeholders</h2><p>The people the portal has to serve, and how the design work was aimed at each of them.</p></div></div>
-  <div class="body">
-    <div class="scroll"><table>
-      <thead><tr><th>Stakeholder</th><th>What they need</th><th>How I worked with them</th></tr></thead>
-      <tbody>
-        <tr><td>Real estate agents</td><td>One place to see goals, cap, earnings, deals, documents, and help, and a clear next step.</td><td>Designed Home, My Earnings, Agent Desk, Documents, and help around the questions in their working day.</td></tr>
-        <tr><td>Mentors and mentees</td><td>A path to find a mentor, apply to become one, manage requests, and follow training.</td><td>Designed a journey for every mentorship state: Find Your Mentor, the application, the mentor dashboard, and the mentee view.</td></tr>
-        <tr><td>Team leaders</td><td>Readable team production and a revenue share organization they can report on.</td><td>Designed the Team dashboard, Organization Reporting, and the Revenue Share Group report, including background downloads.</td></tr>
-        <tr><td>Brokerage reviewers</td><td>See realistic journeys in a demo without standing up separate accounts.</td><td>Built Demo Config into the account menu — mentor modes, capping scenarios including CAP REACHED, ICON toggles, country, and FLQA — so one prototype can switch live.</td></tr>
-        <tr><td>eXpert Care support</td><td>Agents can reach a person or get an answer without a dead end.</td><td>Kept call, AI chat, and email on Contact eXpert Care, and used the same MIRA panel for AI chat and for insights.</td></tr>
-        <tr><td>Engineering and QA</td><td>Screens, states, interaction behavior, and conversation rules they can build and test.</td><td>Specified the handoff package: Figma screens and states, the Lovable prototype as interaction reference, notes for drawers, tabs, tables, and multi-step flows, MIRA specs, Demo Config scenarios, and accessibility notes. The case study does not record a handoff date.</td></tr>
-      </tbody>
-    </table></div>
-  </div>
-</div></section>
-
-<section class="cs-section" id="users"><div class="wrap">
-  <div class="head"><div class="num">05</div><div><h2>End Users</h2><p>A real estate agent who runs their business from the portal every day: tracking goals and capping, checking revenue share and payouts, moving transactions forward, working with a mentor, and finding documents or help.</p></div></div>
-  <div class="body">
-    <div class="grid g3">
-      <div class="card"><h3>New agent</h3><p>Looking for a mentor. Home leads with Getting Started, a Find Your Mentor card, and a countdown. They compare mentor cards and profiles, or let the system choose.</p></div>
-      <div class="card"><h3>Agent who just capped</h3><p>Capping is a milestone. The CAP REACHED state turns goals green, adds goal-reached badges, and pairs with the Recognition tab.</p></div>
-      <div class="card"><h3>Certified mentor</h3><p>Manages mentees and pending requests (Accept / Decline) and keeps a public profile from the mentor dashboard.</p></div>
-      <div class="card"><h3>Active mentee</h3><p>Follows their mentor’s training. The mentee view shows the mentor, training materials, and progress.</p></div>
-      <div class="card"><h3>Agent with a team</h3><p>Reads team production and a revenue share organization: levels, cap percentage, payout status, and organization reports.</p></div>
-      <div class="card"><h3>Anyone who needs help</h3><p>Looks up a document or starts Contact eXpert Care by call, AI chat, or email. MIRA is one click away on every screen.</p></div>
-    </div>
-  </div>
-</div></section>
-
-<section class="cs-section" id="research"><div class="wrap">
-  <div class="head"><div class="num">06</div><div><h2>Research Methods</h2><p>The framework centers on the agent’s daily jobs and the questions they need answered. Participant counts and verbatim quotes are not part of this write-up.</p></div></div>
-  <div class="body">
-    <div class="grid g2">
-      <div class="card"><span class="tag">Daily jobs</span><h3>Questions before features</h3><p>Mapped the working day to the questions agents actually ask: cap progress, what they earned and when they are paid, which deal needs attention, who their mentor is, and where a document or a person is. Key insight: answers were scattered, so agents spent effort finding information instead of acting on it.</p></div>
-      <div class="card"><span class="tag">Synthesis</span><h3>Themes, with ChatGPT and Claude</h3><p>ChatGPT and Claude supported synthesis, clustering inputs into five themes: scattered information, hard-to-read earnings, unclear next action, getting help, and growth and mentorship. Design decisions stayed with me.</p></div>
-      <div class="card"><span class="tag">Journey mapping</span><h3>A day, with a role for MIRA</h3><p>Mapped six stages — start the day, check earnings, move deals, grow, get help, celebrate — to portal touchpoints and to the job MIRA is designed to do at each step.</p></div>
-      <div class="card"><span class="tag">Category review</span><h3>Same criteria, three kinds of product</h3><p>Compared brokerage portals, CRM and transaction tools, and AI assistants on one set of criteria: a unified view, legible earnings, next-action guidance, AI grounded in the agent’s own data, and human control.</p></div>
-      <div class="card"><span class="tag">Scenario coverage</span><h3>Roles the design has to hold</h3><p>The same prototype has to walk a new agent looking for a mentor, an agent who just capped, a certified mentor, a mentee, and an agent with a team. Demo Config makes three of those journeys switchable live.</p></div>
-      <div class="card"><span class="tag">Usability plan</span><h3>Five tasks, results not yet reported</h3><p>A test plan covers finding cap progress, the next payout, the deal that needs attention, asking MIRA about a GCI trend and pinning it, and choosing a mentor. Observe task success, time on task, errors, confusion, and trust in MIRA’s answers. Measured results are not in this case study.</p></div>
-    </div>
-    <h3>Pain-point themes</h3>
-    <div class="scroll"><table>
-      <thead><tr><th>Theme</th><th>What it means for the agent</th><th>How the design responds</th></tr></thead>
-      <tbody>
-        <tr><td>Scattered information</td><td>Answers about goals, cap, earnings, and deals are spread across tools.</td><td>One Home, one sidebar, and MIRA available on every screen.</td></tr>
-        <tr><td>Hard-to-read earnings</td><td>RevShare levels, payouts, and the organization are dense and hierarchical.</td><td>My Earnings, payout tabs (Unpaid / Expected / Last Paid), Revenue Share Group, and Organization Reporting.</td></tr>
-        <tr><td>Unclear next action</td><td>No single view of what needs attention today.</td><td>Agent Desk opens on the pipeline and a “Needs your attention” list.</td></tr>
-        <tr><td>Getting help</td><td>Finding a document or the right support channel takes effort.</td><td>Documents, plus Contact eXpert Care with call, AI chat, and email.</td></tr>
-        <tr><td>Growth and mentorship</td><td>Finding a mentor and tracking progress has many states.</td><td>Separate journeys for a new agent, an applicant, a mentor, and a mentee.</td></tr>
-      </tbody>
-    </table></div>
-    <h3>Agent journey</h3>
-    <p>A journey through a working day, mapped to touchpoints and to the role MIRA is designed to play. The last column is the pain theme that stage was designed against, not a quote from a session.</p>
-    <div class="scroll"><table>
-      <thead><tr><th>Stage</th><th>Agent goal</th><th>Touchpoints</th><th>MIRA’s role (design intent)</th><th>Pain the stage answers</th></tr></thead>
-      <tbody>
-        <tr><td>Start the day</td><td>See where I stand</td><td>Home: Getting Started, Capping Year, Scheduled Training</td><td>Summarize progress and what changed</td><td>Scattered answers; progress is hard to see in one place</td></tr>
-        <tr><td>Check earnings</td><td>Know what I earned and when I get paid</td><td>My Earnings, Unpaid / Expected / Last Paid, Revenue Share Group</td><td>Explain trends; start a payout with confirmation</td><td>Dense, hierarchical earnings</td></tr>
-        <tr><td>Move deals forward</td><td>Act on what needs attention</td><td>Agent Desk, Needs your attention, transaction workspace</td><td>Recommend the next action on a deal</td><td>No clear next step</td></tr>
-        <tr><td>Grow</td><td>Find or be a mentor</td><td>Mentor Program, Choose Mentor drawer, mentor dashboard</td><td>Guide through the right mentorship journey</td><td>Many mentorship states</td></tr>
-        <tr><td>Get help</td><td>Find a document or an answer fast</td><td>Documents, Contact eXpert Care (call, AI chat, email)</td><td>Answer or route to the right human channel</td><td>Help and documents take effort to find</td></tr>
-        <tr><td>Celebrate</td><td>Mark milestones</td><td>CAP REACHED state, Recognition tab</td><td>Highlight milestones and peers to recognize</td><td>Milestones pass without a recognition moment</td></tr>
-      </tbody>
-    </table></div>
-  </div>
-</div></section>
-
-<section class="cs-section" id="competitive"><div class="wrap">
-  <div class="head"><div class="num">07</div><div><h2>Competitive Analysis</h2><p>Three categories agents already use, judged on the same criteria. This case study does not name specific products or publish a scored audit.</p></div></div>
-  <div class="body">
-    <p>I looked at each category for a unified view of the business, legibility of earnings data, next-action guidance, AI grounded in the agent’s own data, and human control over important actions.</p>
-    <div class="scroll"><table>
-      <thead><tr><th>Category</th><th>What I looked at</th><th>Gap the portal was designed against</th><th>Opportunity for My eXp + MIRA</th></tr></thead>
-      <tbody>
-        <tr><td>Brokerage agent portals</td><td>Dashboards, earnings, and transaction views</td><td>Goals, cap, revenue share, deals, and help often sit apart, and earnings stay table-heavy, so the agent hunts for “where do I stand?”</td><td>A personal Home with Getting Started, Capping Year (GCI, Volume, Units, Revenue Share), training, and tiles the agent can rearrange.</td></tr>
-        <tr><td>CRM and transaction-management tools</td><td>Pipelines, checklists, documents, and tables</td><td>Strong as systems of record, weaker at naming the single next action and at keeping every fact about one deal in one workspace.</td><td>Agent Desk with “Needs your attention” and a transaction workspace: Overview, Contacts, Commission, Checklist, Documents, Activity, Comments.</td></tr>
-        <tr><td>AI assistants and copilots</td><td>Conversation design, grounding, actions, and confirmation</td><td>A general chat can answer a question. It is not grounded in that agent’s cap, earnings, and pipeline, and it can act without showing what will happen.</td><td>MIRA on every screen: suggested prompts, chart insight cards that pin to the dashboard, and Review, Confirm, Done before anything that changes money or data. A person is still available in eXpert Care.</td></tr>
-      </tbody>
-    </table></div>
-  </div>
-</div></section>
-
-<section class="cs-section" id="personas"><div class="wrap">
-  <div class="head"><div class="num">08</div><div><h2>User Personas</h2><p>Representative personas based on the agent roles and journeys this case study already describes. They are not transcripts of named research participants.</p></div></div>
-  <div class="body">
-    <div class="grid g2">
-      <div class="card persona"><div class="avatar">AC</div><div><h3>Avery Chen, new agent</h3><p>First 90 days. Getting Started is still open, and a mentor has not been chosen. Goals: finish onboarding, pick a mentor, and understand Capping Year. Frustrations: training, documents, and mentor search live in different places, and a blank chat box does not show what MIRA can do. Needs the checklist on Home, the Choose Mentor drawer (compare profiles or let the system choose), and suggested prompts.</p></div></div>
-      <div class="card persona"><div class="avatar">JH</div><div><h3>Jordan Hale, producing agent</h3><p>An active pipeline and a cap still in progress. Goals: see cap progress, know Unpaid, Expected Next, and Last Paid, and act on the deal that needs attention. Frustrations: RevShare levels are hierarchical, and nothing says what to do today. Needs the Capping Year tile, My Earnings, Agent Desk’s “Needs your attention” list, and Get Paid Now with the fee and total shown before confirm.</p></div></div>
-      <div class="card persona"><div class="avatar">ME</div><div><h3>Morgan Ellis, certified mentor</h3><p>Responsible for mentees and for a public profile. Goals: see mentees, clear pending requests, and keep the profile current. Frustrations: mentorship has many states, and a request is easy to miss. Needs the mentor dashboard, Accept / Decline on pending requests, and profile view and edit.</p></div></div>
-      <div class="card persona"><div class="avatar">SP</div><div><h3>Sam Patel, active mentee</h3><p>Matched with a mentor and working through training. Goals: see the mentor, the materials, and progress in one place. Frustrations: growth tasks split across the relationship and the training calendar. Needs the mentee dashboard and Scheduled Training on Home.</p></div></div>
-      <div class="card persona"><div class="avatar">RO</div><div><h3>Riley Okonkwo, team leader</h3><p>A team and a revenue share organization. Goals: read Units, Volume, and Team Lead Split, understand the organization, and export a detail report. Frustrations: org data is dense, and a report can be too large to show on screen. Needs the Team dashboard, Organization Reporting (Overview, Off-boarding, Detail Report), and a download that finishes in Notifications.</p></div></div>
-    </div>
-  </div>
-</div></section>
-
-<section class="cs-section" id="decisions"><div class="wrap">
-  <div class="head"><div class="num">09</div><div><h2>Design Decisions</h2><p>Each choice keeps the agent in context: a personal Home, legible earnings, one workspace per deal, and the same patterns everywhere.</p></div></div>
-  <div class="body">
-    <div class="card">
-      <h3>A personalized Home that answers “where do I stand?”</h3>
-      <p>Home is a modular set of tiles: a Getting Started checklist for new agents, Capping Year progress with GCI, Volume, Units, and Revenue Share, Scheduled Training, Achievements, What’s New, and Upline Partners. Home changes with the agent’s stage. The Getting Started checklist leads for new joiners and drops away after the first 90 days.</p>
-      <p>Customize Home Screen lets each agent drag tiles into the order they want, with Reset to Default, Cancel, and Save Changes, and a short first-run overlay that explains how. Trade-off: customize mode is another state to learn, so the overlay and Reset to Default are the way out.</p>
-      <p>Before: a light sidebar and a mission-control layout of goal KPIs (Homes Closed, Commission, Sales Volume), Weekly Quests, and a capping ring. After: dark navy navigation, a full-width announcement banner, and the modular tiles above. Source for the current Home: Home-Screens Figma file.</p>
-      <div class="grid g2">
-        <figure class="figure"><a href="img/01-home.webp"><img class="frame" src="img/01-home.webp" alt="Before: Home — Mission Control" width="1600" height="893"></a><figcaption>Before · Home — Mission Control</figcaption></figure>
-        <figure class="figure"><a href="walkthrough.html#01"><img class="frame" src="img-v2/01-home.webp" alt="After: Home — Modular home" width="1440" height="1576"></a><figcaption>After · Home — Modular home</figcaption></figure>
-        <figure class="figure"><a href="walkthrough.html#h1"><img class="frame" src="img-v2/home-getting-started.webp" alt="Home — Getting Started (new agent)" width="1440" height="1395"></a><figcaption>Getting Started, for a new agent</figcaption></figure>
-        <figure class="figure"><a href="img/02-home-customize.webp"><img class="frame" src="img/02-home-customize.webp" alt="Before: Home — Customize mode" width="1600" height="893"></a><figcaption>Before · drag handles, Done, Reset layout</figcaption></figure>
-        <figure class="figure"><a href="walkthrough.html#02"><img class="frame" src="img-v2/02-home-customize.webp" alt="After: Home — Customize Home Screen" width="1440" height="1269"></a><figcaption>After · dashed tiles, Reset to Default, Cancel, Save Changes</figcaption></figure>
-        <figure class="figure"><a href="walkthrough.html#h5"><img class="frame" src="img-v2/home-customize-move-tile.webp" alt="Customize — moving a tile" width="1440" height="1269"></a><figcaption>Customize — moving a tile</figcaption></figure>
-      </div>
-    </div>
-
-    <div class="card">
-      <h3>Capping progress as a moment, not a number</h3>
-      <p>Capping is one of the most meaningful milestones for an agent, so it is a recurring visual thread: the Capping Year progress bar on Home, a year-by-year capping history timeline on the Agent dashboard, and a CAP REACHED celebration state that turns goals green and adds goal-reached badges. Trade-off: the celebration is a scenario state, not the everyday layout, so the default Home stays calm until the milestone is real.</p>
-      <div class="grid g2">
-        <figure class="figure"><a href="walkthrough.html#69"><img class="frame" src="img/69-home-capped-state.webp" alt="Home — CAP REACHED scenario" width="1600" height="893"></a><figcaption>Home — CAP REACHED</figcaption></figure>
-        <figure class="figure"><a href="walkthrough.html#22"><img class="frame" src="img/22-agent-dashboard.webp" alt="Agent Performance dashboard" width="1600" height="893"></a><figcaption>Agent Performance dashboard, capping history</figcaption></figure>
-      </div>
-    </div>
-
-    <div class="card">
-      <h3>RevShare, split into jobs an agent can finish</h3>
-      <p>RevShare data is dense and hierarchical. I split it into clear jobs. My Earnings opens on Revenue Share with My FLA, My FLQA, My New Agents, and My Prospective Agents cards, a Revenue Share Group donut with agent counts per level, and Unpaid, Expected Next, and Last Paid amounts that each open an agent-level table. The Revenue Share Group report lists every agent with level, cap percentage, and amount, and a side panel for details.</p>
-      <p>Organization Reporting separates an Overview Dashboard (KPI tiles, year-to-date revenue share and volume, agent mix, and per-level charts), an Off-boarding Overview, and a Detail Report. Large reports download in the background and land in Notifications, with a clear state when a report is too large to display. Trade-off: more screens than one earnings page, and each screen answers one question instead of stacking every chart.</p>
-      <p>Current earnings, payout, group, and organization screens are from the Cosmo Transition and Organization Figma files.</p>
-      <div class="grid g2">
-        <figure class="figure"><a href="img/42-revshare-dashboard.webp"><img class="frame" src="img/42-revshare-dashboard.webp" alt="Before: RevShare Dashboard" width="1600" height="893"></a><figcaption>Before · YTD revenue share, Get Paid Now, level ladder</figcaption></figure>
-        <figure class="figure"><a href="walkthrough.html#42"><img class="frame" src="img-v2/42-my-earnings-revshare.webp" alt="After: My Earnings — Revenue Share" width="1440" height="1024"></a><figcaption>After · Revenue Share and GCI tabs, FLA / FLQA cards, donut, Unpaid / Expected / Last Paid</figcaption></figure>
-        <figure class="figure"><a href="img/53-revshare-financials.webp"><img class="frame" src="img/53-revshare-financials.webp" alt="Before: Financials — Unpaid" width="1600" height="893"></a><figcaption>Before · summary above an agent table</figcaption></figure>
-        <figure class="figure"><a href="walkthrough.html#53"><img class="frame" src="img-v2/53-revshare-unpaid.webp" alt="After: My Revenue Share — Unpaid" width="1440" height="1024"></a><figcaption>After · Unpaid, Expected, and Last Paid as tabs, plus Download</figcaption></figure>
-        <figure class="figure"><a href="img/51-revshare-group.webp"><img class="frame" src="img/51-revshare-group.webp" alt="Before: Revenue Share Group" width="1600" height="893"></a><figcaption>Before · group table with date, status, country, and level filters</figcaption></figure>
-        <figure class="figure"><a href="walkthrough.html#51"><img class="frame" src="img-v2/51-revshare-group.webp" alt="After: Reports — Rev Share Group" width="1440" height="1024"></a><figcaption>After · Rev Share Group and Rev Share from Team tabs</figcaption></figure>
-        <figure class="figure"><a href="img/47-revshare-organization.webp"><img class="frame" src="img/47-revshare-organization.webp" alt="Before: Organization Dashboard" width="1600" height="893"></a><figcaption>Before · leader tier, month-over-month KPIs, productivity by country</figcaption></figure>
-        <figure class="figure"><a href="walkthrough.html#47"><img class="frame" src="img-v2/47-org-overview.webp" alt="After: Organization Reporting — Overview Dashboard" width="1440" height="1569"></a><figcaption>After · Overview, Off-boarding, and Detail Report</figcaption></figure>
-        <figure class="figure"><a href="walkthrough.html#o3"><img class="frame" src="img-v2/org-detail-report.webp" alt="Organization — Detail Report" width="1440" height="1024"></a><figcaption>Detail Report, with Filter and Download</figcaption></figure>
-      </div>
-    </div>
-
-    <div class="card">
-      <h3>Agent Desk: one workspace per transaction</h3>
-      <p>Agent Desk starts with the active pipeline and a “Needs your attention” list so the next action is obvious. Each transaction opens into a workspace with persistent key facts (agent, buyer, expected close, days on market, price) and tabs for Overview, Contacts, Commission, Checklist, Documents, Activity, and Comments. Trade-off: seven tabs are more structure than one long page, and they keep commission, documents, and comments from collapsing into a single dense view.</p>
-      <div class="grid g2">
-        <figure class="figure"><a href="walkthrough.html#54"><img class="frame" src="img/54-agent-desk.webp" alt="Agent Desk" width="1600" height="893"></a><figcaption>Agent Desk</figcaption></figure>
-        <figure class="figure"><a href="walkthrough.html#56"><img class="frame" src="img/56-transaction-detail.webp" alt="Transaction — Overview" width="1600" height="893"></a><figcaption>Transaction — Overview</figcaption></figure>
-        <figure class="figure"><a href="walkthrough.html#59"><img class="frame" src="img/59-deal-checklist.webp" alt="Transaction — Checklist" width="1600" height="893"></a><figcaption>Transaction — Checklist</figcaption></figure>
-        <figure class="figure"><a href="walkthrough.html#61"><img class="frame" src="img/61-deal-activity.webp" alt="Transaction — Activity" width="1600" height="893"></a><figcaption>Transaction — Activity</figcaption></figure>
-      </div>
-    </div>
-
-    <div class="card">
-      <h3>One table pattern</h3>
-      <p>Much of the portal is tabular, so one data-table pattern covers it: search and filter chips, a column manager, Save View, Download, per-column search, pagination, and row click to open a detail drawer. Once an agent learns it, it works the same on State Mentors, Production Details, Team Reconciliation, Revenue Share Group, and My Mentees. Trade-off: the column manager and Save View are more controls than a plain table, and they remove the need to relearn each report.</p>
-      <div class="grid g2">
-        <figure class="figure"><a href="walkthrough.html#19"><img class="frame" src="img/19-broker-state-mentors.webp" alt="State Mentors table" width="1600" height="893"></a><figcaption>State Mentors table</figcaption></figure>
-        <figure class="figure"><a href="walkthrough.html#21"><img class="frame" src="img/21-table-column-manager.webp" alt="Table column manager" width="1600" height="893"></a><figcaption>Column manager</figcaption></figure>
-        <figure class="figure"><a href="walkthrough.html#24"><img class="frame" src="img/24-agent-production-details.webp" alt="Agent Production Details" width="1600" height="893"></a><figcaption>Agent Production Details</figcaption></figure>
-        <figure class="figure"><a href="walkthrough.html#25"><img class="frame" src="img/25-transaction-details.webp" alt="Transaction Details drawer" width="1600" height="893"></a><figcaption>Transaction details drawer</figcaption></figure>
-      </div>
-    </div>
-
-    <div class="card">
-      <h3>Team dashboard, simplified to the numbers that move</h3>
-      <p>Before: team production, onboarding agents, Top Agents tabs, and Mega Team re-qualification progress. After: Units, Volume, and Team Lead Split tiles with pending values, a currency selector and Filter, and Top Agents tabs for Units Sold and Highest Volume. Source: Cosmo Transition Figma file. Trade-off: some of the earlier re-qualification detail is not on this dashboard; the first screen stays readable.</p>
-      <div class="grid g2">
-        <figure class="figure"><a href="img/38-team-dashboard.webp"><img class="frame" src="img/38-team-dashboard.webp" alt="Before: Team Dashboard" width="1600" height="893"></a><figcaption>Before · Team dashboard</figcaption></figure>
-        <figure class="figure"><a href="walkthrough.html#38"><img class="frame" src="img-v2/38-team-dashboard.webp" alt="After: Team dashboard" width="1440" height="1024"></a><figcaption>After · Team dashboard</figcaption></figure>
-      </div>
-    </div>
-
-    <div class="card">
-      <h3>Notifications with context</h3>
-      <p>Notifications became a full page with an Activity Feed and a Recognition tab, quick date and type filters, and a detail drawer that explains the event in context (capping details, ICON status, top transaction). Recognition items include a send-a-gift action so agents can celebrate peers. The current design simplifies the list: one Filter button, category tags, and inline actions such as “Say Congrats!” and “Invite to a Training.” Source: Cosmo Transition Figma file. Trade-off: the current list drops some of the earlier filter chrome in favor of actions on the row.</p>
-      <div class="grid g2">
-        <figure class="figure"><a href="img/06-notifications.webp"><img class="frame" src="img/06-notifications.webp" alt="Before: Notifications — My Activity Feed" width="1600" height="893"></a><figcaption>Before · activity feed with tabs, search, and filters</figcaption></figure>
-        <figure class="figure"><a href="walkthrough.html#06"><img class="frame" src="img-v2/06-notifications.webp" alt="After: Notifications" width="1440" height="1024"></a><figcaption>After · Notifications</figcaption></figure>
-        <figure class="figure"><a href="walkthrough.html#08"><img class="frame" src="img/08-notification-detail.webp" alt="Notification detail drawer" width="1600" height="893"></a><figcaption>Notification detail drawer</figcaption></figure>
-      </div>
-    </div>
-
-    <div class="card">
-      <h3>Mentor Program flows for every role and state</h3>
-      <p>Mentorship has many states, so it is a set of journeys. A new agent sees a Find Your Mentor card with a countdown, compares mentor cards and profiles, or lets the system choose. Agents apply to become mentors through a prefilled multi-step application. Certified mentors get a dashboard for mentees, pending requests (Accept / Decline), and their own public profile. Mentees see their mentor, training materials, and progress. Key flows stay in context: the application is Start, prefilled from profile, multi-step form, Submit. Trade-off: more screens than a single Mentor page, and each role lands in the right state instead of a generic form.</p>
-      <div class="grid g2">
-        <figure class="figure"><a href="walkthrough.html#70"><img class="frame" src="img/70-home-needs-mentor.webp" alt="Home — Needs Mentor scenario" width="1600" height="893"></a><figcaption>Home — Needs Mentor</figcaption></figure>
-        <figure class="figure"><a href="walkthrough.html#71"><img class="frame" src="img/71-choose-mentor-drawer.webp" alt="Choose Mentor drawer" width="1600" height="893"></a><figcaption>Choose Mentor drawer</figcaption></figure>
-        <figure class="figure"><a href="walkthrough.html#73"><img class="frame" src="img/73-mentor-active-dashboard.webp" alt="Mentor — Active dashboard" width="1600" height="893"></a><figcaption>Mentor — active dashboard</figcaption></figure>
-        <figure class="figure"><a href="walkthrough.html#77"><img class="frame" src="img/77-mentee-dashboard.webp" alt="Mentor Program — Active Mentee" width="1600" height="893"></a><figcaption>Active mentee</figcaption></figure>
-      </div>
-    </div>
-
-    <div class="card">
-      <h3>Demo Config, so one prototype tells several stories</h3>
-      <p>To demo realistic journeys without fake accounts, Demo Configuration sits in the account menu: mentor modes, capping scenarios (including CAP REACHED), ICON toggles, country, and FLQA states. Switching a scenario updates the live UI. A sidebar Demo Toggles menu covers the common switches during a walkthrough. The same prototype can show a new agent looking for a mentor, an agent who just capped, and a certified mentor in one session. Trade-off: demo controls are a designer and stakeholder tool, not an agent-facing feature, so they live in the account menu rather than in the everyday nav.</p>
-      <div class="grid g2">
-        <figure class="figure"><a href="walkthrough.html#14"><img class="frame" src="img/14-demo-config.webp" alt="Demo Configuration" width="1600" height="893"></a><figcaption>Demo Configuration</figcaption></figure>
-        <figure class="figure"><a href="walkthrough.html#68"><img class="frame" src="img/68-demo-capped-celebration.webp" alt="Demo Config — Capped scenario" width="1600" height="893"></a><figcaption>Demo Config — capped scenario</figcaption></figure>
-      </div>
-    </div>
-  </div>
-</div></section>
-
-<section class="cs-section" id="prototype"><div class="wrap">
-  <div class="head"><div class="num">10</div><div><h2>Prototype</h2><p>A clickable, stateful prototype, not a stack of static frames. <a href="walkthrough.html">Open all 77 screens</a>.</p></div></div>
-  <div class="body">
-    <p>Building the prototype in Lovable meant drawers, drill-downs, multi-step flows, and MIRA’s panel could be tested as real behavior. The walkthrough links screens the way the app does. Arrow keys move next and previous. On earlier-prototype screens, hotspots are available and H shows them. MIRA’s answers in the prototype are scripted to demonstrate the experience.</p>
-    <div class="grid g3">
-      <div class="card"><span class="tag">ChatGPT · Claude</span><h3>Understand</h3><p>Framed the agent’s daily questions and jobs, and synthesized research inputs into goals.</p></div>
-      <div class="card"><span class="tag">Structure</span><h3>Information architecture</h3><p>Grouped the platform into My Desk, Business &amp; Growth, and Resources, plus a global header and MIRA.</p></div>
-      <div class="card"><span class="tag">Figma</span><h3>Wireframe</h3><p>Sketched layouts and flows for Home, RevShare, Agent Desk, the Mentor Program, and MIRA.</p></div>
-      <div class="card"><span class="tag">Figma</span><h3>Visual UI and components</h3><p>KPI cards, data tables, drawers, and tabs, with a consistent type, color, and spacing hierarchy.</p></div>
-      <div class="card"><span class="tag">Lovable</span><h3>Prototype</h3><p>Built 71 screens and states as a stateful app, with Demo Config to switch scenarios live. The walkthrough now holds 77, including the current-design updates.</p></div>
-      <div class="card"><span class="tag">Lovable · ChatGPT · Claude</span><h3>Iterate</h3><p>Tested drawers, drill-downs, and multi-step flows as real behavior, and refined layout and UX copy.</p></div>
-    </div>
-    <h3>Flows that keep the agent in context</h3>
-    <div class="grid g3">
-      <div class="card"><h3>Get Paid Now</h3><p>Review → Verify → Confirm → Done. The fee and the total are shown before any commitment. Organization Tree is the same idea of staying oriented: Level → Drill in → Up one level, with a depth breadcrumb.</p></div>
-      <div class="card"><h3>Mentor application</h3><p>Start → prefilled from the profile → multi-step form → Submit. Drawers, not new pages, for choosing a mentor and reading a profile.</p></div>
-      <div class="card"><h3>Report downloads</h3><p>A large Detail Report prepares in the background and is delivered to Notifications. If it is too big to display, the page says so instead of failing silently.</p></div>
-    </div>
-    <h3>MIRA, beyond a chatbot</h3>
-    <p>MIRA is designed to go beyond a traditional chatbot. Rather than a help widget that answers FAQs, it is an assistant that understands what the agent is trying to do, uses the context of their business, and helps them act, with the agent always in control.</p>
-    <div class="grid g2">
-      <div class="card"><h3>In the prototype</h3><ul>
-        <li>Floats on every screen, one click away from Home and every other area</li>
-        <li>Opens with a greeting, suggested prompts (GCI trends, listing velocity, active pipeline), and chat history</li>
-        <li>Answers with chart insight cards that can be pinned to the dashboard</li>
-        <li>The same MIRA panel powers AI chat in Contact eXpert Care, so help and insights share one entry point</li>
-      </ul></div>
-      <div class="card"><h3>Conversation principles</h3><ul>
-        <li>Start with prompts, not a blank box</li>
-        <li>Show, don’t tell: a short summary and a chart insight card</li>
-        <li>Pin an insight card so the answer is useful later</li>
-        <li>Chat history keeps earlier questions close</li>
-        <li>Plain language: UX copy drafted with ChatGPT and Claude, then edited for tone</li>
-        <li>Always a way out: call or email in Contact eXpert Care</li>
-      </ul></div>
-    </div>
-    <div class="grid g2">
-      <figure class="figure"><a href="walkthrough.html#16"><img class="frame" src="img/16-assistant-chat.webp" alt="MIRA assistant" width="1600" height="893"></a><figcaption>MIRA assistant, with suggested prompts</figcaption></figure>
-      <figure class="figure"><a href="walkthrough.html#17"><img class="frame" src="img/17-assistant-answer.webp" alt="MIRA — GCI Trends answer" width="1600" height="893"></a><figcaption>GCI trends, answered as an insight card</figcaption></figure>
-      <figure class="figure"><a href="walkthrough.html#66"><img class="frame" src="img/66-help-center.webp" alt="Contact eXpert Care" width="1600" height="893"></a><figcaption>Contact eXpert Care</figcaption></figure>
-      <figure class="figure"><a href="walkthrough.html#67"><img class="frame" src="img/67-help-ai-chat.webp" alt="Help — AI chat with MIRA" width="1600" height="893"></a><figcaption>Help — AI chat uses the same MIRA panel</figcaption></figure>
-    </div>
-    <p>Labels mark how far each capability got. Prototyped means it is in the prototype. Designed pattern means the interaction principle is specified. Roadmap means it is planned, not built in this prototype.</p>
-    <div class="grid g3">
-      <div class="card"><span class="tag">Prototyped</span><h3>Natural-language conversations</h3><p>Agents ask in their own words, starting from suggested prompts such as GCI trends, listing velocity, and active pipeline.</p></div>
-      <div class="card"><span class="tag">Designed pattern</span><h3>Understanding agent intent</h3><p>Requests are framed as intents — get an insight, find something, do a task, get help — so MIRA can respond in the right way.</p></div>
-      <div class="card"><span class="tag">Designed pattern</span><h3>Context-aware responses</h3><p>Answers take into account where the agent is and what they are looking at, and come back as chart insight cards rather than walls of text.</p></div>
-      <div class="card"><span class="tag">Roadmap</span><h3>Accessing the agent’s own data</h3><p>Answers draw on the agent’s own goals, earnings, pipeline, and documents.</p></div>
-      <div class="card"><span class="tag">Designed pattern</span><h3>Assisting with business workflows</h3><p>MIRA hands the agent into existing flows such as Get Paid Now, a transaction checklist, or the mentor application, instead of replacing them.</p></div>
-      <div class="card"><span class="tag">Designed pattern</span><h3>Recommending next actions</h3><p>Like “Needs your attention” on Agent Desk, MIRA suggests what to do next and links to it.</p></div>
-      <div class="card"><span class="tag">Roadmap</span><h3>Task execution through AI agents</h3><p>MIRA prepares and runs multi-step tasks on the agent’s behalf.</p></div>
-      <div class="card"><span class="tag">Designed pattern</span><h3>Human confirmation and control</h3><p>Important actions follow the Get Paid Now model: show exactly what will happen, then Review, Confirm, and Done. Nothing important happens without the agent’s approval. Trade-off: the confirm step adds a beat, and it keeps money and data changes from firing on their own.</p></div>
-      <div class="card"><span class="tag">Designed pattern</span><h3>Error handling and recovery</h3><p>When a request is unclear or fails, MIRA asks a clarifying question, offers options, or routes to a human in Contact eXpert Care.</p></div>
-    </div>
-    <h3>AI workflows</h3>
-    <div class="grid g2">
-      <div class="card"><span class="tag">Prototyped</span><h3>Insight</h3><p>Ask about GCI trends, get a chart insight card, and pin it to the dashboard.</p></div>
-      <div class="card"><span class="tag">Prototyped</span><h3>Support</h3><p>Start AI Chat in Contact eXpert Care. The same MIRA panel answers.</p></div>
-      <div class="card"><span class="tag">Designed pattern</span><h3>Navigate</h3><p>Ask for a document. MIRA links to the right place in Documents.</p></div>
-      <div class="card"><span class="tag">Designed pattern</span><h3>Act</h3><p>Ask to get paid. MIRA opens Get Paid Now with the fee and total. The agent confirms.</p></div>
-      <div class="card"><span class="tag">Roadmap</span><h3>Next step</h3><p>MIRA flags a deal that needs attention and prepares the next task for approval.</p></div>
-    </div>
-    <h3>Conversation flow</h3>
-    <p>Insight-only answers end at the response. Anything that changes data or money goes through Confirm. Unclear, declined, or failed requests recover and return to intent.</p>
-    <div class="card scroll">
-      <svg viewBox="0 0 1020 280" role="img" aria-label="MIRA conversation flow: intent, context, response or action, confirm, execute, with a recovery path back to intent" style="width:100%;height:auto;min-width:720px">
-        <g font-family="Inter,system-ui,sans-serif" text-anchor="middle">
-          <rect x="6" y="44" width="176" height="80" rx="14" fill="#EEF0FD" stroke="#3B4FE0"/>
-          <text x="94" y="78" font-size="17" font-weight="700" fill="#14161A">1 · Intent</text>
-          <text x="94" y="102" font-size="12" fill="#5B6270">What does the agent want?</text>
-          <rect x="210" y="44" width="176" height="80" rx="14" fill="#EEF0FD" stroke="#3B4FE0"/>
-          <text x="298" y="78" font-size="17" font-weight="700" fill="#14161A">2 · Context</text>
-          <text x="298" y="102" font-size="12" fill="#5B6270">Current screen + agent data</text>
-          <rect x="414" y="44" width="192" height="80" rx="14" fill="#EEF0FD" stroke="#3B4FE0"/>
-          <text x="510" y="78" font-size="17" font-weight="700" fill="#14161A">3 · Response / action</text>
-          <text x="510" y="102" font-size="12" fill="#5B6270">Answer, insight card, or plan</text>
-          <rect x="634" y="44" width="176" height="80" rx="14" fill="#FFFFFF" stroke="#3B4FE0" stroke-dasharray="6 4"/>
-          <text x="722" y="78" font-size="17" font-weight="700" fill="#14161A">4 · Confirm</text>
-          <text x="722" y="102" font-size="12" fill="#5B6270">Agent reviews, approves</text>
-          <rect x="838" y="44" width="176" height="80" rx="14" fill="#101218" stroke="#3B4FE0"/>
-          <text x="926" y="78" font-size="17" font-weight="700" fill="#F3F4F7">5 · Execute</text>
-          <text x="926" y="102" font-size="12" fill="#A9AFBC">Task done, result shown</text>
-          <path d="M182 84H207" stroke="#3B4FE0" stroke-width="2.5" fill="none"/>
-          <path d="M386 84H411" stroke="#3B4FE0" stroke-width="2.5" fill="none"/>
-          <path d="M606 84H631" stroke="#3B4FE0" stroke-width="2.5" fill="none"/>
-          <path d="M810 84H835" stroke="#3B4FE0" stroke-width="2.5" fill="none"/>
-          <path d="M722 124V178H94V124" stroke="#5B6270" stroke-width="2" stroke-dasharray="7 6" fill="none"/>
-          <rect x="220" y="198" width="480" height="36" rx="17" fill="#FFFFFF" stroke="#E4E6EB"/>
-          <text x="460" y="221" font-size="13.5" font-weight="600" fill="#14161A">Recovery: clarify · offer options · hand off to eXpert Care</text>
-          <text x="510" y="260" font-size="12.5" fill="#5B6270">Unclear, declined, or failed at any step returns to intent</text>
-        </g>
-      </svg>
-    </div>
-    <h3>Usability test plan</h3>
-    <p>The case study records the plan, not measured results. Core tasks:</p>
-    <ol>
-      <li>Find how close you are to your cap on Home</li>
-      <li>Find what you will be paid next on My Earnings</li>
-      <li>Find the deal that needs your attention in Agent Desk</li>
-      <li>Ask MIRA about your GCI trend and pin the answer</li>
-      <li>Find and choose a mentor</li>
-    </ol>
-    <p>What to observe: task success, time on task, errors and points of confusion, and trust in MIRA’s answers.</p>
-  </div>
-</div></section>
-
-<section class="cs-section" id="uikit"><div class="wrap">
-  <div class="head"><div class="num">11</div><div><h2>UI Kit</h2><p>The project’s own visual language, shown as a specimen. These colors are sampled from the product screens in this case study. The page around them uses the shared portfolio palette.</p></div></div>
-  <div class="body">
-    <h3>Color</h3>
-    <div class="swatches">
-      <div class="swatch"><i style="background:#0C0F24"></i><span>Navy sidebar<br>#0C0F24</span></div>
-      <div class="swatch"><i style="background:#022177"></i><span>Banner blue<br>#022177</span></div>
-      <div class="swatch"><i style="background:#486EAF"></i><span>Primary card<br>#486EAF</span></div>
-      <div class="swatch"><i style="background:#4B6AA0"></i><span>Button<br>#4B6AA0</span></div>
-      <div class="swatch"><i style="background:#3D65AC"></i><span>Link<br>#3D65AC</span></div>
-      <div class="swatch"><i style="background:#3D3F50"></i><span>Dark stat card<br>#3D3F50</span></div>
-      <div class="swatch"><i style="background:#D3DAEA"></i><span>Stat tile<br>#D3DAEA</span></div>
-      <div class="swatch"><i style="background:#EAEEF6"></i><span>Soft surface<br>#EAEEF6</span></div>
-      <div class="swatch"><i style="background:#5CAE85"></i><span>Cap reached<br>#5CAE85</span></div>
-      <div class="swatch"><i style="background:#545664"></i><span>Selected nav<br>#545664</span></div>
-      <div class="swatch"><i style="background:#0A0E20"></i><span>MIRA panel<br>#0A0E20</span></div>
-      <div class="swatch"><i style="background:#FFFFFF"></i><span>Page / cards<br>#FFFFFF</span></div>
-    </div>
-    <p>Navy is the current sidebar and wordmark ground. Banner blue is the announcement on Home. Primary card blue is My FLA; the darker slate card is My FLQA; the pale tile is My New Agents and My Prospective Agents. Green is reserved for meaning, including goals turning green in the CAP REACHED state. The MIRA panel color is from the earlier assistant prototype.</p>
-    <h3>Type hierarchy</h3>
-    <p>The product UI is a neutral sans. Key values lead. Labels and table text sit behind them. The scale below shows that hierarchy; it is not a claim about a licensed font file.</p>
-    <div class="grid g2">
-      <div class="card">
-        <p style="font:700 28px/1.2 'Inter Tight',Inter,sans-serif;color:#0C0F24">Welcome to eXp!</p>
-        <p style="font:700 18px/1.3 'Inter Tight',Inter,sans-serif;color:#0C0F24">Capping Year</p>
-        <p style="font:800 36px/1 'Inter Tight',Inter,sans-serif;color:#0C0F24">$7,600.00</p>
-        <p style="color:#3D3F50">Unpaid · calculated but not paid out</p>
-        <p style="font-size:13px;color:#5B6270">Label and table data stay secondary</p>
-      </div>
-      <div class="card"><h3>Where type works</h3><ul>
-        <li>Greeting and page title first, then the section title inside a tile</li>
-        <li>KPI values (GCI, Volume, Units, Revenue Share, unpaid amounts) larger than their labels</li>
-        <li>Persistent key facts at the top of a transaction: agent, buyer, expected close, days on market, price</li>
-        <li>Status and payout rows readable at a glance: Unpaid, Expected Next, Last Paid</li>
-      </ul></div>
-    </div>
-    <h3>Components</h3>
-    <div class="grid g3">
-      <div class="card"><h3>KPI tiles</h3><p>Capping progress, GCI, Volume, Units, and Revenue Share. Getting Started uses a checklist; Capping Year uses a progress bar plus four value tiles.</p></div>
-      <div class="card"><h3>Data table</h3><p>Search, filter chips, column manager, Save View, Download, per-column search, pagination, and row click to a drawer.</p></div>
-      <div class="card"><h3>Drawers and side panels</h3><p>Agents, notifications, transactions, and mentors open beside the page, so context is not lost.</p></div>
-      <div class="card"><h3>Tabs</h3><p>Transaction workspace tabs, Notifications (Activity Feed and Recognition), and earnings tabs (Unpaid, Expected, Last Paid).</p></div>
-      <div class="card"><h3>Step flows</h3><p>Mentor application, Get Paid Now (Review, Verify, Confirm, Done), and background report downloads.</p></div>
-      <div class="card"><h3>MIRA panel</h3><p>Greeting, suggested prompts, chat history, and insight cards that can be pinned. The same panel is the AI chat in Contact eXpert Care.</p></div>
-    </div>
-    <div class="grid g3">
-      <figure class="figure"><a href="walkthrough.html#01"><img src="thumb-v2/01-home.webp" alt="KPI tiles on Home" width="640" height="357"></a><figcaption>KPI tiles · Home</figcaption></figure>
-      <figure class="figure"><a href="walkthrough.html#02"><img src="thumb-v2/02-home-customize.webp" alt="Customize Home Screen with tile outlines" width="640" height="357"></a><figcaption>Customize mode · tiles</figcaption></figure>
-      <figure class="figure"><a href="walkthrough.html#o3"><img src="thumb-v2/org-detail-report.webp" alt="Detail Report table with Filter and Download" width="640" height="357"></a><figcaption>Data table · Detail Report</figcaption></figure>
-      <figure class="figure"><a href="walkthrough.html#21"><img src="thumb/21-table-column-manager.webp" alt="Data table with column manager" width="640" height="357"></a><figcaption>Data table · column manager</figcaption></figure>
-      <figure class="figure"><a href="walkthrough.html#25"><img src="thumb/25-transaction-details.webp" alt="Detail drawer" width="640" height="357"></a><figcaption>Detail drawer</figcaption></figure>
-      <figure class="figure"><a href="walkthrough.html#56"><img src="thumb/56-transaction-detail.webp" alt="Transaction workspace tabs" width="640" height="357"></a><figcaption>Tabs · transaction workspace</figcaption></figure>
-    </div>
-    <h3>States</h3>
-    <ul>
-      <li>Empty, filtered, and drill-down states, including “report too large to display”</li>
-      <li>Celebration state for CAP REACHED</li>
-      <li>Customize Home Screen with Reset to Default, Cancel, and Save Changes</li>
-      <li>Pending mentor requests with Accept / Decline</li>
-      <li>Scenario switches in Demo Config that update the live UI</li>
-    </ul>
-  </div>
-</div></section>
-
-<section class="cs-section dark" id="final"><div class="wrap">
-  <div class="head"><div class="num">12</div><div><h2>Final Design</h2><p>All 77 screens and states. Current means the latest Figma design files. Earlier means the previous prototype, kept where no updated design exists yet. Each one opens in the walkthrough.</p></div></div>
-  <div class="body">
-    <p><a href="walkthrough.html">Click through all 77 screens</a>. Screens marked Current: 32. The rest are the earlier prototype.</p>
-    <h3>Sign-in &amp; onboarding · 2 screens</h3>
-<div class="grid g4">
-<figure class="figure"><a href="walkthrough.html#s1"><img loading="lazy" src="thumb-v2/sign-in.webp" alt="Sign in" width="640" height="357"></a><figcaption>Sign in · Current</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#s2"><img loading="lazy" src="thumb-v2/welcome-new-agent.webp" alt="Welcome — new agent" width="640" height="357"></a><figcaption>Welcome — new agent · Current</figcaption></figure>
+<div class="ov">
+<div><b>Project Name</b>My eXp + MIRA</div>
+<div><b>Product Type</b>AI-powered Real Estate Platform</div>
+<div><b>MIRA</b>Agentic AI conversational assistant for real estate agents</div>
+<div><b>My Role</b>Senior UX / Product Designer</div>
+<div><b>Platform</b>Web Application</div>
+<div><b>Tools</b>Lovable, ChatGPT, Claude, Figma</div>
+<div class="wide"><b>Focus Areas</b><span class="chips"><i>Product Strategy</i><i>UX Research</i><i>AI Experience Design</i><i>Conversational UX</i><i>Dashboard Design</i><i>Workflow Automation</i><i>Design Systems</i></span></div>
 </div>
-<h3>Home &amp; personalization · 14 screens</h3>
-<div class="grid g4">
-<figure class="figure"><a href="walkthrough.html#01"><img loading="lazy" src="thumb-v2/01-home.webp" alt="Home — Modular home" width="640" height="357"></a><figcaption>Home — Modular home · Current</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#h1"><img loading="lazy" src="thumb-v2/home-getting-started.webp" alt="Home — Getting Started (new agent)" width="640" height="357"></a><figcaption>Home — Getting Started (new agent) · Current</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#h2"><img loading="lazy" src="thumb-v2/home-post-90-days.webp" alt="Home — after 90 days" width="640" height="357"></a><figcaption>Home — after 90 days · Current</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#h3"><img loading="lazy" src="thumb-v2/home-after-90-days.webp" alt="Home — after 90 days (growth banner)" width="640" height="357"></a><figcaption>Home — after 90 days (growth banner) · Current</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#h4"><img loading="lazy" src="thumb-v2/home-mobile.webp" alt="Home — mobile" width="640" height="357"></a><figcaption>Home — mobile · Current</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#02"><img loading="lazy" src="thumb-v2/02-home-customize.webp" alt="Home — Customize Home Screen" width="640" height="357"></a><figcaption>Home — Customize Home Screen · Current</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#h5"><img loading="lazy" src="thumb-v2/home-customize-move-tile.webp" alt="Customize — moving a tile" width="640" height="357"></a><figcaption>Customize — moving a tile · Current</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#h6"><img loading="lazy" src="thumb-v2/home-customize-tips.webp" alt="Customize — how-to overlay" width="640" height="357"></a><figcaption>Customize — how-to overlay · Current</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#h7"><img loading="lazy" src="thumb-v2/home-reset-default.webp" alt="Customize — Reset complete" width="640" height="357"></a><figcaption>Customize — Reset complete · Current</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#15"><img loading="lazy" src="thumb/15-sidebar-demo-toggles.webp" alt="Demo Toggles quick menu" width="640" height="357"></a><figcaption>Demo Toggles quick menu · Earlier</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#69"><img loading="lazy" src="thumb/69-home-capped-state.webp" alt="Home — CAP REACHED scenario" width="640" height="357"></a><figcaption>Home — CAP REACHED scenario · Earlier</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#70"><img loading="lazy" src="thumb/70-home-needs-mentor.webp" alt="Home — Needs Mentor scenario" width="640" height="357"></a><figcaption>Home — Needs Mentor scenario · Earlier</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#71"><img loading="lazy" src="thumb/71-choose-mentor-drawer.webp" alt="Choose Mentor drawer" width="640" height="357"></a><figcaption>Choose Mentor drawer · Earlier</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#72"><img loading="lazy" src="thumb/72-mentor-profile.webp" alt="Mentor profile" width="640" height="357"></a><figcaption>Mentor profile · Earlier</figcaption></figure>
-</div>
-<h3>Notifications &amp; account · 8 screens</h3>
-<div class="grid g4">
-<figure class="figure"><a href="walkthrough.html#06"><img loading="lazy" src="thumb-v2/06-notifications.webp" alt="Notifications" width="640" height="357"></a><figcaption>Notifications · Current</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#n1"><img loading="lazy" src="thumb-v2/notifications-downloads.webp" alt="Notifications — Downloads" width="640" height="357"></a><figcaption>Notifications — Downloads · Current</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#08"><img loading="lazy" src="thumb/08-notification-detail.webp" alt="Notification detail drawer" width="640" height="357"></a><figcaption>Notification detail drawer · Earlier</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#11"><img loading="lazy" src="thumb-v2/11-account-menu.webp" alt="Account menu" width="640" height="357"></a><figcaption>Account menu · Current</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#12"><img loading="lazy" src="thumb/12-personal-details.webp" alt="Personal Details" width="640" height="357"></a><figcaption>Personal Details · Earlier</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#13"><img loading="lazy" src="thumb/13-settings.webp" alt="Settings" width="640" height="357"></a><figcaption>Settings · Earlier</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#14"><img loading="lazy" src="thumb/14-demo-config.webp" alt="Demo Configuration" width="640" height="357"></a><figcaption>Demo Configuration · Earlier</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#68"><img loading="lazy" src="thumb/68-demo-capped-celebration.webp" alt="Demo Config — Capped scenario" width="640" height="357"></a><figcaption>Demo Config — Capped scenario · Earlier</figcaption></figure>
-</div>
-<h3>MIRA &amp; help · 4 screens</h3>
-<div class="grid g4">
-<figure class="figure"><a href="walkthrough.html#16"><img loading="lazy" src="thumb/16-assistant-chat.webp" alt="MIRA assistant" width="640" height="357"></a><figcaption>MIRA assistant · Earlier</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#17"><img loading="lazy" src="thumb/17-assistant-answer.webp" alt="MIRA — GCI Trends answer" width="640" height="357"></a><figcaption>MIRA — GCI Trends answer · Earlier</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#66"><img loading="lazy" src="thumb/66-help-center.webp" alt="Contact eXpert Care" width="640" height="357"></a><figcaption>Contact eXpert Care · Earlier</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#67"><img loading="lazy" src="thumb/67-help-ai-chat.webp" alt="Help — AI chat" width="640" height="357"></a><figcaption>Help — AI chat · Earlier</figcaption></figure>
-</div>
-<h3>Broker Center · 4 screens</h3>
-<div class="grid g4">
-<figure class="figure"><a href="walkthrough.html#18"><img loading="lazy" src="thumb/18-broker-center.webp" alt="Broker Center" width="640" height="357"></a><figcaption>Broker Center · Earlier</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#19"><img loading="lazy" src="thumb/19-broker-state-mentors.webp" alt="State Mentors table" width="640" height="357"></a><figcaption>State Mentors table · Earlier</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#20"><img loading="lazy" src="thumb/20-mentor-detail-drawer.webp" alt="Mentor profile drawer" width="640" height="357"></a><figcaption>Mentor profile drawer · Earlier</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#21"><img loading="lazy" src="thumb/21-table-column-manager.webp" alt="Table column manager" width="640" height="357"></a><figcaption>Table column manager · Earlier</figcaption></figure>
-</div>
-<h3>Agent · 9 screens</h3>
-<div class="grid g4">
-<figure class="figure"><a href="walkthrough.html#22"><img loading="lazy" src="thumb/22-agent-dashboard.webp" alt="Agent Performance dashboard" width="640" height="357"></a><figcaption>Agent Performance dashboard · Earlier</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#24"><img loading="lazy" src="thumb/24-agent-production-details.webp" alt="Agent Production Details" width="640" height="357"></a><figcaption>Agent Production Details · Earlier</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#25"><img loading="lazy" src="thumb/25-transaction-details.webp" alt="Transaction Details drawer" width="640" height="357"></a><figcaption>Transaction Details drawer · Earlier</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#26"><img loading="lazy" src="thumb/26-icon-production.webp" alt="ICON Program — Production" width="640" height="357"></a><figcaption>ICON Program — Production · Earlier</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#27"><img loading="lazy" src="thumb/27-icon-cultural.webp" alt="ICON Program — Cultural" width="640" height="357"></a><figcaption>ICON Program — Cultural · Earlier</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#28"><img loading="lazy" src="thumb/28-icon-events.webp" alt="ICON Program — Events" width="640" height="357"></a><figcaption>ICON Program — Events · Earlier</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#29"><img loading="lazy" src="thumb/29-icon-stock-grants.webp" alt="ICON Program — Stock Grants" width="640" height="357"></a><figcaption>ICON Program — Stock Grants · Earlier</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#30"><img loading="lazy" src="thumb/30-custom-service-fees.webp" alt="Custom Service Fees report" width="640" height="357"></a><figcaption>Custom Service Fees report · Earlier</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#31"><img loading="lazy" src="thumb/31-custom-fee-detail.webp" alt="Custom Service Fee detail" width="640" height="357"></a><figcaption>Custom Service Fee detail · Earlier</figcaption></figure>
-</div>
-<h3>Documents · 2 screens</h3>
-<div class="grid g4">
-<figure class="figure"><a href="walkthrough.html#32"><img loading="lazy" src="thumb/32-docs-year-end.webp" alt="Documents — Year-End" width="640" height="357"></a><figcaption>Documents — Year-End · Earlier</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#34"><img loading="lazy" src="thumb-v2/34-documents.webp" alt="Documents — Team Documents" width="640" height="357"></a><figcaption>Documents — Team Documents · Current</figcaption></figure>
-</div>
-<h3>Team · 4 screens</h3>
-<div class="grid g4">
-<figure class="figure"><a href="walkthrough.html#38"><img loading="lazy" src="thumb-v2/38-team-dashboard.webp" alt="Team dashboard" width="640" height="357"></a><figcaption>Team dashboard · Current</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#39"><img loading="lazy" src="thumb-v2/39-team-top-agents.webp" alt="Team — Top Agents" width="640" height="357"></a><figcaption>Team — Top Agents · Current</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#40"><img loading="lazy" src="thumb/40-team-reconciliation.webp" alt="Team Reconciliation" width="640" height="357"></a><figcaption>Team Reconciliation · Earlier</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#41"><img loading="lazy" src="thumb-v2/41-team-overview.webp" alt="Team — Overview table" width="640" height="357"></a><figcaption>Team — Overview table · Current</figcaption></figure>
-</div>
-<h3>Training · 1 screen</h3>
-<div class="grid g4">
-<figure class="figure"><a href="walkthrough.html#t1"><img loading="lazy" src="thumb-v2/training-calendar.webp" alt="Training — Scheduled training" width="640" height="357"></a><figcaption>Training — Scheduled training · Current</figcaption></figure>
-</div>
-<h3>RevShare Earnings · 13 screens</h3>
-<div class="grid g4">
-<figure class="figure"><a href="walkthrough.html#42"><img loading="lazy" src="thumb-v2/42-my-earnings-revshare.webp" alt="My Earnings — Revenue Share" width="640" height="357"></a><figcaption>My Earnings — Revenue Share · Current</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#r1"><img loading="lazy" src="thumb-v2/revshare-my-fla.webp" alt="My Earnings — My FLA" width="640" height="357"></a><figcaption>My Earnings — My FLA · Current</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#r2"><img loading="lazy" src="thumb-v2/revshare-fla-agent-drawer.webp" alt="My FLA — agent details" width="640" height="357"></a><figcaption>My FLA — agent details · Current</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#53"><img loading="lazy" src="thumb-v2/53-revshare-unpaid.webp" alt="My Revenue Share — Unpaid" width="640" height="357"></a><figcaption>My Revenue Share — Unpaid · Current</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#r3"><img loading="lazy" src="thumb-v2/revshare-expected.webp" alt="My Revenue Share — Expected" width="640" height="357"></a><figcaption>My Revenue Share — Expected · Current</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#47"><img loading="lazy" src="thumb-v2/47-org-overview.webp" alt="Organization Reporting — Overview Dashboard" width="640" height="357"></a><figcaption>Organization Reporting — Overview Dashboard · Current</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#o1"><img loading="lazy" src="thumb-v2/org-agents-capped.webp" alt="Organization — Agents capped this week" width="640" height="357"></a><figcaption>Organization — Agents capped this week · Current</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#o2"><img loading="lazy" src="thumb-v2/org-offboarding.webp" alt="Organization — Off-boarding Overview" width="640" height="357"></a><figcaption>Organization — Off-boarding Overview · Current</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#o3"><img loading="lazy" src="thumb-v2/org-detail-report.webp" alt="Organization — Detail Report" width="640" height="357"></a><figcaption>Organization — Detail Report · Current</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#o4"><img loading="lazy" src="thumb-v2/org-download-preparing.webp" alt="Detail Report — preparing download" width="640" height="357"></a><figcaption>Detail Report — preparing download · Current</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#o5"><img loading="lazy" src="thumb-v2/org-report-too-large.webp" alt="Detail Report — too large to display" width="640" height="357"></a><figcaption>Detail Report — too large to display · Current</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#51"><img loading="lazy" src="thumb-v2/51-revshare-group.webp" alt="Reports — Rev Share Group" width="640" height="357"></a><figcaption>Reports — Rev Share Group · Current</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#52"><img loading="lazy" src="thumb-v2/52-revshare-agent-drawer.webp" alt="Rev Share Group — agent side panel" width="640" height="357"></a><figcaption>Rev Share Group — agent side panel · Current</figcaption></figure>
-</div>
-<h3>Agent Desk · 9 screens</h3>
-<div class="grid g4">
-<figure class="figure"><a href="walkthrough.html#54"><img loading="lazy" src="thumb/54-agent-desk.webp" alt="Agent Desk" width="640" height="357"></a><figcaption>Agent Desk · Earlier</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#55"><img loading="lazy" src="thumb/55-agent-desk-new-menu.webp" alt="New transaction menu" width="640" height="357"></a><figcaption>New transaction menu · Earlier</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#56"><img loading="lazy" src="thumb/56-transaction-detail.webp" alt="Transaction — Overview" width="640" height="357"></a><figcaption>Transaction — Overview · Earlier</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#57"><img loading="lazy" src="thumb/57-deal-contacts.webp" alt="Transaction — Contacts" width="640" height="357"></a><figcaption>Transaction — Contacts · Earlier</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#58"><img loading="lazy" src="thumb/58-deal-commission.webp" alt="Transaction — Commission" width="640" height="357"></a><figcaption>Transaction — Commission · Earlier</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#59"><img loading="lazy" src="thumb/59-deal-checklist.webp" alt="Transaction — Checklist" width="640" height="357"></a><figcaption>Transaction — Checklist · Earlier</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#60"><img loading="lazy" src="thumb/60-deal-documents.webp" alt="Transaction — Documents" width="640" height="357"></a><figcaption>Transaction — Documents · Earlier</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#61"><img loading="lazy" src="thumb/61-deal-activity.webp" alt="Transaction — Activity" width="640" height="357"></a><figcaption>Transaction — Activity · Earlier</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#62"><img loading="lazy" src="thumb/62-deal-comments.webp" alt="Transaction — Comments" width="640" height="357"></a><figcaption>Transaction — Comments · Earlier</figcaption></figure>
-</div>
-<h3>Mentor Program · 7 screens</h3>
-<div class="grid g4">
-<figure class="figure"><a href="walkthrough.html#63"><img loading="lazy" src="thumb/63-mentor-program.webp" alt="Mentor Program — Not applied" width="640" height="357"></a><figcaption>Mentor Program — Not applied · Earlier</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#64"><img loading="lazy" src="thumb/64-mentor-apply.webp" alt="Mentor application" width="640" height="357"></a><figcaption>Mentor application · Earlier</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#73"><img loading="lazy" src="thumb/73-mentor-active-dashboard.webp" alt="Mentor — Active dashboard" width="640" height="357"></a><figcaption>Mentor — Active dashboard · Earlier</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#74"><img loading="lazy" src="thumb/74-mentor-mentees.webp" alt="My Mentees" width="640" height="357"></a><figcaption>My Mentees · Earlier</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#75"><img loading="lazy" src="thumb/75-mentor-requests.webp" alt="Pending Mentor Requests" width="640" height="357"></a><figcaption>Pending Mentor Requests · Earlier</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#76"><img loading="lazy" src="thumb/76-mentor-profile-edit.webp" alt="Mentor profile (view &amp; edit)" width="640" height="357"></a><figcaption>Mentor profile (view &amp; edit) · Earlier</figcaption></figure>
-<figure class="figure"><a href="walkthrough.html#77"><img loading="lazy" src="thumb/77-mentee-dashboard.webp" alt="Mentor Program — Active Mentee" width="640" height="357"></a><figcaption>Mentor Program — Active Mentee · Earlier</figcaption></figure>
-</div>
-  </div>
-</div></section>
+<blockquote class="vision"><b>Product vision</b>To create a unified real estate platform that combines the My eXp agent experience with MIRA, an intelligent AI assistant that helps agents access information, complete tasks, navigate workflows and make better business decisions through natural conversations.</blockquote>
+<p>I designed the product end to end, from framing the problem and structuring the information architecture to the UI, the component patterns and MIRA’s conversational experience. I then built it into a clickable, stateful prototype of 71 screens and states, since updated with the current design for Home, Notifications, Team, RevShare Earnings and My Organization. I used Figma for wireframes, UI and components; ChatGPT and Claude to synthesize research inputs, explore flows and draft UX copy; and Lovable for the AI-assisted working prototype.</p>
+<p>Project context: UX design work at eXp Realty on the My eXp agent portal; MIRA and some other areas are shown as earlier prototype designs. <span class="ph">[Add: timeline, team and your scope]</span></p>
+</section>
 
-<section class="cs-section" id="outcome"><div class="wrap">
-  <div class="head"><div class="num">13</div><div><h2>Outcome</h2><p>What the work produced, what it taught, and what is still ahead. No business-impact numbers were recorded in the source case study.</p></div></div>
-  <div class="body">
-    <div class="grid g2">
-      <div class="card"><h3>What shipped in the prototype</h3><ul>
-        <li>A stateful Lovable prototype, first built as 71 screens and states, now a walkthrough of 77 with 32 brought up to the current design</li>
-        <li>One MIRA assistant across the platform: the same panel serves insights and Contact eXpert Care</li>
-        <li>One table pattern reused on five data-heavy pages</li>
-        <li>Demo Config, so one prototype can tell the story of a new agent, an agent who just capped, and a certified mentor in the same session</li>
-      </ul></div>
-      <div class="card"><h3>Handoff package</h3><ul>
-        <li>Figma screens, components, and their states</li>
-        <li>The Lovable prototype as a reference for real interaction behavior</li>
-        <li>Interaction notes for drawers, tabs, tables, and multi-step flows</li>
-        <li>MIRA conversation specs: intents, response formats, confirmation steps, and error and recovery states</li>
-        <li>Demo Config scenarios for QA and stakeholder review</li>
-        <li>Accessibility notes for color, contrast, and keyboard flows</li>
-      </ul></div>
-    </div>
-    <h3>Learnings</h3>
-    <p>Working across Figma and Lovable changed how I design. Figma gave a clear structure and a shared set of components. Building those designs in Lovable with AI assistance made it possible to move from idea to a working, stateful experience quickly, and to test drawers, drill-downs, and multi-step flows as real behavior instead of static frames.</p>
-    <p>Designing MIRA taught me that an AI assistant is a product surface of its own. It needs intents, response formats, confirmation, and recovery designed as carefully as any screen. ChatGPT and Claude were useful thinking partners for exploring flows and tightening UX copy, while the design decisions stayed mine.</p>
-    <p>Demo Config turned out to be one of the most useful design tools in the project. One prototype can tell the story of a new agent looking for a mentor, an agent who just capped, and a certified mentor, live in the same session.</p>
-    <h3>Future roadmap</h3>
-    <ul>
-      <li>Usability testing with agents on Home, RevShare, Agent Desk, and MIRA</li>
-      <li>Complete the remaining routes: Events Calendar, Tools, Knowledge Base, Downloads</li>
-      <li>Mobile layouts for the most frequent on-the-go tasks</li>
-      <li>Accessibility review of color, contrast, and keyboard flows in charts and tables</li>
-      <li>Deeper MIRA capabilities grounded in the agent’s own data</li>
-      <li>MIRA task execution through AI agents, with human confirmation for important actions</li>
-    </ul>
-    <p>Shared for portfolio purposes. Demo data only: all names, figures, and transactions are fictional. eXp and My eXp are trademarks of their respective owners.</p>
-  </div>
-</div></section>
+<section id="background" class="cs "><div class="secnum">02</div><h2>Product Background – My eXp and MIRA</h2>
 
-<section class="cs-section" id="metrics"><div class="wrap">
-  <div class="head"><div class="num">14</div><div><h2>Metrics</h2><p>Counts of the design work, as stated in this case study. No product-usage or business KPIs were measured here, so none are shown as targets.</p></div></div>
-  <div class="body">
-    <div class="grid g4">
-      <div class="metric"><div class="v">77</div><div class="l">Screens and states in the walkthrough</div><div class="n">Measured</div></div>
-      <div class="metric"><div class="v">32</div><div class="l">Screens in the current design</div><div class="n">Measured</div></div>
-      <div class="metric"><div class="v">71</div><div class="l">Screens in the first stateful prototype</div><div class="n">Measured</div></div>
-      <div class="metric"><div class="v">5</div><div class="l">Data-heavy pages on one table pattern</div><div class="n">Measured</div></div>
-    </div>
-    <p>The five pages that share the table pattern are State Mentors, Production Details, Team Reconciliation, Revenue Share Group, and My Mentees. The 71-screen count is the Lovable prototype before the current-design update; the walkthrough now holds 77, of which 32 are the current design.</p>
-  </div>
-</div></section>
-</main>
+<p class="lead">My eXp is the main product ecosystem: the portal where an agent runs their business. MIRA is its intelligent AI layer, available across the whole ecosystem rather than living in one corner of it.</p>
+<div class="eco">
+<div class="eco-layer"><b>MIRA · intelligent AI layer</b><span>Floating on every screen · suggested prompts · chat history · insight cards · AI chat in Contact eXpert Care</span></div>
+<div class="eco-areas">
+<div><h4>My Desk</h4><p>Home, Broker Center, Agent, Documents, Events Calendar</p></div>
+<div><h4>Business &amp; Growth</h4><p>Team, RevShare Earnings, Agent Desk, Mentor Program</p></div>
+<div><h4>Resources</h4><p>Tools, Knowledge Base, Contact eXpert Care</p></div>
+<div><h4>Global</h4><p>Notifications, account menu, Demo Config</p></div>
+</div>
+<div class="eco-base"><b>My eXp · agent product ecosystem</b></div>
+</div>
+<div class="grid2"><div class="card"><h3>My eXp</h3><p>One place where an agent can see goals and capping progress, understand revenue share, run transactions, grow through mentorship and find documents or help.</p></div>
+<div class="card"><h3>MIRA</h3><p>A conversational assistant that answers questions about the agent’s business, surfaces insights and helps them get things done, with the same assistant powering support in Contact eXpert Care.</p></div></div>
+</section>
 
-<div class="cs-next"><div class="wrap">
-  <div><small>Previous</small><a href="https://suvarnamyneni-project.github.io/amazon-fresh-case-study/">Amazon Fresh</a></div>
-  <div style="text-align:right"><small>Next project</small><a href="https://suvarnamyneni-project.github.io/agntos-case-study/">AgntOS</a></div>
-</div></div>
-<footer class="cs-foot"><div class="wrap">© 2026 Suvarna Myneni · <a href="https://www.linkedin.com/in/suvarnamyneni/">LinkedIn</a></div></footer>
-</body>
-</html>
+<section id="vision" class="cs "><div class="secnum">03</div><h2>Business Context and Product Vision</h2>
+
+<div class="grid2"><div><p>An agent’s working day spans many questions: how close they are to their goals and their cap, what they have earned in revenue share and when they will be paid, which deal needs attention, who their mentor is, and where to find a document or get help.</p><p>When those answers live in separate tools and dense tables, agents spend effort finding information instead of acting on it. The opportunity: a single, personal and consistent platform, with an AI layer that turns questions into answers and actions.</p></div>
+<div class="card"><h3>Product goals</h3><ul class="clean"><li><b>Personal:</b> a Home that reflects each agent’s own goals and progress</li><li><b>Legible:</b> make complex earnings and organization data easy to read</li><li><b>Actionable:</b> surface what needs attention next</li><li><b>Consistent:</b> one set of patterns across every area</li><li><b>Conversational:</b> let agents ask MIRA instead of hunting through menus</li><li><b>Demo-ready:</b> show many user states without separate accounts</li></ul></div></div>
+<div class="phbox"><b>Needs Suvarna’s input</b><ul><li><span class="ph">[Add: business goals or KPIs from the brief, if any]</span></li><li><span class="ph">[Add: stakeholders involved]</span></li></ul></div>
+</section>
+
+<section id="problem" class="cs "><div class="secnum">04</div><h2>Problem Discovery</h2>
+
+<p><b>Who I designed for:</b> a real estate agent who runs their business from the portal every day: tracking goals and capping, checking revenue share and payouts, moving transactions forward, working with a mentor and finding documents or help.</p>
+<ul class="pains">
+<li><b>Scattered answers</b>Goals, cap, revenue share, deals, mentorship, documents and help sit in different places.</li>
+<li><b>Dense, hard-to-read data</b>Earnings and the revenue share organization are hierarchical and table-heavy.</li>
+<li><b>No clear next step</b>It isn’t obvious which deal or task needs attention right now.</li>
+<li><b>Inconsistent patterns</b>When every area behaves differently, the interface has to be relearned page by page.</li>
+</ul>
+<div class="challenge"><b>Design challenge</b><p>How might we give an agent one personal, consistent platform that answers “where do I stand, and what should I do next?”, and let them get there by simply asking?</p></div>
+</section>
+
+<section id="research" class="cs "><div class="secnum">05</div><h2>User Research and Agent Pain Points</h2>
+
+<p>The research framework centers on the agent’s daily jobs and the questions they need answered. ChatGPT and Claude supported synthesis, helping cluster research inputs into the pain-point themes below.</p>
+<div class="grid2">
+<div class="card"><h3>Research approach</h3><ul class="clean"><li>Methods: <span class="ph">[Add: e.g. agent interviews, surveys, support-ticket or analytics review]</span></li><li>Participants: <span class="ph">[Add: number of agents interviewed and their profiles (new, experienced, team leader, mentor)]</span></li><li>Synthesis: themes clustered with support from ChatGPT and Claude; method <span class="ph">[Add: e.g. affinity mapping]</span></li></ul></div>
+<div class="card"><h3>Agent roles the design covers</h3><ul class="clean"><li>A new agent looking for a mentor</li><li>An agent who has just capped</li><li>A certified mentor managing mentees and requests</li><li>A mentee following their mentor’s training</li><li>An agent with a team and a revenue share organization</li></ul></div>
+</div>
+<table class="tbl"><thead><tr><th>Pain-point theme</th><th>What it means for the agent</th><th>Evidence from research</th></tr></thead><tbody>
+<tr><td>Scattered information</td><td>Answers about goals, cap, earnings and deals are spread across tools</td><td><span class="ph">[Add: finding + quote]</span></td></tr>
+<tr><td>Hard-to-read earnings</td><td>RevShare levels, payouts and the organization are dense and hierarchical</td><td><span class="ph">[Add: finding + quote]</span></td></tr>
+<tr><td>Unclear next action</td><td>No single view of what needs attention today</td><td><span class="ph">[Add: finding + quote]</span></td></tr>
+<tr><td>Getting help</td><td>Finding a document or the right support channel takes effort</td><td><span class="ph">[Add: finding + quote]</span></td></tr>
+<tr><td>Growth and mentorship</td><td>Finding a mentor and tracking progress has many states</td><td><span class="ph">[Add: finding + quote]</span></td></tr>
+</tbody></table>
+<div class="phbox"><b>Needs Suvarna’s input</b><ul><li><span class="ph">[Add: number of agents interviewed and key quotes]</span></li><li><span class="ph">[Add: top 3 research insights]</span></li></ul></div>
+</section>
+
+<section id="competitive" class="cs "><div class="secnum">06</div><h2>Competitive Analysis</h2>
+
+<p>I compared the experience against three categories of product that agents already use, looking at the same criteria for each: a unified view of the business, legibility of earnings data, next-action guidance, AI grounded in the agent’s own data, and human control over important actions.</p>
+<table class="tbl"><thead><tr><th>Category compared</th><th>What I looked at</th><th>Findings</th><th>Opportunity for My eXp + MIRA</th></tr></thead><tbody>
+<tr><td>Brokerage agent portals</td><td>Dashboards, earnings and transaction views</td><td><span class="ph">[Add: findings]</span></td><td><span class="ph">[Add: opportunity]</span></td></tr>
+<tr><td>CRM and transaction-management tools</td><td>Pipelines, checklists, documents and tables</td><td><span class="ph">[Add: findings]</span></td><td><span class="ph">[Add: opportunity]</span></td></tr>
+<tr><td>AI assistants and copilots</td><td>Conversation design, grounding, actions and confirmation</td><td><span class="ph">[Add: findings]</span></td><td><span class="ph">[Add: opportunity]</span></td></tr>
+</tbody></table>
+<div class="phbox"><b>Needs Suvarna’s input</b><ul><li><span class="ph">[Add: products reviewed in each category]</span></li><li><span class="ph">[Add: key findings and the gap MIRA fills]</span></li></ul></div>
+</section>
+
+<section id="strategy" class="cs "><div class="secnum">07</div><h2>Product Strategy and Feature Prioritization</h2>
+
+<div class="pillars">
+<div><h4>Personal Home</h4><p>Getting Started, capping progress and training first, in tiles each agent can rearrange.</p></div>
+<div><h4>Legible earnings</h4><p>My Earnings, payout status by Unpaid / Expected / Last Paid, and organization reporting.</p></div>
+<div><h4>Actionable workspace</h4><p>Agent Desk with “Needs your attention” and one workspace per deal.</p></div>
+<div><h4>Growth</h4><p>Mentor Program journeys for every role and state.</p></div>
+<div><h4>MIRA layer</h4><p>Ask, get insight and act from any screen.</p></div>
+<div><h4>One system</h4><p>Shared tables, drawers, tabs and KPI cards.</p></div>
+</div>
+<div class="nnl">
+<div><h4>Now · in the prototype</h4><p>77 screens and states (32 in the current design): Sign-in &amp; onboarding (2), Home &amp; personalization (14), Notifications &amp; account (8), MIRA &amp; help (4), Broker Center (4), Agent (9), Documents (2), Team (4), Training (1), RevShare Earnings (13), Agent Desk (9), Mentor Program (7).</p></div>
+<div><h4>Next</h4><p>Remaining routes (Events Calendar, Tools, Knowledge Base, Downloads), mobile layouts for frequent on-the-go tasks, and an accessibility review.</p></div>
+<div><h4>Later</h4><p>Deeper MIRA capabilities grounded in the agent’s own data, and task execution with human confirmation.</p></div>
+</div>
+<div class="phbox"><b>Needs Suvarna’s input</b><ul><li><span class="ph">[Add: prioritization method (e.g. impact vs. effort) and who was involved]</span></li></ul></div>
+</section>
+
+<section id="ia" class="cs "><div class="secnum">08</div><h2>Information Architecture</h2>
+<p class="lead">The sidebar groups the platform into three areas. A persistent header holds notifications, the account menu (with Demo Config) and Contact eXpert Care; MIRA floats on every screen.</p>
+<div class="ia">
+<div class="col"><h4>My Desk</h4><ul><li>Home<ul><li>Customize Home Screen</li><li>Getting Started checklist</li></ul></li><li>Broker Center<ul><li>State Mentors table</li><li>Mentor profile drawer</li></ul></li><li>Agent<ul><li>Dashboard</li><li>Agent Production Details</li><li>ICON Program</li><li>Custom Service Fees</li></ul></li><li>Documents<ul><li>Year-End</li><li>Downloads</li><li>Documents Portal</li></ul></li><li>Events Calendar</li></ul></div>
+<div class="col"><h4>Business &amp; Growth</h4><ul><li>Team<ul><li>Dashboard</li><li>Team Reconciliation</li><li>Roster</li></ul></li><li>RevShare Earnings<ul><li>My Earnings · Revenue Share</li><li>My FLA · Unpaid / Expected / Last Paid</li><li>Revenue Share Group</li></ul></li><li>My Organization<ul><li>Overview Dashboard</li><li>Off-boarding Overview</li><li>Detail Report · downloads</li></ul></li><li>Agent Desk<ul><li>Transaction workspace (7 tabs)</li></ul></li><li>Mentor Program<ul><li>Apply · Mentor · Mentee views</li></ul></li></ul></div>
+<div class="col"><h4>Resources</h4><ul><li>Tools</li><li>Knowledge Base</li><li>Contact eXpert Care<ul><li>Call · AI chat · Email</li></ul></li></ul></div>
+<div class="col"><h4>Global</h4><ul><li>Notifications<ul><li>Activity Feed · Recognition</li><li>Filters · Detail drawer</li></ul></li><li>Account menu<ul><li>Personal Details · Settings</li><li>Demo Config</li></ul></li><li>MIRA assistant</li></ul></div>
+</div>
+</section>
+
+<section id="journey" class="cs "><div class="secnum">09</div><h2>Agent Journey Mapping</h2>
+
+<p>A journey through an agent’s working day, mapped to the touchpoints in the platform and the role MIRA is designed to play at each step.</p>
+<div class="tblwrap"><table class="tbl journey"><thead><tr><th>Stage</th><th>Agent goal</th><th>Touchpoints</th><th>MIRA’s role (design intent)</th><th>Pain points &amp; feelings</th></tr></thead><tbody>
+<tr><td>Start the day</td><td>See where I stand</td><td>Home: Getting Started, Capping Year, Scheduled Training</td><td>Summarize progress and what changed</td><td><span class="ph">[Add: from research]</span></td></tr>
+<tr><td>Check earnings</td><td>Know what I earned and when I get paid</td><td>My Earnings, Unpaid / Expected / Last Paid, Revenue Share Group</td><td>Explain trends; start a payout with confirmation</td><td><span class="ph">[Add: from research]</span></td></tr>
+<tr><td>Move deals forward</td><td>Act on what needs attention</td><td>Agent Desk, Needs your attention, transaction workspace</td><td>Recommend the next action on a deal</td><td><span class="ph">[Add: from research]</span></td></tr>
+<tr><td>Grow</td><td>Find or be a mentor</td><td>Mentor Program, Choose Mentor drawer, mentor dashboard</td><td>Guide through the right mentorship journey</td><td><span class="ph">[Add: from research]</span></td></tr>
+<tr><td>Get help</td><td>Find a document or an answer fast</td><td>Documents, Contact eXpert Care (call, AI chat, email)</td><td>Answer or route to the right human channel</td><td><span class="ph">[Add: from research]</span></td></tr>
+<tr><td>Celebrate</td><td>Mark milestones</td><td>CAP REACHED state, Recognition tab</td><td>Highlight milestones and peers to recognize</td><td><span class="ph">[Add: from research]</span></td></tr>
+</tbody></table></div>
+<p class="note">The Demo Config lets the same prototype walk through three of these journeys live: a new agent looking for a mentor, an agent who just capped, and a certified mentor.</p>
+</section>
+
+<section id="flows" class="cs "><div class="secnum">10</div><h2>User Flows and Interaction Design</h2>
+
+<p class="lead">Key flows keep the agent in context: focused drawers instead of new pages, explicit steps for anything involving money, and scenario switching for demos.</p>
+<div class="flowrow"><b>Get Paid Now</b><span>Review</span><span>Verify</span><span>Confirm</span><span>Done</span><em>Fee and total shown before any commitment</em></div>
+<div class="flowrow"><b>Mentor application</b><span>Start</span><span>Prefilled from profile</span><span>Multi-step form</span><span>Submit</span></div>
+<div class="flowrow"><b>Organization Tree</b><span>Level</span><span>Drill in</span><span>Up one level</span><em>Depth breadcrumb keeps orientation</em></div>
+<div class="dec"><div><div class="num">01</div><h3>Mentor Program flows for every role and state</h3><p>Mentorship has many states, so I designed it as a set of journeys: a new agent sees a <b>Find Your Mentor</b> card with a countdown, compares mentor cards and profiles, or lets the system choose. Agents can apply to become mentors through a prefilled multi-step application, and certified mentors get a dashboard for mentees, pending requests (Accept / Decline) and their own public profile. Mentees see their mentor, training materials and progress.</p></div><div class="shots four"><a href="walkthrough.html#70" title="Open in walkthrough: Home — Needs Mentor scenario"><img loading="lazy" src="img/70-home-needs-mentor.webp" alt="Home — Needs Mentor scenario" width="1600" height="893"></a><a href="walkthrough.html#71" title="Open in walkthrough: Choose Mentor drawer"><img loading="lazy" src="img/71-choose-mentor-drawer.webp" alt="Choose Mentor drawer" width="1600" height="893"></a><a href="walkthrough.html#73" title="Open in walkthrough: Mentor — Active dashboard"><img loading="lazy" src="img/73-mentor-active-dashboard.webp" alt="Mentor — Active dashboard" width="1600" height="893"></a><a href="walkthrough.html#77" title="Open in walkthrough: Mentor Program — Active Mentee"><img loading="lazy" src="img/77-mentee-dashboard.webp" alt="Mentor Program — Active Mentee" width="1600" height="893"></a></div></div>
+<div class="dec"><div><div class="num">02</div><h3>Notifications with context</h3><p>Notifications became a full page with an Activity Feed and a Recognition tab, quick date and type filters, and a detail drawer that explains the event in context (capping details, ICON status, top transaction). Recognition items include a send-a-gift action to encourage celebrating peers.</p></div><div class="shots"><a href="walkthrough.html#06" title="Open in walkthrough: Notifications"><img loading="lazy" class="v2" src="img-v2/06-notifications.webp" alt="Notifications" width="1440" height="1024"></a><a href="walkthrough.html#08" title="Open in walkthrough: Notification detail drawer"><img loading="lazy" src="img/08-notification-detail.webp" alt="Notification detail drawer" width="1600" height="893"></a></div></div>
+<div class="dec"><div><div class="num">03</div><h3>Scenario-driven Demo Config for stakeholder demos</h3><p>To demo realistic journeys without fake accounts, I built a Demo Configuration panel into the account menu: mentor modes, capping scenarios (including CAP REACHED), ICON toggles, country and FLQA states. Switching a scenario updates the live UI, and a sidebar Demo Toggles menu covers the most common switches during a walkthrough.</p></div><div class="shots"><a href="walkthrough.html#14" title="Open in walkthrough: Demo Configuration"><img loading="lazy" src="img/14-demo-config.webp" alt="Demo Configuration" width="1600" height="893"></a><a href="walkthrough.html#68" title="Open in walkthrough: Demo Config — Capped scenario"><img loading="lazy" src="img/68-demo-capped-celebration.webp" alt="Demo Config — Capped scenario" width="1600" height="893"></a></div></div>
+</section>
+
+<section id="dashboard" class="cs "><div class="secnum">11</div><h2>Dashboard UX and UI Design</h2>
+<p class="lead">The dashboards turn dense business data into clear answers: where the agent stands, what they earned and what needs attention.</p>
+<div class="dec"><div><div class="num">01</div><h3>A personalized Home that answers “where do I stand?”</h3><p>Home is a modular set of tiles that answers “where do I stand?” at a glance: a <b>Getting Started</b> checklist for new agents, <b>Capping Year</b> progress with GCI, Volume, Units and Revenue Share, Scheduled Training, Achievements, What’s New and Upline Partners. Home changes with the agent’s stage: the Getting Started checklist leads for new joiners and drops away after the first 90 days.</p><p><b>Customize Home Screen</b> lets each agent drag tiles into the order they want, with Reset to Default, Cancel and Save Changes, and a short first-run overlay that explains how.</p></div><div class="shots four"><a href="walkthrough.html#01" title="Open in walkthrough: Home — Modular home"><img loading="lazy" class="v2" src="img-v2/01-home.webp" alt="Home — Modular home" width="1440" height="1576"></a><a href="walkthrough.html#h1" title="Open in walkthrough: Home — Getting Started (new agent)"><img loading="lazy" class="v2" src="img-v2/home-getting-started.webp" alt="Home — Getting Started (new agent)" width="1440" height="1395"></a><a href="walkthrough.html#02" title="Open in walkthrough: Home — Customize Home Screen"><img loading="lazy" class="v2" src="img-v2/02-home-customize.webp" alt="Home — Customize Home Screen" width="1440" height="1269"></a><a href="walkthrough.html#h5" title="Open in walkthrough: Customize — moving a tile"><img loading="lazy" class="v2" src="img-v2/home-customize-move-tile.webp" alt="Customize — moving a tile" width="1440" height="1269"></a></div></div>
+<div class="dec"><div><div class="num">02</div><h3>Capping progress as a moment, not a number</h3><p>Capping is one of the most meaningful milestones for an agent, so I designed it as a recurring visual thread: the Capping Year progress bar on Home, a year-by-year capping history timeline on the Agent dashboard, and a <b>CAP REACHED</b> celebration state that turns goals green and adds goal-reached badges.</p></div><div class="shots"><a href="walkthrough.html#69" title="Open in walkthrough: Home — CAP REACHED scenario"><img loading="lazy" src="img/69-home-capped-state.webp" alt="Home — CAP REACHED scenario" width="1600" height="893"></a><a href="walkthrough.html#22" title="Open in walkthrough: Agent Performance dashboard"><img loading="lazy" src="img/22-agent-dashboard.webp" alt="Agent Performance dashboard" width="1600" height="893"></a></div></div>
+<div class="dec"><div><div class="num">03</div><h3>Making RevShare legible: earnings, levels and organization reporting</h3><p>RevShare data is dense and hierarchical. I split it into clear jobs: <b>My Earnings</b> opens on Revenue Share with My FLA, My FLQA, My New Agents and My Prospective Agents cards, a Revenue Share Group donut with agent counts per level, and <b>Unpaid, Expected Next and Last Paid</b> amounts that each open an agent-level table. The Revenue Share Group report lists every agent with level, cap percentage and amount, and a side panel for details.</p><p>For the organization, <b>Organization Reporting</b> separates an Overview Dashboard (KPI tiles, YTD revenue share and volume, agent mix and per-level charts), an Off-boarding Overview and a Detail Report. Large reports are downloaded in the background and delivered to Notifications, with a clear state when a report is too large to display.</p></div><div class="shots four"><a href="walkthrough.html#42" title="Open in walkthrough: My Earnings — Revenue Share"><img loading="lazy" class="v2" src="img-v2/42-my-earnings-revshare.webp" alt="My Earnings — Revenue Share" width="1440" height="1024"></a><a href="walkthrough.html#51" title="Open in walkthrough: Reports — Rev Share Group"><img loading="lazy" class="v2" src="img-v2/51-revshare-group.webp" alt="Reports — Rev Share Group" width="1440" height="1024"></a><a href="walkthrough.html#47" title="Open in walkthrough: Organization Reporting — Overview Dashboard"><img loading="lazy" class="v2" src="img-v2/47-org-overview.webp" alt="Organization Reporting — Overview Dashboard" width="1440" height="1569"></a><a href="walkthrough.html#o3" title="Open in walkthrough: Organization — Detail Report"><img loading="lazy" class="v2" src="img-v2/org-detail-report.webp" alt="Organization — Detail Report" width="1440" height="1024"></a></div></div>
+<div class="dec"><div><div class="num">04</div><h3>Agent Desk: one workspace per transaction</h3><p>Agent Desk starts with the active pipeline and a <b>Needs your attention</b> list so the next action is obvious. Each transaction opens into a workspace with persistent key facts (agent, buyer, expected close, days on market, price) and tabs for Overview, Contacts, Commission, Checklist, Documents, Activity and Comments, so everything about a deal lives in one place.</p></div><div class="shots four"><a href="walkthrough.html#54" title="Open in walkthrough: Agent Desk"><img loading="lazy" src="img/54-agent-desk.webp" alt="Agent Desk" width="1600" height="893"></a><a href="walkthrough.html#56" title="Open in walkthrough: Transaction — Overview"><img loading="lazy" src="img/56-transaction-detail.webp" alt="Transaction — Overview" width="1600" height="893"></a><a href="walkthrough.html#59" title="Open in walkthrough: Transaction — Checklist"><img loading="lazy" src="img/59-deal-checklist.webp" alt="Transaction — Checklist" width="1600" height="893"></a><a href="walkthrough.html#61" title="Open in walkthrough: Transaction — Activity"><img loading="lazy" src="img/61-deal-activity.webp" alt="Transaction — Activity" width="1600" height="893"></a></div></div>
+<div class="dec"><div><div class="num">05</div><h3>A consistent table system</h3><p>Much of the portal is tabular, so I standardized one data-table pattern: search and filter chips, a column manager, Save View, Download, per-column search, pagination, and row click to open a detail drawer. Once agents learn it on one page, it works the same on State Mentors, Production Details, Team Reconciliation, Revenue Share Group and My Mentees.</p></div><div class="shots four"><a href="walkthrough.html#19" title="Open in walkthrough: State Mentors table"><img loading="lazy" src="img/19-broker-state-mentors.webp" alt="State Mentors table" width="1600" height="893"></a><a href="walkthrough.html#21" title="Open in walkthrough: Table column manager"><img loading="lazy" src="img/21-table-column-manager.webp" alt="Table column manager" width="1600" height="893"></a><a href="walkthrough.html#24" title="Open in walkthrough: Agent Production Details"><img loading="lazy" src="img/24-agent-production-details.webp" alt="Agent Production Details" width="1600" height="893"></a><a href="walkthrough.html#25" title="Open in walkthrough: Transaction Details drawer"><img loading="lazy" src="img/25-transaction-details.webp" alt="Transaction Details drawer" width="1600" height="893"></a></div></div>
+</section>
+<section id="before-after" class="cs "><div class="secnum">12</div><h2>Before and After: Design Evolution</h2>
+<p class="lead">The earlier prototype next to the current design for the same screens. Captions describe only what is visibly different between the two.</p>
+<div class="ba"><div class="bapair"><h3>Home</h3><div class="bagrid"><figure><figcaption>Before · earlier prototype</figcaption><a href="img/01-home.webp" target="_blank" rel="noopener"><img loading="lazy" src="img/01-home.webp" alt="Before: Home — Mission Control" width="1600" height="893"></a></figure><figure class="after"><figcaption>After · current design</figcaption><a href="walkthrough.html#01"><img loading="lazy" src="img-v2/01-home.webp" alt="After: Home — Modular home" width="1440" height="1576"></a></figure></div><p>Before: a light sidebar and a mission-control layout of goal KPIs (Homes Closed, Commission, Sales Volume), Weekly Quests and a capping ring. After: dark navy navigation, a full-width announcement banner and modular tiles: Getting Started checklist, Capping Year progress with GCI, Volume, Units and Revenue Share, Scheduled Training, Achievements, What’s New and Upline Partners.</p><p class="src">After: Home-Screens Figma file.</p></div><div class="bapair"><h3>Home customization</h3><div class="bagrid"><figure><figcaption>Before · earlier prototype</figcaption><a href="img/02-home-customize.webp" target="_blank" rel="noopener"><img loading="lazy" src="img/02-home-customize.webp" alt="Before: Home — Customize mode" width="1600" height="893"></a></figure><figure class="after"><figcaption>After · current design</figcaption><a href="walkthrough.html#02"><img loading="lazy" src="img-v2/02-home-customize.webp" alt="After: Home — Customize Home Screen" width="1440" height="1269"></a></figure></div><p>Before: drag handles and remove controls on each card, with Done and Reset layout. After: a Customize Home Screen mode with dashed tile outlines and Reset to Default, Cancel and Save Changes in the page header.</p><p class="src">After: Home-Screens Figma file.</p></div><div class="bapair"><h3>RevShare dashboard → My Earnings</h3><div class="bagrid"><figure><figcaption>Before · earlier prototype</figcaption><a href="img/42-revshare-dashboard.webp" target="_blank" rel="noopener"><img loading="lazy" src="img/42-revshare-dashboard.webp" alt="Before: RevShare Dashboard" width="1600" height="893"></a></figure><figure class="after"><figcaption>After · current design</figcaption><a href="walkthrough.html#42"><img loading="lazy" src="img-v2/42-my-earnings-revshare.webp" alt="After: My Earnings — Revenue Share" width="1440" height="1024"></a></figure></div><p>Before: YTD revenue share, Get Paid Now, FLA/FLQA tiles, a level ladder and payout status cards. After: Revenue Share and GCI tabs, My FLA, My FLQA, My New Agents and My Prospective Agents cards, a Revenue Share Group donut by level, and Unpaid, Expected Next and Last Paid amounts.</p><p class="src">After: Cosmo Transition Figma file.</p></div><div class="bapair"><h3>Financials → My Revenue Share</h3><div class="bagrid"><figure><figcaption>Before · earlier prototype</figcaption><a href="img/53-revshare-financials.webp" target="_blank" rel="noopener"><img loading="lazy" src="img/53-revshare-financials.webp" alt="Before: Financials — Unpaid" width="1600" height="893"></a></figure><figure class="after"><figcaption>After · current design</figcaption><a href="walkthrough.html#53"><img loading="lazy" src="img-v2/53-revshare-unpaid.webp" alt="After: My Revenue Share — Unpaid" width="1440" height="1024"></a></figure></div><p>Before: an Unpaid / Expected / Last Paid summary above an agent table. After: Unpaid, Expected and Last Paid become tabs over a sortable agent table with level, country, state and total revenue share, plus Download.</p><p class="src">After: Cosmo Transition Figma file.</p></div><div class="bapair"><h3>Revenue Share Group</h3><div class="bagrid"><figure><figcaption>Before · earlier prototype</figcaption><a href="img/51-revshare-group.webp" target="_blank" rel="noopener"><img loading="lazy" src="img/51-revshare-group.webp" alt="Before: Revenue Share Group" width="1600" height="893"></a></figure><figure class="after"><figcaption>After · current design</figcaption><a href="walkthrough.html#51"><img loading="lazy" src="img-v2/51-revshare-group.webp" alt="After: Reports — Rev Share Group" width="1440" height="1024"></a></figure></div><p>Before: a group table with date, status, country and level filters. After: a Reports page with Rev Share Group and Rev Share from Team tabs and a simpler table of level, cap percentage and amount.</p><p class="src">After: Cosmo Transition Figma file.</p></div><div class="bapair"><h3>Organization dashboard → Organization Reporting</h3><div class="bagrid"><figure><figcaption>Before · earlier prototype</figcaption><a href="img/47-revshare-organization.webp" target="_blank" rel="noopener"><img loading="lazy" src="img/47-revshare-organization.webp" alt="Before: Organization Dashboard" width="1600" height="893"></a></figure><figure class="after"><figcaption>After · current design</figcaption><a href="walkthrough.html#47"><img loading="lazy" src="img-v2/47-org-overview.webp" alt="After: Organization Reporting — Overview Dashboard" width="1440" height="1569"></a></figure></div><p>Before: an organization snapshot with leader tier, KPIs with month-over-month deltas and productivity by country. After: Overview Dashboard, Off-boarding Overview and Detail Report tabs, organization KPI tiles, YTD revenue share and volume, donut charts and per-level bar charts.</p><p class="src">After: Organization Figma file.</p></div><div class="bapair"><h3>Team dashboard</h3><div class="bagrid"><figure><figcaption>Before · earlier prototype</figcaption><a href="img/38-team-dashboard.webp" target="_blank" rel="noopener"><img loading="lazy" src="img/38-team-dashboard.webp" alt="Before: Team Dashboard" width="1600" height="893"></a></figure><figure class="after"><figcaption>After · current design</figcaption><a href="walkthrough.html#38"><img loading="lazy" src="img-v2/38-team-dashboard.webp" alt="After: Team dashboard" width="1440" height="1024"></a></figure></div><p>Before: team production, onboarding agents, Top Agents tabs and Mega Team re-qualification progress. After: Units, Volume and Team Lead Split tiles with pending values, a currency selector and Filter, and Top Agents tabs for Units Sold and Highest Volume.</p><p class="src">After: Cosmo Transition Figma file.</p></div><div class="bapair"><h3>Notifications</h3><div class="bagrid"><figure><figcaption>Before · earlier prototype</figcaption><a href="img/06-notifications.webp" target="_blank" rel="noopener"><img loading="lazy" src="img/06-notifications.webp" alt="Before: Notifications — My Activity Feed" width="1600" height="893"></a></figure><figure class="after"><figcaption>After · current design</figcaption><a href="walkthrough.html#06"><img loading="lazy" src="img-v2/06-notifications.webp" alt="After: Notifications" width="1440" height="1024"></a></figure></div><p>Before: a full-page activity feed with tabs, search, date and type filters, download and pagination. After: a simpler list with one Filter button, category tags and inline actions such as “Say Congrats!” and “Invite to a Training”.</p><p class="src">After: Cosmo Transition Figma file.</p></div></div>
+</section>
+
+<section id="mira" class="cs mira"><div class="secnum">13</div><h2>MIRA – Agentic AI Experience Design</h2>
+
+<p class="lead">MIRA is designed to go beyond a traditional chatbot. Rather than a help widget that answers FAQs, it is an assistant that understands what the agent is trying to do, uses the context of their business, and helps them act, with the agent always in control.</p>
+<div class="grid2 mira-proto"><div class="card"><h3>In the prototype</h3><ul class="clean"><li>Floats on every screen, one click away from Home and every other area</li><li>Opens with a greeting, suggested prompts (GCI trends, listing velocity, active pipeline) and chat history</li><li>Answers with chart insight cards that can be pinned to the dashboard</li><li>The same MIRA panel powers AI chat support in Contact eXpert Care, so help and insights share one entry point</li></ul><p class="note">MIRA’s answers in the prototype are scripted to demonstrate the experience.</p></div>
+<div class="shots"><a href="walkthrough.html#16" title="Open in walkthrough: MIRA assistant"><img loading="lazy" src="img/16-assistant-chat.webp" alt="MIRA assistant" width="1600" height="893"></a><a href="walkthrough.html#17" title="Open in walkthrough: MIRA — GCI Trends answer"><img loading="lazy" src="img/17-assistant-answer.webp" alt="MIRA — GCI Trends answer" width="1600" height="893"></a></div></div>
+<h3 class="sub">Beyond a chatbot: capabilities and design principles</h3>
+<p class="note">Labels: <span class="tag tprototyped">Prototyped</span> shown in the prototype · <span class="tag tdesigned">Designed pattern</span> designed interaction principle · <span class="tag troadmap">Roadmap</span> planned capability.</p>
+<div class="caps"><div class="cap"><span class="tag tprototyped">Prototyped</span><h4>Natural-language conversations</h4><p>Agents ask in their own words, starting from suggested prompts such as GCI trends, listing velocity and active pipeline.</p></div><div class="cap"><span class="tag tdesigned">Designed pattern</span><h4>Understanding agent intent</h4><p>Requests are framed as intents (get an insight, find something, do a task, get help) so MIRA can respond in the right way.</p></div><div class="cap"><span class="tag tdesigned">Designed pattern</span><h4>Context-aware responses</h4><p>Answers take into account where the agent is and what they are looking at, and come back as chart insight cards rather than walls of text.</p></div><div class="cap"><span class="tag troadmap">Roadmap</span><h4>Accessing relevant agent information</h4><p>Answers draw on the agent’s own goals, earnings, pipeline and documents.</p></div><div class="cap"><span class="tag tdesigned">Designed pattern</span><h4>Assisting with business workflows</h4><p>MIRA hands the agent into existing flows such as Get Paid Now, a transaction checklist or the mentor application instead of replacing them.</p></div><div class="cap"><span class="tag tdesigned">Designed pattern</span><h4>Recommending next actions</h4><p>Like “Needs your attention” on Agent Desk, MIRA suggests what to do next and links to it.</p></div><div class="cap"><span class="tag troadmap">Roadmap</span><h4>Supporting task execution through AI agents</h4><p>MIRA prepares and runs multi-step tasks on the agent’s behalf.</p></div><div class="cap"><span class="tag tdesigned">Designed pattern</span><h4>Human confirmation and control</h4><p>Important actions follow the Get Paid Now model: show exactly what will happen, then Review, Confirm and Done. Nothing important happens without the agent’s approval.</p></div><div class="cap"><span class="tag tdesigned">Designed pattern</span><h4>Error handling and conversation recovery</h4><p>When a request is unclear or fails, MIRA asks a clarifying question, offers options, or routes to a human in Contact eXpert Care.</p></div></div>
+<h3 class="sub">Conversation flow</h3>
+<div class="card flowcard"><svg class="mflow" viewBox="0 0 1020 280" role="img" aria-label="MIRA conversation flow: intent, context, response or action, confirm, execute, with a recovery path back to intent">
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#3d5aa8"/></marker><marker id="arg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#c48a12"/></marker></defs>
+<g font-family="Inter,system-ui,sans-serif" text-anchor="middle">
+<text x="510" y="24" font-size="13" fill="#5b6478">Insight-only answers end at step 3; anything that changes data or money goes through Confirm</text>
+<rect x="6" y="44" width="176" height="80" rx="14" fill="#e8edf9" stroke="#3d5aa8"/><text x="94" y="78" font-size="17" font-weight="700" fill="#0f1b33">1 · Intent</text><text x="94" y="102" font-size="12" fill="#5b6478">What does the agent want?</text>
+<rect x="210" y="44" width="176" height="80" rx="14" fill="#e8edf9" stroke="#3d5aa8"/><text x="298" y="78" font-size="17" font-weight="700" fill="#0f1b33">2 · Context</text><text x="298" y="102" font-size="12" fill="#5b6478">Current screen + agent data</text>
+<rect x="414" y="44" width="192" height="80" rx="14" fill="#e8edf9" stroke="#3d5aa8"/><text x="510" y="78" font-size="17" font-weight="700" fill="#0f1b33">3 · Response / action</text><text x="510" y="102" font-size="12" fill="#5b6478">Answer, insight card or plan</text>
+<rect x="634" y="44" width="176" height="80" rx="14" fill="#fff6e0" stroke="#c48a12"/><text x="722" y="78" font-size="17" font-weight="700" fill="#0f1b33">4 · Confirm</text><text x="722" y="102" font-size="12" fill="#5b6478">Agent reviews, approves</text>
+<rect x="838" y="44" width="176" height="80" rx="14" fill="#e3f4ea" stroke="#2f8a57"/><text x="926" y="78" font-size="17" font-weight="700" fill="#0f1b33">5 · Execute</text><text x="926" y="102" font-size="12" fill="#5b6478">Task done, result shown</text>
+<path d="M182 84H207" stroke="#3d5aa8" stroke-width="2.5" marker-end="url(#ar)" fill="none"/><path d="M386 84H411" stroke="#3d5aa8" stroke-width="2.5" marker-end="url(#ar)" fill="none"/><path d="M606 84H631" stroke="#3d5aa8" stroke-width="2.5" marker-end="url(#ar)" fill="none"/><path d="M810 84H835" stroke="#3d5aa8" stroke-width="2.5" marker-end="url(#ar)" fill="none"/>
+<path d="M722 124V190H94V130" stroke="#c48a12" stroke-width="2.5" stroke-dasharray="7 6" fill="none" marker-end="url(#arg)"/>
+<path d="M510 124V190" stroke="#c48a12" stroke-width="2.5" stroke-dasharray="7 6" fill="none"/>
+<rect x="250" y="206" width="420" height="34" rx="17" fill="#fff" stroke="#c48a12"/><text x="460" y="228" font-size="13.5" font-weight="600" fill="#7a5200">Recovery: clarify · offer options · hand off to eXpert Care</text>
+<text x="510" y="266" font-size="12.5" fill="#5b6478">Unclear, declined or failed at any step → recover and return to intent</text>
+</g></svg></div>
+</section>
+
+<section id="conversational" class="cs "><div class="secnum">14</div><h2>Conversational UX and AI Workflows</h2>
+
+<div class="grid2"><div class="card"><h3>Conversation design principles</h3><ul class="clean"><li><b>Start with prompts, not a blank box:</b> suggested prompts show what MIRA can do</li><li><b>Show, don’t tell:</b> answer with a short summary and a chart insight card</li><li><b>Make answers useful later:</b> pin an insight card to the dashboard</li><li><b>Remember the thread:</b> chat history keeps earlier questions close</li><li><b>Clear, plain language:</b> UX copy drafted and refined with ChatGPT and Claude, then edited for tone</li><li><b>Always a way out:</b> human help in Contact eXpert Care via call or email</li></ul></div>
+<div class="card"><h3>AI workflows</h3><ol class="wf">
+<li><b>Insight</b> <span class="tag tprototyped">Prototyped</span><br>Ask about GCI trends → chart insight card → pin to dashboard</li>
+<li><b>Support</b> <span class="tag tprototyped">Prototyped</span><br>Start AI Chat in Contact eXpert Care → the same MIRA panel answers</li>
+<li><b>Navigate</b> <span class="tag tdesigned">Designed pattern</span><br>Ask for a document → MIRA links to the right place in Documents</li>
+<li><b>Act</b> <span class="tag tdesigned">Designed pattern</span><br>Ask to get paid → MIRA opens Get Paid Now with the fee and total → agent confirms</li>
+<li><b>Next step</b> <span class="tag troadmap">Roadmap</span><br>MIRA flags a deal that needs attention and prepares the next task for approval</li>
+</ol></div></div>
+<div class="shots two"><a href="walkthrough.html#66" title="Open in walkthrough: Contact eXpert Care"><img loading="lazy" src="img/66-help-center.webp" alt="Contact eXpert Care" width="1600" height="893"></a><a href="walkthrough.html#67" title="Open in walkthrough: Help — AI chat"><img loading="lazy" src="img/67-help-ai-chat.webp" alt="Help — AI chat with MIRA" width="1600" height="893"></a></div>
+</section>
+
+<section id="prototyping" class="cs "><div class="secnum">15</div><h2>Wireframing and Prototyping</h2>
+
+<div class="steps">
+<div><h4>Understand</h4><p>Framed the agent’s daily questions and jobs, and synthesized research inputs into goals.</p><span class="tool">ChatGPT · Claude</span></div>
+<div><h4>Structure (IA)</h4><p>Grouped the platform into My Desk, Business &amp; Growth, Resources, plus a global header and MIRA.</p></div>
+<div><h4>Wireframe</h4><p>Sketched layouts and flows for Home, RevShare, Agent Desk, the Mentor Program and MIRA.</p><span class="tool">Figma</span></div>
+<div><h4>Visual UI &amp; components</h4><p>Designed KPI cards, data tables, drawers and tabs with a consistent type, color and spacing hierarchy.</p><span class="tool">Figma</span></div>
+<div><h4>Prototype</h4><p>Built 71 screens and states as a stateful app, with a Demo Config to switch scenarios live.</p><span class="tool">Lovable</span></div>
+<div><h4>Iterate</h4><p>Tested drawers, drill-downs and multi-step flows as real behavior, and refined layout and UX copy.</p><span class="tool">Lovable · ChatGPT · Claude</span></div>
+</div>
+<p>Building the prototype in Lovable with AI-assisted development meant interactions like drawers, drill-downs, multi-step flows and MIRA’s panel could be tested as real behavior instead of static frames. The result is a clickable walkthrough in which hotspots link the screens the way the app does.</p>
+<div class="phbox"><b>Needs Suvarna’s input</b><ul><li><span class="ph">[Add: Figma wireframe and UI images to show the design evolution]</span></li></ul></div>
+<p><a class="btn" href="walkthrough.html">Click through all 77 screens →</a></p>
+</section>
+
+<section id="design-system" class="cs "><div class="secnum">16</div><h2>Design System and Components</h2>
+
+<p class="lead">A small set of reusable components and states keeps 77 screens feeling like one product. Once an agent learns a pattern on one page, it works the same everywhere.</p>
+<div class="uis">
+<div class="card"><h3>Core components</h3><ul class="clean"><li><b>KPI tiles</b> for capping progress, GCI, Volume, Units and Revenue Share</li><li><b>Data table</b> with search and filter chips, column manager, Save View, Download, per-column search and pagination</li><li><b>Detail drawers and side panels</b> for agents, notifications, transactions and mentors, so context is never lost</li><li><b>Tabs</b> for the transaction workspace and Notifications (Activity Feed · Recognition)</li><li><b>Step flows</b> such as the mentor application and background report downloads</li><li><b>MIRA panel</b> with prompts, chat history and pinnable insight cards</li></ul></div>
+<div class="card"><h3>Visual hierarchy</h3><ul class="clean"><li>Typography and spacing that put key values first, with labels and table data secondary</li><li>Color used for meaning, such as goals turning green and goal-reached badges in the CAP REACHED state</li><li>Status and payout cards that make earnings readable at a glance</li><li>Persistent key facts at the top of each transaction workspace</li></ul></div>
+<div class="card"><h3>States &amp; microinteractions</h3><ul class="clean"><li>Empty, filtered and drill-down states, including “report too large to display”</li><li>Celebration state for CAP REACHED</li><li>Customize Home Screen with Reset to Default, Cancel and Save Changes</li><li>Pending requests with Accept / Decline; row click opens a drawer</li><li>Scenario switches that update the live UI</li></ul></div>
+<div class="card"><h3>Consistency</h3><p>One table pattern serves State Mentors, Production Details, Team Reconciliation, Revenue Share Group and My Mentees. A persistent header and the floating MIRA assistant appear on every screen, and drawers keep the agent on the page they started from.</p></div>
+</div>
+<div class="uishots">
+<a href="walkthrough.html#01" title="Open in walkthrough: Home — Modular home"><img loading="lazy" src="thumb-v2/01-home.webp" alt="Capping Year progress and KPI tiles on Home" width="640" height="357"><span>KPI tiles · Home</span></a> <a href="walkthrough.html#02" title="Open in walkthrough: Home — Customize Home Screen"><img loading="lazy" src="thumb-v2/02-home-customize.webp" alt="Customize Home Screen with tile outlines" width="640" height="357"><span>Customize mode · tiles</span></a> <a href="walkthrough.html#o3" title="Open in walkthrough: Organization — Detail Report"><img loading="lazy" src="thumb-v2/org-detail-report.webp" alt="Detail Report table with Filter and Download" width="640" height="357"><span>Data table · Detail Report</span></a>
+<a href="walkthrough.html#21" title="Open in walkthrough: Table column manager"><img loading="lazy" src="thumb/21-table-column-manager.webp" alt="Data table with column manager" width="640" height="357"><span>Data table · column manager</span></a>
+<a href="walkthrough.html#25" title="Open in walkthrough: Transaction Details drawer"><img loading="lazy" src="thumb/25-transaction-details.webp" alt="Detail drawer" width="640" height="357"><span>Detail drawer</span></a>
+<a href="walkthrough.html#56" title="Open in walkthrough: Transaction — Overview"><img loading="lazy" src="thumb/56-transaction-detail.webp" alt="Transaction workspace tabs" width="640" height="357"><span>Tabs · transaction workspace</span></a>
+</div>
+</section>
+
+<section id="usability" class="cs "><div class="secnum">17</div><h2>Usability Testing and Iterations</h2>
+
+<div class="grid2"><div class="card"><h3>Test plan: core tasks</h3><ol class="wf"><li>Find how close you are to your cap on Home</li><li>Find what you will be paid next on My Earnings</li><li>Find the deal that needs your attention in Agent Desk</li><li>Ask MIRA about your GCI trend and pin the answer</li><li>Find and choose a mentor</li></ol><p class="note">What to observe: task success, time on task, errors and points of confusion, and trust in MIRA’s answers.</p></div>
+<div class="card"><h3>Results and iterations</h3><ul class="clean"><li>Status: <span class="ph">[Add: testing completed, or planned]</span></li><li>Participants: <span class="ph">[Add: number and profile of agents tested]</span></li><li>Key findings: <span class="ph">[Add: findings]</span></li><li>Changes made: <span class="ph">[Add: before / after iterations]</span></li></ul></div></div>
+</section>
+
+<section id="handoff" class="cs "><div class="secnum">18</div><h2>Development Handoff</h2>
+
+<div class="grid2"><div class="card"><h3>What a handoff package includes</h3><ul class="clean"><li>Figma screens, components and their states</li><li>The Lovable prototype as a reference for real interaction behavior</li><li>Interaction notes for drawers, tabs, tables and multi-step flows</li><li>MIRA conversation specs: intents, response formats, confirmation steps and error and recovery states</li><li>Demo Config scenarios for QA and stakeholder review</li><li>Accessibility notes for color, contrast and keyboard flows</li></ul></div>
+<div class="card"><h3>How it happened</h3><ul class="clean"><li><span class="ph">[Add: engineering team or partners, and whether handoff has happened yet]</span></li><li><span class="ph">[Add: tools and documentation used, e.g. Figma Dev Mode, tickets, specs]</span></li></ul></div></div>
+</section>
+
+<section id="outcomes" class="cs "><div class="secnum">19</div><h2>Product Outcomes and Business Impact</h2>
+
+<div class="outs">
+<div><b>71</b><span>screens and states designed and prototyped</span></div>
+<div><b>Stateful</b><span>working prototype built in Lovable, not static frames</span></div>
+<div><b>1 prototype</b><span>tells many stories through the Demo Config in stakeholder demos</span></div>
+<div><b>1 table pattern</b><span>reused across five data-heavy pages</span></div>
+</div>
+<p>MIRA is integrated as one assistant across the platform, and the same panel serves insights and support.</p>
+<div class="phbox"><b>Business impact: needs Suvarna’s input</b><ul><li><span class="ph">[Add: stakeholder or recruiter feedback from demos]</span></li><li><span class="ph">[Add: business impact or metrics, only if measured]</span></li></ul></div>
+</section>
+
+<section id="learnings" class="cs "><div class="secnum">20</div><h2>Learnings and Future Roadmap</h2>
+
+<div class="grid2"><div><p>Working across Figma and Lovable changed how I design. Figma gave me a clear structure and a shared set of components; building those designs in Lovable with AI assistance let me move from idea to a working, stateful experience quickly, and test interactions like drawers, drill-downs and multi-step flows as real behavior instead of static frames.</p><p>Designing MIRA taught me that an AI assistant is a product surface of its own: it needs intents, response formats, confirmation and recovery designed as carefully as any screen. ChatGPT and Claude were useful thinking partners for exploring flows and tightening UX copy, while the design decisions stayed mine.</p><p>The Demo Config turned out to be one of the most useful design tools in the project: one prototype can tell the story of a new agent looking for a mentor, an agent who just capped, and a certified mentor, live in the same session.</p></div>
+<div class="card"><h3>Future roadmap</h3><ul class="clean"><li>Usability testing with agents on Home, RevShare, Agent Desk and MIRA</li><li>Complete the remaining routes (Events Calendar, Tools, Knowledge Base, Downloads)</li><li>Mobile layouts for the most frequent on-the-go tasks</li><li>Accessibility review of color, contrast and keyboard flows in charts and tables</li><li>Deeper MIRA capabilities grounded in the agent’s own data</li><li>MIRA task execution through AI agents, with human confirmation for important actions</li></ul></div></div>
+</section>
+</main></div>
+<section id="gallery" class="gal"><div class="wrap"><div class="secnum">Appendix</div><h2>Screen gallery</h2><p class="lead">All 77 screens and states, grouped by area. Screens marked <span class="badge2">Current</span> come from the latest Figma design files; screens marked <span class="badge2 old">Earlier</span> are from the earlier prototype, kept where no updated design exists yet. Each one opens in the walkthrough.</p><h3>Sign-in &amp; onboarding <span>2 screens</span></h3><div class="thumbs"><a href="walkthrough.html#s1"><img loading="lazy" src="thumb-v2/sign-in.webp" alt="" width="640" height="357"><span>Sign in <span class="badge2">Current</span></span></a><a href="walkthrough.html#s2"><img loading="lazy" src="thumb-v2/welcome-new-agent.webp" alt="" width="640" height="357"><span>Welcome — new agent <span class="badge2">Current</span></span></a></div><h3>Home &amp; personalization <span>14 screens</span></h3><div class="thumbs"><a href="walkthrough.html#01"><img loading="lazy" src="thumb-v2/01-home.webp" alt="" width="640" height="357"><span>Home — Modular home <span class="badge2">Current</span></span></a><a href="walkthrough.html#h1"><img loading="lazy" src="thumb-v2/home-getting-started.webp" alt="" width="640" height="357"><span>Home — Getting Started (new agent) <span class="badge2">Current</span></span></a><a href="walkthrough.html#h2"><img loading="lazy" src="thumb-v2/home-post-90-days.webp" alt="" width="640" height="357"><span>Home — after 90 days <span class="badge2">Current</span></span></a><a href="walkthrough.html#h3"><img loading="lazy" src="thumb-v2/home-after-90-days.webp" alt="" width="640" height="357"><span>Home — after 90 days (growth banner) <span class="badge2">Current</span></span></a><a href="walkthrough.html#h4"><img loading="lazy" src="thumb-v2/home-mobile.webp" alt="" width="640" height="357"><span>Home — mobile <span class="badge2">Current</span></span></a><a href="walkthrough.html#02"><img loading="lazy" src="thumb-v2/02-home-customize.webp" alt="" width="640" height="357"><span>Home — Customize Home Screen <span class="badge2">Current</span></span></a><a href="walkthrough.html#h5"><img loading="lazy" src="thumb-v2/home-customize-move-tile.webp" alt="" width="640" height="357"><span>Customize — moving a tile <span class="badge2">Current</span></span></a><a href="walkthrough.html#h6"><img loading="lazy" src="thumb-v2/home-customize-tips.webp" alt="" width="640" height="357"><span>Customize — how-to overlay <span class="badge2">Current</span></span></a><a href="walkthrough.html#h7"><img loading="lazy" src="thumb-v2/home-reset-default.webp" alt="" width="640" height="357"><span>Customize — Reset complete <span class="badge2">Current</span></span></a><a href="walkthrough.html#15"><img loading="lazy" src="thumb/15-sidebar-demo-toggles.webp" alt="" width="640" height="357"><span>Demo Toggles quick menu <span class="badge2 old">Earlier</span></span></a><a href="walkthrough.html#69"><img loading="lazy" src="thumb/69-home-capped-state.webp" alt="" width="640" height="357"><span>Home — CAP REACHED scenario <span class="badge2 old">Earlier</span></span></a><a href="walkthrough.html#70"><img loading="lazy" src="thumb/70-home-needs-mentor.webp" alt="" width="640" height="357"><span>Home — Needs Mentor scenario <span class="badge2 old">Earlier</span></span></a><a href="walkthrough.html#71"><img loading="lazy" src="thumb/71-choose-mentor-drawer.webp" alt="" width="640" height="357"><span>Choose Mentor drawer <span class="badge2 old">Earlier</span></span></a><a href="walkthrough.html#72"><img loading="lazy" src="thumb/72-mentor-profile.webp" alt="" width="640" height="357"><span>Mentor profile <span class="badge2 old">Earlier</span></span></a></div><h3>Notifications &amp; account <span>8 screens</span></h3><div class="thumbs"><a href="walkthrough.html#06"><img loading="lazy" src="thumb-v2/06-notifications.webp" alt="" width="640" height="357"><span>Notifications <span class="badge2">Current</span></span></a><a href="walkthrough.html#n1"><img loading="lazy" src="thumb-v2/notifications-downloads.webp" alt="" width="640" height="357"><span>Notifications — Downloads <span class="badge2">Current</span></span></a><a href="walkthrough.html#08"><img loading="lazy" src="thumb/08-notification-detail.webp" alt="" width="640" height="357"><span>Notification detail drawer <span class="badge2 old">Earlier</span></span></a><a href="walkthrough.html#11"><img loading="lazy" src="thumb-v2/11-account-menu.webp" alt="" width="640" height="357"><span>Account menu <span class="badge2">Current</span></span></a><a href="walkthrough.html#12"><img loading="lazy" src="thumb/12-personal-details.webp" alt="" width="640" height="357"><span>Personal Details <span class="badge2 old">Earlier</span></span></a><a href="walkthrough.html#13"><img loading="lazy" src="thumb/13-settings.webp" alt="" width="640" height="357"><span>Settings <span class="badge2 old">Earlier</span></span></a><a href="walkthrough.html#14"><img loading="lazy" src="thumb/14-demo-config.webp" alt="" width="640" height="357"><span>Demo Configuration <span class="badge2 old">Earlier</span></span></a><a href="walkthrough.html#68"><img loading="lazy" src="thumb/68-demo-capped-celebration.webp" alt="" width="640" height="357"><span>Demo Config — Capped scenario <span class="badge2 old">Earlier</span></span></a></div><h3>MIRA &amp; help <span>4 screens</span></h3><div class="thumbs"><a href="walkthrough.html#16"><img loading="lazy" src="thumb/16-assistant-chat.webp" alt="" width="640" height="357"><span>MIRA assistant <span class="badge2 old">Earlier</span></span></a><a href="walkthrough.html#17"><img loading="lazy" src="thumb/17-assistant-answer.webp" alt="" width="640" height="357"><span>MIRA — GCI Trends answer <span class="badge2 old">Earlier</span></span></a><a href="walkthrough.html#66"><img loading="lazy" src="thumb/66-help-center.webp" alt="" width="640" height="357"><span>Contact eXpert Care <span class="badge2 old">Earlier</span></span></a><a href="walkthrough.html#67"><img loading="lazy" src="thumb/67-help-ai-chat.webp" alt="" width="640" height="357"><span>Help — AI chat <span class="badge2 old">Earlier</span></span></a></div><h3>Broker Center <span>4 screens</span></h3><div class="thumbs"><a href="walkthrough.html#18"><img loading="lazy" src="thumb/18-broker-center.webp" alt="" width="640" height="357"><span>Broker Center <span class="badge2 old">Earlier</span></span></a><a href="walkthrough.html#19"><img loading="lazy" src="thumb/19-broker-state-mentors.webp" alt="" width="640" height="357"><span>State Mentors table <span class="badge2 old">Earlier</span></span></a><a href="walkthrough.html#20"><img loading="lazy" src="thumb/20-mentor-detail-drawer.webp" alt="" width="640" height="357"><span>Mentor profile drawer <span class="badge2 old">Earlier</span></span></a><a href="walkthrough.html#21"><img loading="lazy" src="thumb/21-table-column-manager.webp" alt="" width="640" height="357"><span>Table column manager <span class="badge2 old">Earlier</span></span></a></div><h3>Agent <span>9 screens</span></h3><div class="thumbs"><a href="walkthrough.html#22"><img loading="lazy" src="thumb/22-agent-dashboard.webp" alt="" width="640" height="357"><span>Agent Performance dashboard <span class="badge2 old">Earlier</span></span></a><a href="walkthrough.html#24"><img loading="lazy" src="thumb/24-agent-production-details.webp" alt="" width="640" height="357"><span>Agent Production Details <span class="badge2 old">Earlier</span></span></a><a href="walkthrough.html#25"><img loading="lazy" src="thumb/25-transaction-details.webp" alt="" width="640" height="357"><span>Transaction Details drawer <span class="badge2 old">Earlier</span></span></a><a href="walkthrough.html#26"><img loading="lazy" src="thumb/26-icon-production.webp" alt="" width="640" height="357"><span>ICON Program — Production <span class="badge2 old">Earlier</span></span></a><a href="walkthrough.html#27"><img loading="lazy" src="thumb/27-icon-cultural.webp" alt="" width="640" height="357"><span>ICON Program — Cultural <span class="badge2 old">Earlier</span></span></a><a href="walkthrough.html#28"><img loading="lazy" src="thumb/28-icon-events.webp" alt="" width="640" height="357"><span>ICON Program — Events <span class="badge2 old">Earlier</span></span></a><a href="walkthrough.html#29"><img loading="lazy" src="thumb/29-icon-stock-grants.webp" alt="" width="640" height="357"><span>ICON Program — Stock Grants <span class="badge2 old">Earlier</span></span></a><a href="walkthrough.html#30"><img loading="lazy" src="thumb/30-custom-service-fees.webp" alt="" width="640" height="357"><span>Custom Service Fees report <span class="badge2 old">Earlier</span></span></a><a href="walkthrough.html#31"><img loading="lazy" src="thumb/31-custom-fee-detail.webp" alt="" width="640" height="357"><span>Custom Service Fee detail <span class="badge2 old">Earlier</span></span></a></div><h3>Documents <span>2 screens</span></h3><div class="thumbs"><a href="walkthrough.html#32"><img loading="lazy" src="thumb/32-docs-year-end.webp" alt="" width="640" height="357"><span>Documents — Year-End <span class="badge2 old">Earlier</span></span></a><a href="walkthrough.html#34"><img loading="lazy" src="thumb-v2/34-documents.webp" alt="" width="640" height="357"><span>Documents — Team Documents <span class="badge2">Current</span></span></a></div><h3>Team <span>4 screens</span></h3><div class="thumbs"><a href="walkthrough.html#38"><img loading="lazy" src="thumb-v2/38-team-dashboard.webp" alt="" width="640" height="357"><span>Team dashboard <span class="badge2">Current</span></span></a><a href="walkthrough.html#39"><img loading="lazy" src="thumb-v2/39-team-top-agents.webp" alt="" width="640" height="357"><span>Team — Top Agents <span class="badge2">Current</span></span></a><a href="walkthrough.html#40"><img loading="lazy" src="thumb/40-team-reconciliation.webp" alt="" width="640" height="357"><span>Team Reconciliation <span class="badge2 old">Earlier</span></span></a><a href="walkthrough.html#41"><img loading="lazy" src="thumb-v2/41-team-overview.webp" alt="" width="640" height="357"><span>Team — Overview table <span class="badge2">Current</span></span></a></div><h3>Training <span>1 screen</span></h3><div class="thumbs"><a href="walkthrough.html#t1"><img loading="lazy" src="thumb-v2/training-calendar.webp" alt="" width="640" height="357"><span>Training — Scheduled training <span class="badge2">Current</span></span></a></div><h3>RevShare Earnings <span>13 screens</span></h3><div class="thumbs"><a href="walkthrough.html#42"><img loading="lazy" src="thumb-v2/42-my-earnings-revshare.webp" alt="" width="640" height="357"><span>My Earnings — Revenue Share <span class="badge2">Current</span></span></a><a href="walkthrough.html#r1"><img loading="lazy" src="thumb-v2/revshare-my-fla.webp" alt="" width="640" height="357"><span>My Earnings — My FLA <span class="badge2">Current</span></span></a><a href="walkthrough.html#r2"><img loading="lazy" src="thumb-v2/revshare-fla-agent-drawer.webp" alt="" width="640" height="357"><span>My FLA — agent details <span class="badge2">Current</span></span></a><a href="walkthrough.html#53"><img loading="lazy" src="thumb-v2/53-revshare-unpaid.webp" alt="" width="640" height="357"><span>My Revenue Share — Unpaid <span class="badge2">Current</span></span></a><a href="walkthrough.html#r3"><img loading="lazy" src="thumb-v2/revshare-expected.webp" alt="" width="640" height="357"><span>My Revenue Share — Expected <span class="badge2">Current</span></span></a><a href="walkthrough.html#47"><img loading="lazy" src="thumb-v2/47-org-overview.webp" alt="" width="640" height="357"><span>Organization Reporting — Overview Dashboard <span class="badge2">Current</span></span></a><a href="walkthrough.html#o1"><img loading="lazy" src="thumb-v2/org-agents-capped.webp" alt="" width="640" height="357"><span>Organization — Agents capped this week <span class="badge2">Current</span></span></a><a href="walkthrough.html#o2"><img loading="lazy" src="thumb-v2/org-offboarding.webp" alt="" width="640" height="357"><span>Organization — Off-boarding Overview <span class="badge2">Current</span></span></a><a href="walkthrough.html#o3"><img loading="lazy" src="thumb-v2/org-detail-report.webp" alt="" width="640" height="357"><span>Organization — Detail Report <span class="badge2">Current</span></span></a><a href="walkthrough.html#o4"><img loading="lazy" src="thumb-v2/org-download-preparing.webp" alt="" width="640" height="357"><span>Detail Report — preparing download <span class="badge2">Current</span></span></a><a href="walkthrough.html#o5"><img loading="lazy" src="thumb-v2/org-report-too-large.webp" alt="" width="640" height="357"><span>Detail Report — too large to display <span class="badge2">Current</span></span></a><a href="walkthrough.html#51"><img loading="lazy" src="thumb-v2/51-revshare-group.webp" alt="" width="640" height="357"><span>Reports — Rev Share Group <span class="badge2">Current</span></span></a><a href="walkthrough.html#52"><img loading="lazy" src="thumb-v2/52-revshare-agent-drawer.webp" alt="" width="640" height="357"><span>Rev Share Group — agent side panel <span class="badge2">Current</span></span></a></div><h3>Agent Desk <span>9 screens</span></h3><div class="thumbs"><a href="walkthrough.html#54"><img loading="lazy" src="thumb/54-agent-desk.webp" alt="" width="640" height="357"><span>Agent Desk <span class="badge2 old">Earlier</span></span></a><a href="walkthrough.html#55"><img loading="lazy" src="thumb/55-agent-desk-new-menu.webp" alt="" width="640" height="357"><span>New transaction menu <span class="badge2 old">Earlier</span></span></a><a href="walkthrough.html#56"><img loading="lazy" src="thumb/56-transaction-detail.webp" alt="" width="640" height="357"><span>Transaction — Overview <span class="badge2 old">Earlier</span></span></a><a href="walkthrough.html#57"><img loading="lazy" src="thumb/57-deal-contacts.webp" alt="" width="640" height="357"><span>Transaction — Contacts <span class="badge2 old">Earlier</span></span></a><a href="walkthrough.html#58"><img loading="lazy" src="thumb/58-deal-commission.webp" alt="" width="640" height="357"><span>Transaction — Commission <span class="badge2 old">Earlier</span></span></a><a href="walkthrough.html#59"><img loading="lazy" src="thumb/59-deal-checklist.webp" alt="" width="640" height="357"><span>Transaction — Checklist <span class="badge2 old">Earlier</span></span></a><a href="walkthrough.html#60"><img loading="lazy" src="thumb/60-deal-documents.webp" alt="" width="640" height="357"><span>Transaction — Documents <span class="badge2 old">Earlier</span></span></a><a href="walkthrough.html#61"><img loading="lazy" src="thumb/61-deal-activity.webp" alt="" width="640" height="357"><span>Transaction — Activity <span class="badge2 old">Earlier</span></span></a><a href="walkthrough.html#62"><img loading="lazy" src="thumb/62-deal-comments.webp" alt="" width="640" height="357"><span>Transaction — Comments <span class="badge2 old">Earlier</span></span></a></div><h3>Mentor Program <span>7 screens</span></h3><div class="thumbs"><a href="walkthrough.html#63"><img loading="lazy" src="thumb/63-mentor-program.webp" alt="" width="640" height="357"><span>Mentor Program — Not applied <span class="badge2 old">Earlier</span></span></a><a href="walkthrough.html#64"><img loading="lazy" src="thumb/64-mentor-apply.webp" alt="" width="640" height="357"><span>Mentor application <span class="badge2 old">Earlier</span></span></a><a href="walkthrough.html#73"><img loading="lazy" src="thumb/73-mentor-active-dashboard.webp" alt="" width="640" height="357"><span>Mentor — Active dashboard <span class="badge2 old">Earlier</span></span></a><a href="walkthrough.html#74"><img loading="lazy" src="thumb/74-mentor-mentees.webp" alt="" width="640" height="357"><span>My Mentees <span class="badge2 old">Earlier</span></span></a><a href="walkthrough.html#75"><img loading="lazy" src="thumb/75-mentor-requests.webp" alt="" width="640" height="357"><span>Pending Mentor Requests <span class="badge2 old">Earlier</span></span></a><a href="walkthrough.html#76"><img loading="lazy" src="thumb/76-mentor-profile-edit.webp" alt="" width="640" height="357"><span>Mentor profile (view &amp; edit) <span class="badge2 old">Earlier</span></span></a><a href="walkthrough.html#77"><img loading="lazy" src="thumb/77-mentee-dashboard.webp" alt="" width="640" height="357"><span>Mentor Program — Active Mentee <span class="badge2 old">Earlier</span></span></a></div></div></section>
+<footer><div class="wrap">Suvarna Myneni · Senior UX / Product Designer · AI-Native · <a href="https://headless-brenxsjtqad-motiveux-1408.wix-site-host.com">Portfolio</a> · <a href="walkthrough.html">Interactive walkthrough</a><br><span class="note">Shared for portfolio purposes. Demo data only: all names, figures and transactions are fictional. eXp and My eXp are trademarks of their respective owners.</span></div></footer>
+<script>
+(()=>{const links=[...document.querySelectorAll('.toc a')];const map=new Map(links.map(a=>[a.getAttribute('href').slice(1),a]));
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.remove('on'));const a=map.get(e.target.id);a&&a.classList.add('on');}})},{rootMargin:'-30% 0px -60% 0px'});
+document.querySelectorAll('main section[id],#gallery').forEach(s=>io.observe(s));})();
+</script>
+</body></html>
